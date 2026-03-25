@@ -7,7 +7,7 @@
     "process-data": "tsx scripts/process-data.ts",
     "predev": "npm run process-data",
     "dev": "vite",
-    "prebuild": "npm run process-data",
+    "prebuild": "test -d data && npm run process-data || true",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

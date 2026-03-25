@@ -1,0 +1,362 @@
+{
+  "totalPermits2025": 31044,
+  "totalPermits2026": 5976,
+  "totalRefused2025": 3432,
+  "totalRefused2026": 803,
+  "totalCompanies2025": 8330,
+  "totalCompanies2026": 2596,
+  "approvalRate2025": 90.05,
+  "approvalRate2026": 88.15,
+  "topCompanies2025": [
+    {
+      "name": "Google Ireland Limited",
+      "total": 368
+    },
+    {
+      "name": "Ernst & Young",
+      "total": 278
+    },
+    {
+      "name": "University Limerick Hospitals Group",
+      "total": 251
+    },
+    {
+      "name": "Amazon Development Centre Ireland Limited",
+      "total": 245
+    },
+    {
+      "name": "Redwood Extended Care Facility UC",
+      "total": 237
+    },
+    {
+      "name": "Accenture Limited",
+      "total": 195
+    },
+    {
+      "name": "Tata Consultancy Services Limited",
+      "total": 153
+    },
+    {
+      "name": "Cork University Hospital",
+      "total": 146
+    },
+    {
+      "name": "WuXi Biologics Ireland Limited",
+      "total": 130
+    },
+    {
+      "name": "Mowlam Healthcare Services Unlimited Company",
+      "total": 129
+    },
+    {
+      "name": "Costern Unlimited Company",
+      "total": 128
+    },
+    {
+      "name": "Software Labs Campus Unlimited Company",
+      "total": 127
+    },
+    {
+      "name": "Amazon Web Services EMEA SARL",
+      "total": 125
+    },
+    {
+      "name": "Bernard Kavanagh and Sons Limited",
+      "total": 123
+    },
+    {
+      "name": "Resilience Healthcare Limited",
+      "total": 117
+    }
+  ],
+  "topCompanies2026": [
+    {
+      "name": "Redwood Extended Care Facility Unlimited Company",
+      "total": 92
+    },
+    {
+      "name": "Applus Inspection Services Ireland Limited",
+      "total": 77
+    },
+    {
+      "name": "Circet Networks (Ireland) Limited",
+      "total": 68
+    },
+    {
+      "name": "Cork University Hospital",
+      "total": 63
+    },
+    {
+      "name": "Google Ireland Limited",
+      "total": 56
+    },
+    {
+      "name": "InisCare Limited",
+      "total": 41
+    },
+    {
+      "name": "Resilience Healthcare Limited",
+      "total": 41
+    },
+    {
+      "name": "Ernst & Young",
+      "total": 39
+    },
+    {
+      "name": "Costern Unlimited Company",
+      "total": 34
+    },
+    {
+      "name": "Bus Atha Cliath - Dublin Bus",
+      "total": 32
+    },
+    {
+      "name": "Accenture Limited",
+      "total": 31
+    },
+    {
+      "name": "Kel-Tech Engineering (Waterford) Limited",
+      "total": 31
+    },
+    {
+      "name": "QT Technologies Ireland Limited",
+      "total": 30
+    },
+    {
+      "name": "Tata Consultancy Services Limited",
+      "total": 30
+    },
+    {
+      "name": "Intel Ireland Limited",
+      "total": 29
+    }
+  ],
+  "topSectors2025": [
+    {
+      "name": "Q - Health & Social Work Activities",
+      "total": 7948
+    },
+    {
+      "name": "J - Information & Communication Activities",
+      "total": 3630
+    },
+    {
+      "name": "I - Accommodation & Food Services Activities",
+      "total": 3499
+    },
+    {
+      "name": "S - Other Service Activities",
+      "total": 2087
+    },
+    {
+      "name": "F - Construction",
+      "total": 2031
+    },
+    {
+      "name": "A - Agriculture, Forestry & Fishing",
+      "total": 1915
+    },
+    {
+      "name": "K - Financial & Insurance Activities",
+      "total": 1424
+    },
+    {
+      "name": "H - Transport & Storage",
+      "total": 1363
+    },
+    {
+      "name": "C - All Other Manufacturing",
+      "total": 1292
+    },
+    {
+      "name": "M - Professional, Scientific & Technical Activities of Head Offices, Management Consultancy Services",
+      "total": 765
+    }
+  ],
+  "topSectors2026": [
+    {
+      "name": "Q - Health & Social Work Activities",
+      "total": 1584
+    },
+    {
+      "name": "J - Information & Communication Activities",
+      "total": 709
+    },
+    {
+      "name": "I - Accommodation & Food Services Activities",
+      "total": 646
+    },
+    {
+      "name": "S - Other Service Activities",
+      "total": 465
+    },
+    {
+      "name": "F - Construction",
+      "total": 361
+    },
+    {
+      "name": "H - Transport & Storage",
+      "total": 299
+    },
+    {
+      "name": "C - All Other Manufacturing",
+      "total": 297
+    },
+    {
+      "name": "A - Agriculture, Forestry & Fishing",
+      "total": 285
+    },
+    {
+      "name": "K - Financial & Insurance Activities",
+      "total": 227
+    },
+    {
+      "name": "No Sector Entered",
+      "total": 133
+    }
+  ],
+  "topCounties2025": [
+    {
+      "name": "Dublin",
+      "issued": 14627
+    },
+    {
+      "name": "Cork",
+      "issued": 2973
+    },
+    {
+      "name": "Limerick",
+      "issued": 1543
+    },
+    {
+      "name": "Meath",
+      "issued": 1252
+    },
+    {
+      "name": "Kildare",
+      "issued": 1194
+    },
+    {
+      "name": "Galway",
+      "issued": 1104
+    },
+    {
+      "name": "Wexford",
+      "issued": 762
+    },
+    {
+      "name": "Waterford",
+      "issued": 695
+    },
+    {
+      "name": "Tipperary",
+      "issued": 650
+    },
+    {
+      "name": "Kilkenny",
+      "issued": 580
+    }
+  ],
+  "topCounties2026": [
+    {
+      "name": "Dublin",
+      "issued": 2700
+    },
+    {
+      "name": "Cork",
+      "issued": 651
+    },
+    {
+      "name": "Meath",
+      "issued": 326
+    },
+    {
+      "name": "Kildare",
+      "issued": 251
+    },
+    {
+      "name": "Limerick",
+      "issued": 250
+    },
+    {
+      "name": "Galway",
+      "issued": 186
+    },
+    {
+      "name": "Wexford",
+      "issued": 168
+    },
+    {
+      "name": "Louth",
+      "issued": 141
+    },
+    {
+      "name": "Clare",
+      "issued": 135
+    },
+    {
+      "name": "Tipperary",
+      "issued": 132
+    }
+  ],
+  "monthlyTrend2025": [
+    3798,
+    2994,
+    3191,
+    1668,
+    1820,
+    1684,
+    2180,
+    2661,
+    2627,
+    3092,
+    2889,
+    2440
+  ],
+  "monthlyTrend2026": [
+    3187,
+    2789
+  ],
+  "yearlyTotals": [
+    {
+      "year": 2022,
+      "totalPermits": 39955,
+      "totalIssued": 39955,
+      "totalRefused": 3476,
+      "approvalRate": 92,
+      "totalCompanies": 6626
+    },
+    {
+      "year": 2023,
+      "totalPermits": 30981,
+      "totalIssued": 30906,
+      "totalRefused": 1566,
+      "approvalRate": 95.18,
+      "totalCompanies": 6754
+    },
+    {
+      "year": 2024,
+      "totalPermits": 39390,
+      "totalIssued": 39320,
+      "totalRefused": 2445,
+      "approvalRate": 94.15,
+      "totalCompanies": 8062
+    },
+    {
+      "year": 2025,
+      "totalPermits": 31044,
+      "totalIssued": 31044,
+      "totalRefused": 3432,
+      "approvalRate": 90.05,
+      "totalCompanies": 8330
+    },
+    {
+      "year": 2026,
+      "totalPermits": 5976,
+      "totalIssued": 5976,
+      "totalRefused": 803,
+      "approvalRate": 88.15,
+      "totalCompanies": 2596
+    }
+  ]
+}

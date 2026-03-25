@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Dublin",
+    "slug": "dublin",
+    "issued": 15401,
+    "refused": 752,
+    "approvalRate": 95.34,
+    "year": 2023
+  },
+  {
+    "name": "Cork",
+    "slug": "cork",
+    "issued": 2613,
+    "refused": 123,
+    "approvalRate": 95.5,
+    "year": 2023
+  },
+  {
+    "name": "Kildare",
+    "slug": "kildare",
+    "issued": 1734,
+    "refused": 53,
+    "approvalRate": 97.03,
+    "year": 2023
+  },
+  {
+    "name": "Limerick",
+    "slug": "limerick",
+    "issued": 1600,
+    "refused": 84,
+    "approvalRate": 95.01,
+    "year": 2023
+  },
+  {
+    "name": "Galway",
+    "slug": "galway",
+    "issued": 1387,
+    "refused": 85,
+    "approvalRate": 94.23,
+    "year": 2023
+  },
+  {
+    "name": "Meath",
+    "slug": "meath",
+    "issued": 1137,
+    "refused": 53,
+    "approvalRate": 95.55,
+    "year": 2023
+  },
+  {
+    "name": "Waterford",
+    "slug": "waterford",
+    "issued": 660,
+    "refused": 16,
+    "approvalRate": 97.63,
+    "year": 2023
+  },
+  {
+    "name": "Louth",
+    "slug": "louth",
+    "issued": 649,
+    "refused": 20,
+    "approvalRate": 97.01,
+    "year": 2023
+  },
+  {
+    "name": "Wexford",
+    "slug": "wexford",
+    "issued": 606,
+    "refused": 31,
+    "approvalRate": 95.13,
+    "year": 2023
+  },
+  {
+    "name": "Tipperary",
+    "slug": "tipperary",
+    "issued": 531,
+    "refused": 33,
+    "approvalRate": 94.15,
+    "year": 2023
+  },
+  {
+    "name": "Clare",
+    "slug": "clare",
+    "issued": 496,
+    "refused": 30,
+    "approvalRate": 94.3,
+    "year": 2023
+  },
+  {
+    "name": "Kilkenny",
+    "slug": "kilkenny",
+    "issued": 491,
+    "refused": 24,
+    "approvalRate": 95.34,
+    "year": 2023
+  },
+  {
+    "name": "Westmeath",
+    "slug": "westmeath",
+    "issued": 391,
+    "refused": 21,
+    "approvalRate": 94.9,
+    "year": 2023
+  },
+  {
+    "name": "Donegal",
+    "slug": "donegal",
+    "issued": 387,
+    "refused": 19,
+    "approvalRate": 95.32,
+    "year": 2023
+  },
+  {
+    "name": "Kerry",
+    "slug": "kerry",
+    "issued": 384,
+    "refused": 26,
+    "approvalRate": 93.66,
+    "year": 2023
+  },
+  {
+    "name": "Mayo",
+    "slug": "mayo",
+    "issued": 378,
+    "refused": 19,
+    "approvalRate": 95.21,
+    "year": 2023
+  },
+  {
+    "name": "Offaly",
+    "slug": "offaly",
+    "issued": 328,
+    "refused": 10,
+    "approvalRate": 97.04,
+    "year": 2023
+  },
+  {
+    "name": "Cavan",
+    "slug": "cavan",
+    "issued": 312,
+    "refused": 18,
+    "approvalRate": 94.55,
+    "year": 2023
+  },
+  {
+    "name": "Wicklow",
+    "slug": "wicklow",
+    "issued": 275,
+    "refused": 47,
+    "approvalRate": 85.4,
+    "year": 2023
+  },
+  {
+    "name": "Monaghan",
+    "slug": "monaghan",
+    "issued": 240,
+    "refused": 34,
+    "approvalRate": 87.59,
+    "year": 2023
+  },
+  {
+    "name": "Sligo",
+    "slug": "sligo",
+    "issued": 220,
+    "refused": 20,
+    "approvalRate": 91.67,
+    "year": 2023
+  },
+  {
+    "name": "Laois",
+    "slug": "laois",
+    "issued": 213,
+    "refused": 14,
+    "approvalRate": 93.83,
+    "year": 2023
+  },
+  {
+    "name": "Carlow",
+    "slug": "carlow",
+    "issued": 161,
+    "refused": 7,
+    "approvalRate": 95.83,
+    "year": 2023
+  },
+  {
+    "name": "Roscommon",
+    "slug": "roscommon",
+    "issued": 138,
+    "refused": 8,
+    "approvalRate": 94.52,
+    "year": 2023
+  },
+  {
+    "name": "Longford",
+    "slug": "longford",
+    "issued": 120,
+    "refused": 13,
+    "approvalRate": 90.23,
+    "year": 2023
+  },
+  {
+    "name": "Leitrim",
+    "slug": "leitrim",
+    "issued": 54,
+    "refused": 5,
+    "approvalRate": 91.53,
+    "year": 2023
+  },
+  {
+    "name": "Derry",
+    "slug": "derry",
+    "issued": 0,
+    "refused": 1,
+    "approvalRate": 0,
+    "year": 2023
+  }
+]
