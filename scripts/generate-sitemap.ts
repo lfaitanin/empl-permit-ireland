@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-const BASE_URL = 'https://ie-work-permits.vercel.app';
+const BASE_URL = 'https://ie-work-permits.com';
 const TODAY = new Date().toISOString().split('T')[0];
 
 const STATIC_ROUTES = [

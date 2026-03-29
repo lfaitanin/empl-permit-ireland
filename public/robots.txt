@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ie-work-permits.vercel.app/sitemap.xml
+Sitemap: https://ie-work-permits.com/sitemap.xml

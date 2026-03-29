@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const SITE_NAME = 'IE Work Permits Explorer';
-const BASE_URL = 'https://ie-work-permits.vercel.app';
+const BASE_URL = 'https://ie-work-permits.com';
 
 export function useSEO({
   title,
