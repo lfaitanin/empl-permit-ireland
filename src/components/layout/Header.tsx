@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { BarChart3, Building2, Factory, MapPin, Info, Menu, X } from 'lucide-react';
+import { BarChart3, Building2, Factory, MapPin, Globe, ShieldCheck, BookOpen, Info, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useLang } from '../../i18n/LangContext';
 
@@ -13,6 +13,9 @@ export default function Header() {
     { to: '/companies', label: t.nav.companies, icon: Building2 },
     { to: '/sectors', label: t.nav.sectors, icon: Factory },
     { to: '/counties', label: t.nav.counties, icon: MapPin },
+    { to: '/nationalities', label: t.nav.nationalities, icon: Globe },
+    { to: '/eligibility', label: t.nav.eligibility, icon: ShieldCheck },
+    { to: '/visa-guide', label: t.nav.visaGuide, icon: BookOpen },
     { to: '/about', label: t.nav.about, icon: Info },
   ];
 

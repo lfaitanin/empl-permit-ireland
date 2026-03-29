@@ -72,4 +72,30 @@ export interface CourseRecommendation {
   }[];
 }
 
+export interface Nationality {
+  name: string;
+  slug: string;
+  issued: number;
+  refused: number;
+  withdrawn: number;
+  total: number;
+  approvalRate: number;
+  year: number;
+}
+
+export interface CriticalSkillOccupation {
+  title: string;
+  socCode: string;
+  category: 'critical_skills' | 'ineligible';
+}
+
+export interface VisaStamp {
+  stamp: string;
+  name: string;
+  description: string;
+  workRights: string;
+  duration: string;
+  examples: string[];
+}
+
 export type Lang = 'en' | 'pt';

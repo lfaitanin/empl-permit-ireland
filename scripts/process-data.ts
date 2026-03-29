@@ -310,6 +310,114 @@ function processCounties2026() {
     .sort((a, b) => b.issued - a.issued);
 }
 
+// ─── NATIONALITIES ───────────────────────────────────────────────────────────
+
+function processNationalities2022() {
+  const rows = readSheet('permits-by-nationality-2022.xlsx');
+  // 2022: cols = '2022' (issued), '__EMPTY' (nationality), '__EMPTY_1' (refused), '__EMPTY_2' (withdrawn)
+  return rows.slice(2) // skip header row and Grand Total
+    .filter(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      return name && name !== 'Grand Total' && name !== 'Nationality';
+    })
+    .map(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      const issued = Number(row['2022'] || 0);
+      const refused = Number(row['__EMPTY_1'] || 0);
+      const withdrawn = Number(row['__EMPTY_2'] || 0);
+      const total = issued + refused + withdrawn;
+      const approvalRate = issued + refused > 0 ? Math.round((issued / (issued + refused)) * 10000) / 100 : 0;
+      return { name, slug: slugify(name), issued, refused, withdrawn, total, approvalRate, year: 2022 };
+    })
+    .filter(n => n.total > 0)
+    .sort((a, b) => b.issued - a.issued);
+}
+
+function processNationalities2023() {
+  const rows = readSheet('permits-by-nationality-2023.xlsx');
+  // 2023: cols = '__EMPTY' (nationality), ' 2023 ' (issued), '__EMPTY_1' (refused), '__EMPTY_2' (withdrawn)
+  const issuedKey = Object.keys(rows[0]).find(k => k.trim() === '2023') || ' 2023 ';
+  return rows.slice(2)
+    .filter(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      return name && name !== 'Grand Total' && name !== 'Nationality (group)';
+    })
+    .map(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      const issued = Number(row[issuedKey] || 0);
+      const refused = Number(row['__EMPTY_1'] || 0);
+      const withdrawn = Number(row['__EMPTY_2'] || 0);
+      const total = issued + refused + withdrawn;
+      const approvalRate = issued + refused > 0 ? Math.round((issued / (issued + refused)) * 10000) / 100 : 0;
+      return { name, slug: slugify(name), issued, refused, withdrawn, total, approvalRate, year: 2023 };
+    })
+    .filter(n => n.total > 0)
+    .sort((a, b) => b.issued - a.issued);
+}
+
+function processNationalities2024() {
+  const rows = readSheet('permits-by-nationality-2024.xlsx');
+  // 2024: clean headers: 'Nationality', 'Issued', 'Refused', 'Withdrawn'
+  return rows
+    .filter(row => {
+      const name = String(row['Nationality'] || '').trim();
+      return name && name !== 'Grand Total';
+    })
+    .map(row => {
+      const name = String(row['Nationality'] || '').trim();
+      const issued = Number(row['Issued'] || 0);
+      const refused = Number(row['Refused'] || 0);
+      const withdrawn = Number(row['Withdrawn'] || 0);
+      const total = issued + refused + withdrawn;
+      const approvalRate = issued + refused > 0 ? Math.round((issued / (issued + refused)) * 10000) / 100 : 0;
+      return { name, slug: slugify(name), issued, refused, withdrawn, total, approvalRate, year: 2024 };
+    })
+    .filter(n => n.total > 0)
+    .sort((a, b) => b.issued - a.issued);
+}
+
+function processNationalities2025() {
+  const rows = readSheet('permits-by-nationality-2025.xlsx');
+  // 2025: cols = '2025' (issued), '__EMPTY' (nationality), '__EMPTY_1' (refused)
+  return rows.slice(2)
+    .filter(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      return name && name !== 'Grand Total' && name !== 'Nationality' && name !== 'No Country Entered';
+    })
+    .map(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      const issued = Number(row['2025'] || 0);
+      const refused = Number(row['__EMPTY_1'] || 0);
+      const withdrawn = 0;
+      const total = issued + refused;
+      const approvalRate = total > 0 ? Math.round((issued / total) * 10000) / 100 : 0;
+      return { name, slug: slugify(name), issued, refused, withdrawn, total, approvalRate, year: 2025 };
+    })
+    .filter(n => n.total > 0)
+    .sort((a, b) => b.issued - a.issued);
+}
+
+function processNationalities2026() {
+  const rows = readSheet('employment-permits-by-nationality-2026.xlsx');
+  // 2026: cols = '2026' (issued), '__EMPTY' (nationality), '__EMPTY_1' (refused)
+  return rows.slice(2)
+    .filter(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      return name && name !== 'Grand Total' && name !== 'Nationality' && name !== 'No Country Entered';
+    })
+    .map(row => {
+      const name = String(row['__EMPTY'] || '').trim();
+      const issued = Number(row['2026'] || 0);
+      const refused = Number(row['__EMPTY_1'] || 0);
+      const withdrawn = 0;
+      const total = issued + refused;
+      const approvalRate = total > 0 ? Math.round((issued / total) * 10000) / 100 : 0;
+      return { name, slug: slugify(name), issued, refused, withdrawn, total, approvalRate, year: 2026 };
+    })
+    .filter(n => n.total > 0)
+    .sort((a, b) => b.issued - a.issued);
+}
+
 // ─── YEARLY TOTALS ────────────────────────────────────────────────────────────
 
 function buildYearlyTotals(
@@ -399,6 +507,14 @@ const co2025 = processCounties2025();
 const co2026 = processCounties2026();
 console.log(`  2022: ${co2022.length} | 2023: ${co2023.length} | 2024: ${co2024.length} | 2025: ${co2025.length} | 2026: ${co2026.length}`);
 
+console.log('Processing nationalities...');
+const n2022 = processNationalities2022();
+const n2023 = processNationalities2023();
+const n2024 = processNationalities2024();
+const n2025 = processNationalities2025();
+const n2026 = processNationalities2026();
+console.log(`  2022: ${n2022.length} | 2023: ${n2023.length} | 2024: ${n2024.length} | 2025: ${n2025.length} | 2026: ${n2026.length}`);
+
 const yearlyTotals = buildYearlyTotals([c2022,c2023,c2024,c2025,c2026], [co2022,co2023,co2024,co2025,co2026]);
 const summary = buildSummary([c2022,c2023,c2024,c2025,c2026], [s2022,s2023,s2024,s2025,s2026], [co2022,co2023,co2024,co2025,co2026], yearlyTotals);
 
@@ -417,5 +533,8 @@ write('sectors-2026.json', s2026);
 write('counties-2022.json', co2022); write('counties-2023.json', co2023);
 write('counties-2024.json', co2024); write('counties-2025.json', co2025);
 write('counties-2026.json', co2026);
+write('nationalities-2022.json', n2022); write('nationalities-2023.json', n2023);
+write('nationalities-2024.json', n2024); write('nationalities-2025.json', n2025);
+write('nationalities-2026.json', n2026);
 write('summary.json', summary);
 console.log('Done!');

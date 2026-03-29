@@ -1,4 +1,4 @@
-import type { Company, Sector, County, Summary } from '../types';
+import type { Company, Sector, County, Nationality, Summary } from '../types';
 
 import companies2022Data from '../data/companies-2022.json';
 import companies2023Data from '../data/companies-2023.json';
@@ -15,6 +15,11 @@ import counties2023Data from '../data/counties-2023.json';
 import counties2024Data from '../data/counties-2024.json';
 import counties2025Data from '../data/counties-2025.json';
 import counties2026Data from '../data/counties-2026.json';
+import nationalities2022Data from '../data/nationalities-2022.json';
+import nationalities2023Data from '../data/nationalities-2023.json';
+import nationalities2024Data from '../data/nationalities-2024.json';
+import nationalities2025Data from '../data/nationalities-2025.json';
+import nationalities2026Data from '../data/nationalities-2026.json';
 import summaryData from '../data/summary.json';
 
 export const companies2022 = companies2022Data as Company[];
@@ -32,11 +37,17 @@ export const counties2023 = counties2023Data as County[];
 export const counties2024 = counties2024Data as County[];
 export const counties2025 = counties2025Data as County[];
 export const counties2026 = counties2026Data as County[];
+export const nationalities2022 = nationalities2022Data as Nationality[];
+export const nationalities2023 = nationalities2023Data as Nationality[];
+export const nationalities2024 = nationalities2024Data as Nationality[];
+export const nationalities2025 = nationalities2025Data as Nationality[];
+export const nationalities2026 = nationalities2026Data as Nationality[];
 export const summary = summaryData as Summary;
 
 export const companiesByYear: Record<number, Company[]> = { 2022: companies2022, 2023: companies2023, 2024: companies2024, 2025: companies2025, 2026: companies2026 };
 export const sectorsByYear: Record<number, Sector[]> = { 2022: sectors2022, 2023: sectors2023, 2024: sectors2024, 2025: sectors2025, 2026: sectors2026 };
 export const countiesByYear: Record<number, County[]> = { 2022: counties2022, 2023: counties2023, 2024: counties2024, 2025: counties2025, 2026: counties2026 };
+export const nationalitiesByYear: Record<number, Nationality[]> = { 2022: nationalities2022, 2023: nationalities2023, 2024: nationalities2024, 2025: nationalities2025, 2026: nationalities2026 };
 
 export const ALL_YEARS = [2022, 2023, 2024, 2025, 2026] as const;
 
