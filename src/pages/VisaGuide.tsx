@@ -195,7 +195,7 @@ export default function VisaGuide() {
   const toggle = (stamp: string) => setExpanded(expanded === stamp ? null : stamp);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">{t.visaGuide.title}</h1>
       <p className="text-gray-500 mb-8">{t.visaGuide.subtitle}</p>
 

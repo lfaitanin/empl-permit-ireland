@@ -17,7 +17,7 @@ export default function Sectors() {
   const monthCount = YEAR_MONTH_COUNT[year];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">{t.sectors.title}</h1>
@@ -52,11 +52,11 @@ export default function Sectors() {
                 className="w-full flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors text-left"
               >
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-gray-900 truncate">{sector.name}</div>
+                  <div className="font-semibold text-gray-900 truncate text-sm sm:text-base">{sector.name}</div>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
                     <span className="text-sm text-gray-700 font-medium">{formatNumber(sector.total)} {t.sectors.permits} ({year})</span>
                     {yearStats.length > 1 && (
-                      <span className="flex items-center gap-1 text-xs text-gray-400">
+                      <span className="hidden sm:flex items-center gap-1 text-xs text-gray-400">
                         {yearStats.map(ys => (
                           <span key={ys.year} className={ys.year === year ? 'text-gray-600 font-medium' : ''}>{ys.year}: {formatNumber(ys.total)}</span>
                         )).reduce<React.ReactNode[]>((acc, el, i) => i === 0 ? [el] : [...acc, <span key={`sep-${i}`}> · </span>, el], [])}

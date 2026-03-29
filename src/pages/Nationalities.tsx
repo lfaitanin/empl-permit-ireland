@@ -75,7 +75,7 @@ export default function Nationalities() {
   const COLORS = ['#2563eb', '#dc2626', '#16a34a', '#ea580c', '#8b5cf6', '#0891b2', '#d97706', '#be185d', '#4f46e5', '#059669'];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">{t.nationalities.title}</h1>
@@ -93,7 +93,7 @@ export default function Nationalities() {
 
       {/* Brazil Highlight Card */}
       {brazilCurrent && (
-        <div className="bg-gradient-to-r from-green-50 to-yellow-50 border border-green-200 rounded-xl p-5 mb-8">
+        <div className="bg-gradient-to-r from-green-50 to-yellow-50 border border-green-200 rounded-xl p-4 sm:p-5 mb-6">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-2xl">🇧🇷</span>
             <h2 className="text-lg font-bold text-gray-900">{t.nationalities.brazilHighlight}</h2>
@@ -132,13 +132,13 @@ export default function Nationalities() {
       )}
 
       {/* Top 15 Chart */}
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 mb-8">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">{t.nationalities.top15}</h2>
-        <ResponsiveContainer width="100%" height={420}>
-          <BarChart data={chartData} layout="vertical" margin={{ left: 0, right: 20 }}>
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">{t.nationalities.top15}</h2>
+        <ResponsiveContainer width="100%" height={380}>
+          <BarChart data={chartData} layout="vertical" margin={{ left: 0, right: 12 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-            <XAxis type="number" fontSize={11} />
-            <YAxis type="category" dataKey="name" width={120} fontSize={12} />
+            <XAxis type="number" fontSize={10} tickFormatter={(v) => v >= 1000 ? `${(v/1000).toFixed(0)}k` : v} />
+            <YAxis type="category" dataKey="name" width={90} fontSize={11} />
             <Tooltip />
             <Bar dataKey="issued" fill="#2563eb" name={t.nationalities.issued} radius={[0,4,4,0]} />
             <Bar dataKey="refused" fill="#ef4444" name={t.nationalities.refused} radius={[0,4,4,0]} />
@@ -147,19 +147,19 @@ export default function Nationalities() {
       </div>
 
       {/* Multi-year trend */}
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 mb-8">
-        <div className="flex items-center gap-2 mb-4">
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <TrendingUp className="w-5 h-5 text-blue-600" />
-          <h2 className="text-lg font-semibold text-gray-900">{t.nationalities.yearlyTrend}</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900">{t.nationalities.yearlyTrend}</h2>
         </div>
         <p className="text-sm text-gray-500 mb-3">{t.nationalities.yearlyTrendDesc}</p>
-        <ResponsiveContainer width="100%" height={350}>
-          <LineChart data={trendData}>
+        <ResponsiveContainer width="100%" height={280}>
+          <LineChart data={trendData} margin={{ left: 0, right: 8 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-            <XAxis dataKey="year" fontSize={12} />
-            <YAxis fontSize={11} />
+            <XAxis dataKey="year" fontSize={11} />
+            <YAxis fontSize={10} tickFormatter={(v) => v >= 1000 ? `${(v/1000).toFixed(0)}k` : v} width={32} />
             <Tooltip />
-            <Legend />
+            <Legend wrapperStyle={{ fontSize: 11 }} />
             {HIGHLIGHT_NATIONALITIES.map((nat, i) => (
               <Line key={nat} type="monotone" dataKey={nat} stroke={COLORS[i % COLORS.length]}
                 strokeWidth={nat === 'Brazil' ? 3 : 1.5}
@@ -190,44 +190,44 @@ export default function Nationalities() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-gray-200 bg-gray-50">
-              <th className="px-4 py-3 text-left">
+              <th className="px-3 sm:px-4 py-3 text-left">
                 <button onClick={() => toggleSort('name')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900">
                   {t.nationalities.nationality} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-right">
+              <th className="px-3 sm:px-4 py-3 text-right">
                 <button onClick={() => toggleSort('issued')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900 ml-auto">
                   {t.nationalities.issued} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-right">
+              <th className="px-3 sm:px-4 py-3 text-right hidden sm:table-cell">
                 <button onClick={() => toggleSort('refused')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900 ml-auto">
                   {t.nationalities.refused} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-right">
+              <th className="px-3 sm:px-4 py-3 text-right">
                 <button onClick={() => toggleSort('approvalRate')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900 ml-auto">
                   {t.nationalities.approvalRate} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-left text-gray-600 font-medium">{t.nationalities.distribution}</th>
+              <th className="px-3 sm:px-4 py-3 text-left text-gray-600 font-medium hidden sm:table-cell">{t.nationalities.distribution}</th>
             </tr>
           </thead>
           <tbody>
             {sorted.map(n => (
               <tr key={n.slug} className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${n.name === 'Brazil' ? 'bg-green-50/50' : ''}`}>
-                <td className="px-4 py-3 font-medium text-gray-900">
+                <td className="px-3 sm:px-4 py-2.5 font-medium text-gray-900">
                   {n.name}
-                  {n.name === 'Brazil' && <span className="ml-1.5 text-xs">🇧🇷</span>}
+                  {n.name === 'Brazil' && <span className="ml-1 text-xs">🇧🇷</span>}
                 </td>
-                <td className="px-4 py-3 text-right font-mono text-gray-700">{formatNumber(n.issued)}</td>
-                <td className="px-4 py-3 text-right font-mono text-red-600">{formatNumber(n.refused)}</td>
-                <td className="px-4 py-3 text-right">
-                  <span className={`font-mono font-medium ${n.approvalRate >= 90 ? 'text-emerald-600' : n.approvalRate >= 80 ? 'text-amber-600' : 'text-red-600'}`}>
+                <td className="px-3 sm:px-4 py-2.5 text-right font-mono text-gray-700">{formatNumber(n.issued)}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right font-mono text-red-600 hidden sm:table-cell">{formatNumber(n.refused)}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right">
+                  <span className={`font-mono font-medium text-xs sm:text-sm ${n.approvalRate >= 90 ? 'text-emerald-600' : n.approvalRate >= 80 ? 'text-amber-600' : 'text-red-600'}`}>
                     {n.approvalRate}%
                   </span>
                 </td>
-                <td className="px-4 py-3 w-48">
+                <td className="px-3 sm:px-4 py-2.5 w-32 hidden sm:table-cell">
                   <div className="w-full bg-gray-100 rounded-full h-2">
                     <div className="bg-blue-500 rounded-full h-2" style={{ width: `${(n.issued / maxIssued) * 100}%` }} />
                   </div>

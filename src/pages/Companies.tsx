@@ -54,7 +54,7 @@ export default function Companies() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">{t.companies.title}</h1>
       <p className="text-gray-500 mb-6">{formatNumber(allCompanies.length)} {t.companies.subtitle}</p>
 

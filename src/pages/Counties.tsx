@@ -31,7 +31,7 @@ export default function Counties() {
   const chartData = sorted.slice(0, 15);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">{t.counties.title}</h1>
@@ -47,13 +47,13 @@ export default function Counties() {
         </select>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 mb-8">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">{t.counties.top15}</h2>
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={chartData} layout="vertical" margin={{ left: 0, right: 20 }}>
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">{t.counties.top15}</h2>
+        <ResponsiveContainer width="100%" height={360}>
+          <BarChart data={chartData} layout="vertical" margin={{ left: 0, right: 12 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-            <XAxis type="number" fontSize={11} />
-            <YAxis type="category" dataKey="name" width={100} fontSize={12} />
+            <XAxis type="number" fontSize={10} tickFormatter={(v) => v >= 1000 ? `${(v/1000).toFixed(0)}k` : v} />
+            <YAxis type="category" dataKey="name" width={80} fontSize={11} />
             <Tooltip />
             <Bar dataKey="issued" fill="#2563eb" name={t.counties.issued} radius={[0,4,4,0]} />
             <Bar dataKey="refused" fill="#ef4444" name={t.counties.refused} radius={[0,4,4,0]} />
@@ -65,41 +65,41 @@ export default function Counties() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-gray-200 bg-gray-50">
-              <th className="px-4 py-3 text-left">
+              <th className="px-3 sm:px-4 py-3 text-left">
                 <button onClick={() => toggleSort('name')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900">
                   {t.counties.county} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-right">
+              <th className="px-3 sm:px-4 py-3 text-right">
                 <button onClick={() => toggleSort('issued')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900 ml-auto">
                   {t.counties.issued} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-right">
+              <th className="px-3 sm:px-4 py-3 text-right hidden sm:table-cell">
                 <button onClick={() => toggleSort('refused')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900 ml-auto">
                   {t.counties.refused} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-right">
+              <th className="px-3 sm:px-4 py-3 text-right">
                 <button onClick={() => toggleSort('approvalRate')} className="flex items-center gap-1 text-gray-600 font-medium hover:text-gray-900 ml-auto">
                   {t.counties.approvalRate} <ArrowUpDown className="w-3 h-3" />
                 </button>
               </th>
-              <th className="px-4 py-3 text-left text-gray-600 font-medium">{t.counties.distribution}</th>
+              <th className="px-3 sm:px-4 py-3 text-left text-gray-600 font-medium hidden sm:table-cell">{t.counties.distribution}</th>
             </tr>
           </thead>
           <tbody>
             {sorted.map(c => (
               <tr key={c.slug} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                <td className="px-4 py-3 font-medium text-gray-900">{c.name}</td>
-                <td className="px-4 py-3 text-right font-mono text-gray-700">{formatNumber(c.issued)}</td>
-                <td className="px-4 py-3 text-right font-mono text-red-600">{formatNumber(c.refused)}</td>
-                <td className="px-4 py-3 text-right">
-                  <span className={`font-mono font-medium ${c.approvalRate >= 90 ? 'text-emerald-600' : c.approvalRate >= 80 ? 'text-amber-600' : 'text-red-600'}`}>
+                <td className="px-3 sm:px-4 py-2.5 font-medium text-gray-900">{c.name}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right font-mono text-gray-700">{formatNumber(c.issued)}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right font-mono text-red-600 hidden sm:table-cell">{formatNumber(c.refused)}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right">
+                  <span className={`font-mono font-medium text-xs sm:text-sm ${c.approvalRate >= 90 ? 'text-emerald-600' : c.approvalRate >= 80 ? 'text-amber-600' : 'text-red-600'}`}>
                     {c.approvalRate}%
                   </span>
                 </td>
-                <td className="px-4 py-3 w-48">
+                <td className="px-3 sm:px-4 py-2.5 w-32 hidden sm:table-cell">
                   <div className="w-full bg-gray-100 rounded-full h-2">
                     <div className="bg-blue-500 rounded-full h-2" style={{ width: `${(c.issued / maxIssued) * 100}%` }} />
                   </div>

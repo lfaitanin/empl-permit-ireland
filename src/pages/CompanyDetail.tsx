@@ -51,7 +51,7 @@ export default function CompanyDetail() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
       <Link to="/companies" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 no-underline mb-4">
         <ArrowLeft className="w-4 h-4" /> {t.companyDetail.backToCompanies}
       </Link>
@@ -72,15 +72,15 @@ export default function CompanyDetail() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-8 mb-8">
+      <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 mb-6">
         {/* Multi-year trend */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">{t.companyDetail.multiYearTrend}</h2>
-          <ResponsiveContainer width="100%" height={240}>
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">{t.companyDetail.multiYearTrend}</h2>
+          <ResponsiveContainer width="100%" height={200}>
             <BarChart data={yearTrendData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="year" fontSize={12} />
-              <YAxis fontSize={12} allowDecimals={false} />
+              <XAxis dataKey="year" fontSize={11} />
+              <YAxis fontSize={11} allowDecimals={false} width={32} />
               <Tooltip />
               <Bar dataKey="permits" radius={[4,4,0,0]}>
                 {yearTrendData.map((entry) => (
@@ -91,17 +91,17 @@ export default function CompanyDetail() {
           </ResponsiveContainer>
         </div>
 
-        {/* Monthly 2025 */}
+        {/* Monthly 2025/2026 */}
         {(company2025 || company2026) && (
-          <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">{t.companyDetail.monthlyPermits}</h2>
-            <ResponsiveContainer width="100%" height={240}>
-              <BarChart data={monthlyData}>
+          <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5">
+            <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">{t.companyDetail.monthlyPermits}</h2>
+            <ResponsiveContainer width="100%" height={200}>
+              <BarChart data={monthlyData} margin={{ left: 0, right: 8 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                <XAxis dataKey="month" fontSize={11} />
-                <YAxis fontSize={11} allowDecimals={false} />
+                <XAxis dataKey="month" fontSize={10} interval={1} />
+                <YAxis fontSize={10} allowDecimals={false} width={28} />
                 <Tooltip />
-                <Legend />
+                <Legend wrapperStyle={{ fontSize: 12 }} />
                 {company2025 && <Bar dataKey="2025" fill="#2563eb" radius={[4,4,0,0]} />}
                 {company2026 && <Bar dataKey="2026" fill="#10b981" radius={[4,4,0,0]} />}
               </BarChart>
@@ -111,13 +111,13 @@ export default function CompanyDetail() {
       </div>
 
       {/* Job Links */}
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
-        <div className="flex items-center gap-2 mb-4">
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5">
+        <div className="flex items-center gap-2 mb-2">
           <SearchIcon className="w-5 h-5 text-gray-600" />
-          <h2 className="text-lg font-semibold text-gray-900">{t.companyDetail.findJobs} {name}</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900">{t.companyDetail.findJobs} {name}</h2>
         </div>
         <p className="text-sm text-gray-500 mb-4">{t.companyDetail.clickToSearch}</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
           {jobLinks.map(link => (
             <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer"
               className={`flex items-center gap-2 px-4 py-3 rounded-lg border font-medium text-sm no-underline transition-all hover:shadow-md ${link.color}`}>
