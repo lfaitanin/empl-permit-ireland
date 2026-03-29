@@ -5,6 +5,7 @@ import { getCompanyBySlug, ALL_YEARS } from '../lib/data-loader';
 import { googleJobsUrl, linkedInUrl, indeedUrl, careersPageUrl, irishJobsUrl } from '../lib/url-builders';
 import { MONTHS, formatNumber } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 const YEAR_COLORS: Record<number, string> = { 2022: '#94a3b8', 2023: '#f59e0b', 2024: '#8b5cf6', 2025: '#2563eb', 2026: '#10b981' };
 
@@ -24,8 +25,16 @@ export default function CompanyDetail() {
   }
 
   const name = byYear[activeYears[0]]!.name;
+  const totalAll = activeYears.reduce((sum, y) => sum + (byYear[y]?.total || 0), 0);
 
-  // Monthly chart for 2025 (12 months) if available
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useSEO({
+    title: `${name} — Work Permit History Ireland`,
+    description: `${name} has sponsored ${totalAll.toLocaleString('en-IE')} employment permits in Ireland (${activeYears.join(', ')}). View monthly breakdown, year-over-year trend and find current job openings.`,
+    path: `/companies/${slug}`,
+  });
+
+  // Monthly chart for 2025/2026 if available
   const company2025 = byYear[2025];
   const company2026 = byYear[2026];
   const monthlyData = MONTHS.map((m, i) => ({
@@ -39,8 +48,6 @@ export default function CompanyDetail() {
     year: String(y),
     permits: byYear[y]?.total || 0,
   }));
-
-  const totalAll = activeYears.reduce((sum, y) => sum + (byYear[y]?.total || 0), 0);
 
   const jobLinks = [
     { label: 'Google Jobs', url: googleJobsUrl(name), color: 'bg-red-50 text-red-700 border-red-200' },

@@ -4,11 +4,17 @@ import { ArrowUpDown } from 'lucide-react';
 import { countiesByYear } from '../lib/data-loader';
 import { formatNumber } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 type SortKey = 'name' | 'issued' | 'refused' | 'approvalRate';
 
 export default function Counties() {
   const { t } = useLang();
+  useSEO({
+    title: 'Work Permits by County in Ireland | Dublin, Cork, Galway & More',
+    description: 'See how Irish employment permits are distributed across all 26 counties from 2022 to 2026. Compare permit volumes, approval rates and find where the most opportunities are outside Dublin.',
+    path: '/counties',
+  });
   const [year, setYear] = useState<number>(2025);
   const [sortKey, setSortKey] = useState<SortKey>('issued');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');

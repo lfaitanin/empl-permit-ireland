@@ -5,11 +5,17 @@ import { sectorsByYear } from '../lib/data-loader';
 import { getCoursesForSector } from '../constants/sector-courses';
 import { formatNumber, MONTHS } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 const YEAR_MONTH_COUNT: Record<number, number> = { 2022: 12, 2023: 12, 2024: 12, 2025: 12, 2026: 2 };
 
 export default function Sectors() {
   const { t } = useLang();
+  useSEO({
+    title: 'Employment Permits by Sector in Ireland | IT, Healthcare, Finance & More',
+    description: 'Explore Irish employment permit statistics by industry sector from 2022 to 2026. Discover which sectors are growing, find suggested courses (Springboard+, universities) and certifications to boost your chances.',
+    path: '/sectors',
+  });
   const [expanded, setExpanded] = useState<string | null>(null);
   const [year, setYear] = useState<number>(2025);
 

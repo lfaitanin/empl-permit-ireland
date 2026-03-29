@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ExternalLink, ChevronDown, ChevronUp, Briefcase, GraduationCap, Users, Clock, FileCheck } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 interface StampInfo {
   stamp: string;
@@ -190,6 +191,11 @@ const colorMap: Record<string, { bg: string; border: string; text: string; light
 
 export default function VisaGuide() {
   const { t, lang } = useLang();
+  useSEO({
+    title: 'Irish Visa & Immigration Stamp Guide | Stamp 1, 2, 4 & Work Permissions',
+    description: 'Complete guide to Irish immigration stamps: Stamp 1 (work permit), Stamp 1G (graduate), Stamp 2 (student), Stamp 4 (unrestricted work), Stamp 5 (long-term residency). Work rights, duration and how to progress explained.',
+    path: '/visa-guide',
+  });
   const [expanded, setExpanded] = useState<string | null>(null);
 
   const toggle = (stamp: string) => setExpanded(expanded === stamp ? null : stamp);

@@ -4,6 +4,7 @@ import { Building2, Factory, MapPin, TrendingUp, Users, ShieldCheck } from 'luci
 import { summary } from '../lib/data-loader';
 import { formatNumber, MONTHS, shortenName } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 const YEAR_COLORS: Record<number, string> = { 2022: '#94a3b8', 2023: '#f59e0b', 2024: '#8b5cf6', 2025: '#2563eb', 2026: '#10b981' };
 
@@ -31,6 +32,11 @@ function StatCard({ label, value, icon: Icon, sub, color }: { label: string; val
 
 export default function Dashboard() {
   const { t } = useLang();
+  useSEO({
+    title: 'Ireland Work Permits Explorer | Companies, Sectors & Statistics 2022–2026',
+    description: 'Explore Irish employment permit statistics from 2022 to 2026. Search 8,000+ sponsoring companies, 26 sectors, check your occupation eligibility and understand Irish visa stamps. Free tool for immigrants.',
+    path: '/',
+  });
 
   const yearlyData = summary.yearlyTotals.map(y => ({
     year: String(y.year),

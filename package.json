@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "process-data": "tsx scripts/process-data.ts",
+    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "predev": "npm run process-data",
     "dev": "vite",
-    "prebuild": "test -d data && npm run process-data || true",
+    "prebuild": "test -d data && npm run process-data || true && tsx scripts/generate-sitemap.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

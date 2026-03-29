@@ -2,12 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ireland Work Permits Explorer</title>
-    <meta name="description" content="Explore Irish employment permit statistics by company, sector and county. Find sponsoring employers, suggested courses and job links." />
-    <meta property="og:title" content="Ireland Work Permits Explorer" />
-    <meta property="og:description" content="Explore Irish employment permit statistics for 2025-2026" />
+
+    <!-- Primary Meta Tags -->
+    <title>Ireland Work Permits Explorer | Companies, Sectors & Statistics 2022–2026</title>
+    <meta name="description" content="Explore Irish employment permit statistics from 2022 to 2026. Search 8,000+ sponsoring companies, 26 sectors, check your eligibility, visa stamps guide and more. Free tool for immigrants in Ireland." />
+    <meta name="keywords" content="ireland work permit, employment permit ireland, critical skills permit ireland, work permit ireland 2025, ireland work permit companies, stamp 4 ireland, immigration ireland, work visa ireland" />
+    <meta name="author" content="IE Work Permits Explorer" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://ie-work-permits.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ie-work-permits.vercel.app/" />
+    <meta property="og:site_name" content="IE Work Permits Explorer" />
+    <meta property="og:title" content="Ireland Work Permits Explorer | Companies, Sectors & Statistics 2022–2026" />
+    <meta property="og:description" content="Explore Irish employment permit statistics from 2022 to 2026. Search 8,000+ sponsoring companies, check your occupation eligibility, and understand visa stamps. Free tool for immigrants in Ireland." />
+    <meta property="og:image" content="https://ie-work-permits.vercel.app/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ireland Work Permits Explorer — Statistics 2022 to 2026" />
+    <meta property="og:locale" content="en_IE" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ie-work-permits.vercel.app/" />
+    <meta name="twitter:title" content="Ireland Work Permits Explorer | Companies, Sectors & Statistics 2022–2026" />
+    <meta name="twitter:description" content="Explore Irish employment permit statistics from 2022 to 2026. Search 8,000+ sponsoring companies, check your occupation eligibility, and understand visa stamps." />
+    <meta name="twitter:image" content="https://ie-work-permits.vercel.app/og-image.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ireland Work Permits Explorer",
+      "description": "Interactive tool for exploring Irish employment permit statistics from 2022 to 2026. Search sponsoring companies, sectors, check eligibility, and understand Irish visa stamps.",
+      "url": "https://ie-work-permits.vercel.app",
+      "inLanguage": ["en", "pt"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://ie-work-permits.vercel.app/companies?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Irish Employment Permits",
+        "description": "Employment permit statistics published by the Department of Enterprise, Trade and Employment (DETE) of Ireland"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "IE Work Permits Explorer"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList for navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "IE Work Permits Explorer Navigation",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Dashboard", "url": "https://ie-work-permits.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Companies", "url": "https://ie-work-permits.vercel.app/companies" },
+        { "@type": "ListItem", "position": 3, "name": "Sectors", "url": "https://ie-work-permits.vercel.app/sectors" },
+        { "@type": "ListItem", "position": 4, "name": "Counties", "url": "https://ie-work-permits.vercel.app/counties" },
+        { "@type": "ListItem", "position": 5, "name": "Nationalities", "url": "https://ie-work-permits.vercel.app/nationalities" },
+        { "@type": "ListItem", "position": 6, "name": "Eligibility", "url": "https://ie-work-permits.vercel.app/eligibility" },
+        { "@type": "ListItem", "position": 7, "name": "Visa Guide", "url": "https://ie-work-permits.vercel.app/visa-guide" }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -4,6 +4,7 @@ import { ArrowUpDown, Search, TrendingUp } from 'lucide-react';
 import { nationalitiesByYear, ALL_YEARS } from '../lib/data-loader';
 import { formatNumber } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 import Fuse from 'fuse.js';
 
 type SortKey = 'name' | 'issued' | 'refused' | 'approvalRate';
@@ -12,6 +13,11 @@ const HIGHLIGHT_NATIONALITIES = ['Brazil', 'India', 'Philippines', 'Pakistan', '
 
 export default function Nationalities() {
   const { t } = useLang();
+  useSEO({
+    title: 'Work Permits by Nationality in Ireland | Brazil, India, Philippines & More',
+    description: 'Explore which nationalities receive the most employment permits in Ireland. Multi-year trends from 2022 to 2026 with a Brazil highlight. Data from the official DETE statistics.',
+    path: '/nationalities',
+  });
   const [year, setYear] = useState<number>(2025);
   const [sortKey, setSortKey] = useState<SortKey>('issued');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');

@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 import Fuse from 'fuse.js';
 
 // Critical Skills Occupation List (SOC 2010) — updated March 2026
@@ -92,6 +93,11 @@ type SearchResult = {
 
 export default function Eligibility() {
   const { t } = useLang();
+  useSEO({
+    title: 'Ireland Work Permit Eligibility Checker | Critical Skills & General Permits',
+    description: 'Check if your occupation qualifies for an Irish employment permit. Search the Critical Skills Occupation List, ineligible categories, salary thresholds (€40,904 / €34,000) and permit types explained simply.',
+    path: '/eligibility',
+  });
   const [search, setSearch] = useState('');
   const [showCriticalSkills, setShowCriticalSkills] = useState(false);
   const [showIneligible, setShowIneligible] = useState(false);

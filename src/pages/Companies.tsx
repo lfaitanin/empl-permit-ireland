@@ -6,6 +6,7 @@ import { getAllCompanies } from '../lib/data-loader';
 import { formatNumber } from '../lib/utils';
 import { googleJobsUrl, linkedInUrl } from '../lib/url-builders';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 const allCompanies = getAllCompanies();
 const fuse = new Fuse(allCompanies, { keys: ['name'], threshold: 0.3 });
@@ -17,6 +18,11 @@ type SortDir = 'asc' | 'desc';
 
 export default function Companies() {
   const { t } = useLang();
+  useSEO({
+    title: 'Companies Sponsoring Work Permits in Ireland | 8,000+ Employers',
+    description: 'Search 8,000+ companies that sponsored Irish employment permits from 2022 to 2026. Filter by year, see permit history, and find direct job links on LinkedIn, Indeed and Google Jobs.',
+    path: '/companies',
+  });
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(0);
   const [sortKey, setSortKey] = useState<SortKey>('grandTotal');

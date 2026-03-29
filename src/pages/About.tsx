@@ -1,8 +1,14 @@
 import { ExternalLink } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
+import { useSEO } from '../hooks/useSEO';
 
 export default function About() {
   const { t } = useLang();
+  useSEO({
+    title: 'About IE Work Permits Explorer | Open Data Tool for Immigrants in Ireland',
+    description: 'IE Work Permits Explorer is a free, independent tool built to help immigrants understand the Irish employment permit system. Data sourced from the official DETE statistics (2022–2026).',
+    path: '/about',
+  });
   const a = t.about;
 
   return (
