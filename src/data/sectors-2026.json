@@ -4,21 +4,12 @@
     "slug": "q-health-social-work-activities",
     "code": "Q",
     "monthly": [
-      816,
-      768
+      820,
+      768,
+      833,
+      924
     ],
-    "total": 1584,
-    "year": 2026
-  },
-  {
-    "name": "J - Information & Communication Activities",
-    "slug": "j-information-communication-activities",
-    "code": "J",
-    "monthly": [
-      410,
-      299
-    ],
-    "total": 709,
+    "total": 3345,
     "year": 2026
   },
   {
@@ -26,10 +17,25 @@
     "slug": "i-accommodation-food-services-activities",
     "code": "I",
     "monthly": [
-      318,
-      328
+      332,
+      337,
+      311,
+      361
     ],
-    "total": 646,
+    "total": 1341,
+    "year": 2026
+  },
+  {
+    "name": "J - Information & Communication Activities",
+    "slug": "j-information-communication-activities",
+    "code": "J",
+    "monthly": [
+      414,
+      298,
+      305,
+      278
+    ],
+    "total": 1295,
     "year": 2026
   },
   {
@@ -37,10 +43,12 @@
     "slug": "s-other-service-activities",
     "code": "S",
     "monthly": [
-      269,
-      196
+      286,
+      207,
+      186,
+      340
     ],
-    "total": 465,
+    "total": 1019,
     "year": 2026
   },
   {
@@ -48,32 +56,12 @@
     "slug": "f-construction",
     "code": "F",
     "monthly": [
-      192,
-      169
+      188,
+      160,
+      197,
+      215
     ],
-    "total": 361,
-    "year": 2026
-  },
-  {
-    "name": "H - Transport & Storage",
-    "slug": "h-transport-storage",
-    "code": "H",
-    "monthly": [
-      140,
-      159
-    ],
-    "total": 299,
-    "year": 2026
-  },
-  {
-    "name": "C - All Other Manufacturing",
-    "slug": "c-all-other-manufacturing",
-    "code": "C",
-    "monthly": [
-      164,
-      133
-    ],
-    "total": 297,
+    "total": 760,
     "year": 2026
   },
   {
@@ -81,10 +69,38 @@
     "slug": "a-agriculture-forestry-fishing",
     "code": "A",
     "monthly": [
-      162,
-      123
+      168,
+      132,
+      127,
+      324
     ],
-    "total": 285,
+    "total": 751,
+    "year": 2026
+  },
+  {
+    "name": "C - All Other Manufacturing",
+    "slug": "c-all-other-manufacturing",
+    "code": "C",
+    "monthly": [
+      174,
+      148,
+      151,
+      145
+    ],
+    "total": 618,
+    "year": 2026
+  },
+  {
+    "name": "H - Transport & Storage",
+    "slug": "h-transport-storage",
+    "code": "H",
+    "monthly": [
+      142,
+      160,
+      196,
+      118
+    ],
+    "total": 616,
     "year": 2026
   },
   {
@@ -92,21 +108,12 @@
     "slug": "k-financial-insurance-activities",
     "code": "K",
     "monthly": [
-      100,
-      127
+      102,
+      128,
+      130,
+      84
     ],
-    "total": 227,
-    "year": 2026
-  },
-  {
-    "name": "No Sector Entered",
-    "slug": "no-sector-entered",
-    "code": "",
-    "monthly": [
-      76,
-      57
-    ],
-    "total": 133,
+    "total": 444,
     "year": 2026
   },
   {
@@ -114,10 +121,12 @@
     "slug": "m-professional-scientific-technical-activities-of-head-offices-management-consultancy-services",
     "code": "M",
     "monthly": [
-      73,
-      51
+      77,
+      55,
+      52,
+      65
     ],
-    "total": 124,
+    "total": 249,
     "year": 2026
   },
   {
@@ -125,10 +134,12 @@
     "slug": "g-wholesale-retail-trade",
     "code": "G",
     "monthly": [
-      65,
-      51
+      68,
+      50,
+      60,
+      44
     ],
-    "total": 116,
+    "total": 222,
     "year": 2026
   },
   {
@@ -136,32 +147,12 @@
     "slug": "m-all-other-professional-scientific-technical-activities",
     "code": "M",
     "monthly": [
-      63,
-      40
+      62,
+      39,
+      55,
+      65
     ],
-    "total": 103,
-    "year": 2026
-  },
-  {
-    "name": "C - Manufacture of Chemicals & Pharmaceuticals",
-    "slug": "c-manufacture-of-chemicals-pharmaceuticals",
-    "code": "C",
-    "monthly": [
-      60,
-      37
-    ],
-    "total": 97,
-    "year": 2026
-  },
-  {
-    "name": "P - Education",
-    "slug": "p-education",
-    "code": "P",
-    "monthly": [
-      54,
-      38
-    ],
-    "total": 92,
+    "total": 221,
     "year": 2026
   },
   {
@@ -169,10 +160,25 @@
     "slug": "r-arts-entertainment-and-recreation",
     "code": "R",
     "monthly": [
-      49,
-      40
+      51,
+      42,
+      46,
+      56
     ],
-    "total": 89,
+    "total": 195,
+    "year": 2026
+  },
+  {
+    "name": "P - Education",
+    "slug": "p-education",
+    "code": "P",
+    "monthly": [
+      55,
+      39,
+      39,
+      51
+    ],
+    "total": 184,
     "year": 2026
   },
   {
@@ -181,9 +187,24 @@
     "code": "C",
     "monthly": [
       34,
-      45
+      47,
+      29,
+      69
     ],
-    "total": 79,
+    "total": 179,
+    "year": 2026
+  },
+  {
+    "name": "C - Manufacture of Chemicals & Pharmaceuticals",
+    "slug": "c-manufacture-of-chemicals-pharmaceuticals",
+    "code": "C",
+    "monthly": [
+      60,
+      37,
+      41,
+      37
+    ],
+    "total": 175,
     "year": 2026
   },
   {
@@ -192,9 +213,11 @@
     "code": "C",
     "monthly": [
       42,
+      31,
+      39,
       31
     ],
-    "total": 73,
+    "total": 143,
     "year": 2026
   },
   {
@@ -202,10 +225,12 @@
     "slug": "d-electricity-gas-air-conditioning-supply",
     "code": "D",
     "monthly": [
-      35,
-      28
+      36,
+      27,
+      25,
+      38
     ],
-    "total": 63,
+    "total": 126,
     "year": 2026
   },
   {
@@ -214,9 +239,24 @@
     "code": "C",
     "monthly": [
       22,
-      30
+      31,
+      21,
+      18
     ],
-    "total": 52,
+    "total": 92,
+    "year": 2026
+  },
+  {
+    "name": "No Sector Entered",
+    "slug": "no-sector-entered",
+    "code": "",
+    "monthly": [
+      26,
+      13,
+      21,
+      27
+    ],
+    "total": 87,
     "year": 2026
   },
   {
@@ -225,9 +265,11 @@
     "code": "B",
     "monthly": [
       8,
-      23
+      23,
+      15,
+      9
     ],
-    "total": 31,
+    "total": 55,
     "year": 2026
   },
   {
@@ -235,10 +277,12 @@
     "slug": "n-administrative-support-service-activities",
     "code": "N",
     "monthly": [
-      11,
-      14
+      13,
+      14,
+      13,
+      10
     ],
-    "total": 25,
+    "total": 50,
     "year": 2026
   },
   {
@@ -247,9 +291,11 @@
     "code": "E",
     "monthly": [
       10,
-      2
+      2,
+      7,
+      7
     ],
-    "total": 12,
+    "total": 26,
     "year": 2026
   },
   {
@@ -258,9 +304,11 @@
     "code": "L",
     "monthly": [
       9,
-      0
+      0,
+      3,
+      2
     ],
-    "total": 9,
+    "total": 14,
     "year": 2026
   },
   {
@@ -269,9 +317,24 @@
     "code": "O",
     "monthly": [
       5,
-      0
+      0,
+      2,
+      3
     ],
-    "total": 5,
+    "total": 10,
+    "year": 2026
+  },
+  {
+    "name": "T - Domestic - Activities of Households as Employers",
+    "slug": "t-domestic-activities-of-households-as-employers",
+    "code": "T",
+    "monthly": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "total": 2,
     "year": 2026
   }
 ]

@@ -87,16 +87,15 @@ function processCompanies2026() {
   return rows
     .filter(row => {
       const name = String(Object.values(row)[0] || '').trim();
-      return name && name !== 'Employer Name' && name !== 'Grand Total';
+      return name && !name.startsWith('Employer Name') && name !== 'Grand Total' && name !== 'Total';
     })
     .map(row => {
       const keys = Object.keys(row);
       const name = String(row[keys[0]] || '').trim();
-      const jan = Number(row[keys[1]] || 0);
-      const feb = Number(row[keys[2]] || 0);
-      let total = Number(row[keys[3]] || 0);
-      if (!total) total = jan + feb;
-      return { slug: slugify(name), name, monthly: [jan, feb], total, year: 2026 };
+      const monthly = keys.slice(1, -1).map(k => Number(row[k] || 0));
+      let total = Number(row[keys[keys.length - 1]] || 0);
+      if (!total) total = monthly.reduce((a, b) => a + b, 0);
+      return { slug: slugify(name), name, monthly, total, year: 2026 };
     })
     .filter(c => c.total > 0)
     .sort((a, b) => b.total - a.total);
@@ -175,14 +174,14 @@ function processSectors2026() {
   return rows
     .filter(row => {
       const name = String(Object.values(row)[0] || '').trim();
-      return name && name !== 'Grand Total' && !name.startsWith('Sector');
+      return name && name !== 'Grand Total' && name !== 'Total' && !name.startsWith('Sector');
     })
     .map(row => {
       const keys = Object.keys(row);
       const name = String(row[keys[0]] || '').trim();
       const code = (name.match(/^([A-Z])\s*-/) || [])[1] || '';
-      const monthly = [Number(row[keys[1]] || 0), Number(row[keys[2]] || 0)];
-      let total = Number(row[keys[3]] || 0);
+      const monthly = keys.slice(1, -1).map(k => Number(row[k] || 0));
+      let total = Number(row[keys[keys.length - 1]] || 0);
       if (!total) total = monthly.reduce((a, b) => a + b, 0);
       return { name, slug: slugify(name), code, monthly, total, year: 2026 };
     })
@@ -459,7 +458,8 @@ function buildSummary(
 
   const monthlyTrend2025 = Array.from({ length: 12 }, (_, i) =>
     sectors2025.reduce((sum, s) => sum + (s.monthly[i] || 0), 0));
-  const monthlyTrend2026 = [0, 1].map(i =>
+  const numMonths2026 = sectors2026[0]?.monthly.length || 0;
+  const monthlyTrend2026 = Array.from({ length: numMonths2026 }, (_, i) =>
     sectors2026.reduce((sum, s) => sum + (s.monthly[i] || 0), 0));
 
   return {

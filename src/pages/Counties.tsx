@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { ArrowUpDown } from 'lucide-react';
-import { countiesByYear } from '../lib/data-loader';
-import { formatNumber } from '../lib/utils';
+import { countiesByYear, summary } from '../lib/data-loader';
+import { formatNumber, monthRangeLabel } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 
@@ -49,7 +49,7 @@ export default function Counties() {
           <option value={2024}>2024</option>
           <option value={2023}>2023</option>
           <option value={2022}>2022</option>
-          <option value={2026}>2026 (Jan–Feb)</option>
+          <option value={2026}>2026 ({monthRangeLabel(summary.monthlyTrend2026.length)})</option>
         </select>
       </div>
 

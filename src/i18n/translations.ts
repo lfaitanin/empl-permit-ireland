@@ -10,6 +10,7 @@ export const translations = {
       nationalities: 'Nationalities',
       eligibility: 'Eligibility',
       visaGuide: 'Visa Guide',
+      howToApply: 'How to Apply',
     },
     // Dashboard
     dashboard: {
@@ -20,7 +21,12 @@ export const translations = {
       companies2025: 'Companies 2025',
       approvalRate: 'Approval Rate',
       fullYear: 'Full year',
-      janFebOnly: 'Jan–Feb only',
+      vsSamePeriod: 'vs same period 2025',
+      dataThrough: 'Data through',
+      newPortalTitle: 'New Application Portal Launched — April 2025',
+      newPortalDesc: 'DETE replaced the old system with a new cloud-based Employment Permits Online System (EPOS). All new applications must go through the new portal.',
+      newPortalCta: 'How to apply with the new system',
+      newPortalOfficial: 'Official EPOS portal',
       monthlyTrend: 'Monthly Permits Trend',
       topCompanies: 'Top Companies 2025',
       topSectors: 'Top Sectors 2025',
@@ -175,8 +181,8 @@ export const translations = {
     },
     // Common
     common: {
-      years: ['2022', '2023', '2024', '2025', '2026 (Jan–Feb)'],
-      yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (Jan–Feb)' },
+      years: ['2022', '2023', '2024', '2025', '2026 (Jan–Apr)'],
+      yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (Jan–Apr)' },
     },
   },
   pt: {
@@ -189,6 +195,7 @@ export const translations = {
       nationalities: 'Nacionalidades',
       eligibility: 'Elegibilidade',
       visaGuide: 'Guia de Vistos',
+      howToApply: 'Como Aplicar',
     },
     dashboard: {
       title: 'Licenças de Trabalho na Irlanda',
@@ -198,7 +205,12 @@ export const translations = {
       companies2025: 'Empresas 2025',
       approvalRate: 'Taxa de Aprovação',
       fullYear: 'Ano completo',
-      janFebOnly: 'Jan–Fev apenas',
+      vsSamePeriod: 'vs mesmo período 2025',
+      dataThrough: 'Dados até',
+      newPortalTitle: 'Novo Portal de Aplicação Lançado — Abril 2025',
+      newPortalDesc: 'O DETE substituiu o sistema antigo por um novo sistema cloud (EPOS). Todas as novas aplicações devem passar pelo novo portal.',
+      newPortalCta: 'Como aplicar com o novo sistema',
+      newPortalOfficial: 'Portal EPOS oficial',
       monthlyTrend: 'Tendência Mensal',
       topCompanies: 'Top Empresas 2025',
       topSectors: 'Top Setores 2025',
@@ -344,8 +356,8 @@ export const translations = {
       linkCitizensInfo: 'Citizens Information — Visao Geral de Employment Permits',
     },
     common: {
-      years: ['2022', '2023', '2024', '2025', '2026 (Jan–Fev)'],
-      yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (Jan–Fev)' },
+      years: ['2022', '2023', '2024', '2025', '2026 (Jan–Apr)'],
+      yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (Jan–Apr)' },
     },
   },
 } as const;

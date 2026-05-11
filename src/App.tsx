@@ -11,6 +11,7 @@ const Counties = lazy(() => import('./pages/Counties'));
 const Nationalities = lazy(() => import('./pages/Nationalities'));
 const Eligibility = lazy(() => import('./pages/Eligibility'));
 const VisaGuide = lazy(() => import('./pages/VisaGuide'));
+const HowToApply = lazy(() => import('./pages/HowToApply'));
 const About = lazy(() => import('./pages/About'));
 
 function Loading() {
@@ -36,6 +37,7 @@ export default function App() {
               <Route path="/nationalities" element={<Nationalities />} />
               <Route path="/eligibility" element={<Eligibility />} />
               <Route path="/visa-guide" element={<VisaGuide />} />
+              <Route path="/apply" element={<HowToApply />} />
               <Route path="/about" element={<About />} />
             </Route>
           </Routes>

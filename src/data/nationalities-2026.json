@@ -2,346 +2,426 @@
   {
     "name": "India",
     "slug": "india",
-    "issued": 1860,
-    "refused": 167,
+    "issued": 3728,
+    "refused": 338,
     "withdrawn": 0,
-    "total": 2027,
-    "approvalRate": 91.76,
+    "total": 4066,
+    "approvalRate": 91.69,
     "year": 2026
   },
   {
     "name": "Philippines",
     "slug": "philippines",
-    "issued": 865,
-    "refused": 80,
+    "issued": 1913,
+    "refused": 177,
     "withdrawn": 0,
-    "total": 945,
+    "total": 2090,
     "approvalRate": 91.53,
     "year": 2026
   },
   {
     "name": "Brazil",
     "slug": "brazil",
-    "issued": 597,
-    "refused": 124,
+    "issued": 1397,
+    "refused": 276,
     "withdrawn": 0,
-    "total": 721,
-    "approvalRate": 82.8,
+    "total": 1673,
+    "approvalRate": 83.5,
     "year": 2026
   },
   {
     "name": "China",
     "slug": "china",
-    "issued": 349,
-    "refused": 77,
+    "issued": 667,
+    "refused": 109,
     "withdrawn": 0,
-    "total": 426,
-    "approvalRate": 81.92,
+    "total": 776,
+    "approvalRate": 85.95,
     "year": 2026
   },
   {
     "name": "Pakistan",
     "slug": "pakistan",
-    "issued": 250,
-    "refused": 34,
+    "issued": 499,
+    "refused": 69,
     "withdrawn": 0,
-    "total": 284,
-    "approvalRate": 88.03,
+    "total": 568,
+    "approvalRate": 87.85,
     "year": 2026
   },
   {
     "name": "South Africa",
     "slug": "south-africa",
-    "issued": 244,
-    "refused": 44,
+    "issued": 491,
+    "refused": 67,
     "withdrawn": 0,
-    "total": 288,
-    "approvalRate": 84.72,
-    "year": 2026
-  },
-  {
-    "name": "United States of America",
-    "slug": "united-states-of-america",
-    "issued": 175,
-    "refused": 14,
-    "withdrawn": 0,
-    "total": 189,
-    "approvalRate": 92.59,
-    "year": 2026
-  },
-  {
-    "name": "Sri Lanka",
-    "slug": "sri-lanka",
-    "issued": 171,
-    "refused": 16,
-    "withdrawn": 0,
-    "total": 187,
-    "approvalRate": 91.44,
-    "year": 2026
-  },
-  {
-    "name": "Nigeria",
-    "slug": "nigeria",
-    "issued": 170,
-    "refused": 33,
-    "withdrawn": 0,
-    "total": 203,
-    "approvalRate": 83.74,
+    "total": 558,
+    "approvalRate": 87.99,
     "year": 2026
   },
   {
     "name": "Zimbabwe",
     "slug": "zimbabwe",
-    "issued": 155,
-    "refused": 30,
+    "issued": 373,
+    "refused": 63,
     "withdrawn": 0,
-    "total": 185,
-    "approvalRate": 83.78,
+    "total": 436,
+    "approvalRate": 85.55,
+    "year": 2026
+  },
+  {
+    "name": "United States of America",
+    "slug": "united-states-of-america",
+    "issued": 344,
+    "refused": 19,
+    "withdrawn": 0,
+    "total": 363,
+    "approvalRate": 94.77,
+    "year": 2026
+  },
+  {
+    "name": "Sri Lanka",
+    "slug": "sri-lanka",
+    "issued": 321,
+    "refused": 26,
+    "withdrawn": 0,
+    "total": 347,
+    "approvalRate": 92.51,
+    "year": 2026
+  },
+  {
+    "name": "Nigeria",
+    "slug": "nigeria",
+    "issued": 293,
+    "refused": 50,
+    "withdrawn": 0,
+    "total": 343,
+    "approvalRate": 85.42,
     "year": 2026
   },
   {
     "name": "Nepal",
     "slug": "nepal",
-    "issued": 124,
-    "refused": 24,
+    "issued": 210,
+    "refused": 31,
     "withdrawn": 0,
-    "total": 148,
-    "approvalRate": 83.78,
-    "year": 2026
-  },
-  {
-    "name": "Mexico",
-    "slug": "mexico",
-    "issued": 88,
-    "refused": 11,
-    "withdrawn": 0,
-    "total": 99,
-    "approvalRate": 88.89,
+    "total": 241,
+    "approvalRate": 87.14,
     "year": 2026
   },
   {
     "name": "Malaysia",
     "slug": "malaysia",
-    "issued": 87,
-    "refused": 8,
+    "issued": 182,
+    "refused": 13,
     "withdrawn": 0,
-    "total": 95,
-    "approvalRate": 91.58,
+    "total": 195,
+    "approvalRate": 93.33,
+    "year": 2026
+  },
+  {
+    "name": "Mexico",
+    "slug": "mexico",
+    "issued": 170,
+    "refused": 22,
+    "withdrawn": 0,
+    "total": 192,
+    "approvalRate": 88.54,
     "year": 2026
   },
   {
     "name": "Türkiye",
     "slug": "t-rkiye",
-    "issued": 49,
-    "refused": 2,
+    "issued": 95,
+    "refused": 4,
     "withdrawn": 0,
-    "total": 51,
-    "approvalRate": 96.08,
+    "total": 99,
+    "approvalRate": 95.96,
     "year": 2026
   },
   {
     "name": "Bangladesh",
     "slug": "bangladesh",
-    "issued": 48,
-    "refused": 11,
+    "issued": 84,
+    "refused": 19,
     "withdrawn": 0,
-    "total": 59,
-    "approvalRate": 81.36,
+    "total": 103,
+    "approvalRate": 81.55,
+    "year": 2026
+  },
+  {
+    "name": "Chile",
+    "slug": "chile",
+    "issued": 75,
+    "refused": 12,
+    "withdrawn": 0,
+    "total": 87,
+    "approvalRate": 86.21,
     "year": 2026
   },
   {
     "name": "Kenya",
     "slug": "kenya",
-    "issued": 44,
-    "refused": 12,
+    "issued": 72,
+    "refused": 18,
     "withdrawn": 0,
-    "total": 56,
-    "approvalRate": 78.57,
+    "total": 90,
+    "approvalRate": 80,
+    "year": 2026
+  },
+  {
+    "name": "Ghana",
+    "slug": "ghana",
+    "issued": 71,
+    "refused": 21,
+    "withdrawn": 0,
+    "total": 92,
+    "approvalRate": 77.17,
     "year": 2026
   },
   {
     "name": "Israel",
     "slug": "israel",
-    "issued": 39,
+    "issued": 65,
     "refused": 0,
     "withdrawn": 0,
-    "total": 39,
+    "total": 65,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Egypt",
+    "slug": "egypt",
+    "issued": 64,
+    "refused": 5,
+    "withdrawn": 0,
+    "total": 69,
+    "approvalRate": 92.75,
+    "year": 2026
+  },
+  {
+    "name": "Japan",
+    "slug": "japan",
+    "issued": 64,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 64,
     "approvalRate": 100,
     "year": 2026
   },
   {
     "name": "Ukraine",
     "slug": "ukraine",
-    "issued": 39,
-    "refused": 2,
+    "issued": 63,
+    "refused": 1,
     "withdrawn": 0,
-    "total": 41,
-    "approvalRate": 95.12,
+    "total": 64,
+    "approvalRate": 98.44,
     "year": 2026
   },
   {
     "name": "Sudan",
     "slug": "sudan",
-    "issued": 38,
+    "issued": 55,
     "refused": 0,
     "withdrawn": 0,
-    "total": 38,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Chile",
-    "slug": "chile",
-    "issued": 34,
-    "refused": 5,
-    "withdrawn": 0,
-    "total": 39,
-    "approvalRate": 87.18,
-    "year": 2026
-  },
-  {
-    "name": "Ghana",
-    "slug": "ghana",
-    "issued": 34,
-    "refused": 13,
-    "withdrawn": 0,
-    "total": 47,
-    "approvalRate": 72.34,
-    "year": 2026
-  },
-  {
-    "name": "Egypt",
-    "slug": "egypt",
-    "issued": 33,
-    "refused": 3,
-    "withdrawn": 0,
-    "total": 36,
-    "approvalRate": 91.67,
-    "year": 2026
-  },
-  {
-    "name": "Japan",
-    "slug": "japan",
-    "issued": 28,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 28,
+    "total": 55,
     "approvalRate": 100,
     "year": 2026
   },
   {
     "name": "Canada",
     "slug": "canada",
-    "issued": 26,
-    "refused": 3,
+    "issued": 51,
+    "refused": 6,
     "withdrawn": 0,
-    "total": 29,
-    "approvalRate": 89.66,
-    "year": 2026
-  },
-  {
-    "name": "Colombia",
-    "slug": "colombia",
-    "issued": 25,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 26,
-    "approvalRate": 96.15,
-    "year": 2026
-  },
-  {
-    "name": "Australia",
-    "slug": "australia",
-    "issued": 22,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 23,
-    "approvalRate": 95.65,
+    "total": 57,
+    "approvalRate": 89.47,
     "year": 2026
   },
   {
     "name": "Botswana",
     "slug": "botswana",
-    "issued": 21,
-    "refused": 5,
+    "issued": 45,
+    "refused": 16,
     "withdrawn": 0,
-    "total": 26,
-    "approvalRate": 80.77,
-    "year": 2026
-  },
-  {
-    "name": "Mongolia",
-    "slug": "mongolia",
-    "issued": 21,
-    "refused": 6,
-    "withdrawn": 0,
-    "total": 27,
-    "approvalRate": 77.78,
-    "year": 2026
-  },
-  {
-    "name": "Taiwan",
-    "slug": "taiwan",
-    "issued": 21,
-    "refused": 2,
-    "withdrawn": 0,
-    "total": 23,
-    "approvalRate": 91.3,
-    "year": 2026
-  },
-  {
-    "name": "Argentina",
-    "slug": "argentina",
-    "issued": 20,
-    "refused": 9,
-    "withdrawn": 0,
-    "total": 29,
-    "approvalRate": 68.97,
-    "year": 2026
-  },
-  {
-    "name": "Iran, Islamic Republic of",
-    "slug": "iran-islamic-republic-of",
-    "issued": 18,
-    "refused": 2,
-    "withdrawn": 0,
-    "total": 20,
-    "approvalRate": 90,
-    "year": 2026
-  },
-  {
-    "name": "Thailand",
-    "slug": "thailand",
-    "issued": 18,
-    "refused": 5,
-    "withdrawn": 0,
-    "total": 23,
-    "approvalRate": 78.26,
+    "total": 61,
+    "approvalRate": 73.77,
     "year": 2026
   },
   {
     "name": "Vietnam",
     "slug": "vietnam",
-    "issued": 16,
-    "refused": 8,
+    "issued": 45,
+    "refused": 9,
     "withdrawn": 0,
-    "total": 24,
-    "approvalRate": 66.67,
+    "total": 54,
+    "approvalRate": 83.33,
     "year": 2026
   },
   {
-    "name": "Uganda",
-    "slug": "uganda",
-    "issued": 15,
+    "name": "Australia",
+    "slug": "australia",
+    "issued": 42,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 44,
+    "approvalRate": 95.45,
+    "year": 2026
+  },
+  {
+    "name": "Bolivia",
+    "slug": "bolivia",
+    "issued": 41,
+    "refused": 7,
+    "withdrawn": 0,
+    "total": 48,
+    "approvalRate": 85.42,
+    "year": 2026
+  },
+  {
+    "name": "Thailand",
+    "slug": "thailand",
+    "issued": 39,
+    "refused": 8,
+    "withdrawn": 0,
+    "total": 47,
+    "approvalRate": 82.98,
+    "year": 2026
+  },
+  {
+    "name": "Argentina",
+    "slug": "argentina",
+    "issued": 38,
+    "refused": 12,
+    "withdrawn": 0,
+    "total": 50,
+    "approvalRate": 76,
+    "year": 2026
+  },
+  {
+    "name": "Taiwan",
+    "slug": "taiwan",
+    "issued": 38,
     "refused": 4,
     "withdrawn": 0,
-    "total": 19,
-    "approvalRate": 78.95,
+    "total": 42,
+    "approvalRate": 90.48,
+    "year": 2026
+  },
+  {
+    "name": "Mongolia",
+    "slug": "mongolia",
+    "issued": 34,
+    "refused": 12,
+    "withdrawn": 0,
+    "total": 46,
+    "approvalRate": 73.91,
     "year": 2026
   },
   {
     "name": "Russian Federation",
     "slug": "russian-federation",
+    "issued": 34,
+    "refused": 3,
+    "withdrawn": 0,
+    "total": 37,
+    "approvalRate": 91.89,
+    "year": 2026
+  },
+  {
+    "name": "Colombia",
+    "slug": "colombia",
+    "issued": 33,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 35,
+    "approvalRate": 94.29,
+    "year": 2026
+  },
+  {
+    "name": "Korea, Republic of",
+    "slug": "korea-republic-of",
+    "issued": 29,
+    "refused": 1,
+    "withdrawn": 0,
+    "total": 30,
+    "approvalRate": 96.67,
+    "year": 2026
+  },
+  {
+    "name": "Iran, Islamic Republic of",
+    "slug": "iran-islamic-republic-of",
+    "issued": 28,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 30,
+    "approvalRate": 93.33,
+    "year": 2026
+  },
+  {
+    "name": "Morocco",
+    "slug": "morocco",
+    "issued": 28,
+    "refused": 3,
+    "withdrawn": 0,
+    "total": 31,
+    "approvalRate": 90.32,
+    "year": 2026
+  },
+  {
+    "name": "New Zealand",
+    "slug": "new-zealand",
+    "issued": 25,
+    "refused": 6,
+    "withdrawn": 0,
+    "total": 31,
+    "approvalRate": 80.65,
+    "year": 2026
+  },
+  {
+    "name": "Uganda",
+    "slug": "uganda",
+    "issued": 22,
+    "refused": 6,
+    "withdrawn": 0,
+    "total": 28,
+    "approvalRate": 78.57,
+    "year": 2026
+  },
+  {
+    "name": "El Salvador",
+    "slug": "el-salvador",
+    "issued": 20,
+    "refused": 3,
+    "withdrawn": 0,
+    "total": 23,
+    "approvalRate": 86.96,
+    "year": 2026
+  },
+  {
+    "name": "Costa Rica",
+    "slug": "costa-rica",
+    "issued": 15,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 17,
+    "approvalRate": 88.24,
+    "year": 2026
+  },
+  {
+    "name": "Lebanon",
+    "slug": "lebanon",
+    "issued": 14,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 14,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Mauritius",
+    "slug": "mauritius",
     "issued": 14,
     "refused": 3,
     "withdrawn": 0,
@@ -350,78 +430,118 @@
     "year": 2026
   },
   {
-    "name": "Bolivia",
-    "slug": "bolivia",
-    "issued": 12,
-    "refused": 4,
-    "withdrawn": 0,
-    "total": 16,
-    "approvalRate": 75,
-    "year": 2026
-  },
-  {
-    "name": "Korea, Republic of",
-    "slug": "korea-republic-of",
-    "issued": 12,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 13,
-    "approvalRate": 92.31,
-    "year": 2026
-  },
-  {
-    "name": "New Zealand",
-    "slug": "new-zealand",
-    "issued": 12,
-    "refused": 4,
-    "withdrawn": 0,
-    "total": 16,
-    "approvalRate": 75,
-    "year": 2026
-  },
-  {
-    "name": "Morocco",
-    "slug": "morocco",
-    "issued": 11,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 12,
-    "approvalRate": 91.67,
-    "year": 2026
-  },
-  {
-    "name": "Mauritius",
-    "slug": "mauritius",
-    "issued": 10,
-    "refused": 2,
-    "withdrawn": 0,
-    "total": 12,
-    "approvalRate": 83.33,
-    "year": 2026
-  },
-  {
     "name": "Jordan",
     "slug": "jordan",
-    "issued": 8,
+    "issued": 13,
     "refused": 5,
     "withdrawn": 0,
-    "total": 13,
-    "approvalRate": 61.54,
+    "total": 18,
+    "approvalRate": 72.22,
     "year": 2026
   },
   {
-    "name": "Costa Rica",
-    "slug": "costa-rica",
-    "issued": 7,
+    "name": "Kyrgyzstan",
+    "slug": "kyrgyzstan",
+    "issued": 13,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 13,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Indonesia",
+    "slug": "indonesia",
+    "issued": 12,
+    "refused": 11,
+    "withdrawn": 0,
+    "total": 23,
+    "approvalRate": 52.17,
+    "year": 2026
+  },
+  {
+    "name": "Palestine",
+    "slug": "palestine",
+    "issued": 12,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 12,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Panama",
+    "slug": "panama",
+    "issued": 11,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 13,
+    "approvalRate": 84.62,
+    "year": 2026
+  },
+  {
+    "name": "Kazakhstan",
+    "slug": "kazakhstan",
+    "issued": 10,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 10,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Tunisia",
+    "slug": "tunisia",
+    "issued": 10,
     "refused": 1,
     "withdrawn": 0,
-    "total": 8,
-    "approvalRate": 87.5,
+    "total": 11,
+    "approvalRate": 90.91,
+    "year": 2026
+  },
+  {
+    "name": "Cameroon",
+    "slug": "cameroon",
+    "issued": 9,
+    "refused": 3,
+    "withdrawn": 0,
+    "total": 12,
+    "approvalRate": 75,
+    "year": 2026
+  },
+  {
+    "name": "Albania",
+    "slug": "albania",
+    "issued": 8,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 10,
+    "approvalRate": 80,
     "year": 2026
   },
   {
     "name": "Uzbekistan",
     "slug": "uzbekistan",
+    "issued": 8,
+    "refused": 1,
+    "withdrawn": 0,
+    "total": 9,
+    "approvalRate": 88.89,
+    "year": 2026
+  },
+  {
+    "name": "Algeria",
+    "slug": "algeria",
+    "issued": 7,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 7,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Guatemala",
+    "slug": "guatemala",
     "issued": 7,
     "refused": 1,
     "withdrawn": 0,
@@ -430,8 +550,68 @@
     "year": 2026
   },
   {
-    "name": "El Salvador",
-    "slug": "el-salvador",
+    "name": "Lesotho",
+    "slug": "lesotho",
+    "issued": 7,
+    "refused": 1,
+    "withdrawn": 0,
+    "total": 8,
+    "approvalRate": 87.5,
+    "year": 2026
+  },
+  {
+    "name": "Malawi",
+    "slug": "malawi",
+    "issued": 7,
+    "refused": 1,
+    "withdrawn": 0,
+    "total": 8,
+    "approvalRate": 87.5,
+    "year": 2026
+  },
+  {
+    "name": "Moldova, Republic of",
+    "slug": "moldova-republic-of",
+    "issued": 7,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 7,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Myanmar",
+    "slug": "myanmar",
+    "issued": 7,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 7,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Singapore",
+    "slug": "singapore",
+    "issued": 7,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 7,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Georgia",
+    "slug": "georgia",
+    "issued": 6,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 8,
+    "approvalRate": 75,
+    "year": 2026
+  },
+  {
+    "name": "Paraguay",
+    "slug": "paraguay",
     "issued": 6,
     "refused": 1,
     "withdrawn": 0,
@@ -440,18 +620,28 @@
     "year": 2026
   },
   {
-    "name": "Indonesia",
-    "slug": "indonesia",
+    "name": "Peru",
+    "slug": "peru",
     "issued": 6,
-    "refused": 7,
+    "refused": 1,
     "withdrawn": 0,
-    "total": 13,
-    "approvalRate": 46.15,
+    "total": 7,
+    "approvalRate": 85.71,
     "year": 2026
   },
   {
-    "name": "Myanmar",
-    "slug": "myanmar",
+    "name": "Syrian Arab Republic",
+    "slug": "syrian-arab-republic",
+    "issued": 6,
+    "refused": 1,
+    "withdrawn": 0,
+    "total": 7,
+    "approvalRate": 85.71,
+    "year": 2026
+  },
+  {
+    "name": "Venezuela",
+    "slug": "venezuela",
     "issued": 6,
     "refused": 0,
     "withdrawn": 0,
@@ -460,63 +650,33 @@
     "year": 2026
   },
   {
-    "name": "Panama",
-    "slug": "panama",
-    "issued": 6,
+    "name": "Azerbaijan",
+    "slug": "azerbaijan",
+    "issued": 5,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 5,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Honduras",
+    "slug": "honduras",
+    "issued": 5,
     "refused": 1,
     "withdrawn": 0,
-    "total": 7,
-    "approvalRate": 85.71,
+    "total": 6,
+    "approvalRate": 83.33,
     "year": 2026
   },
   {
-    "name": "Cameroon",
-    "slug": "cameroon",
+    "name": "Swaziland",
+    "slug": "swaziland",
     "issued": 5,
-    "refused": 2,
+    "refused": 1,
     "withdrawn": 0,
-    "total": 7,
-    "approvalRate": 71.43,
-    "year": 2026
-  },
-  {
-    "name": "Kazakhstan",
-    "slug": "kazakhstan",
-    "issued": 5,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 5,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Lebanon",
-    "slug": "lebanon",
-    "issued": 5,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 5,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Lesotho",
-    "slug": "lesotho",
-    "issued": 5,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 5,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Palestine",
-    "slug": "palestine",
-    "issued": 5,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 5,
-    "approvalRate": 100,
+    "total": 6,
+    "approvalRate": 83.33,
     "year": 2026
   },
   {
@@ -530,8 +690,8 @@
     "year": 2026
   },
   {
-    "name": "Guatemala",
-    "slug": "guatemala",
+    "name": "Ecuador",
+    "slug": "ecuador",
     "issued": 4,
     "refused": 1,
     "withdrawn": 0,
@@ -540,8 +700,18 @@
     "year": 2026
   },
   {
-    "name": "Kyrgyzstan",
-    "slug": "kyrgyzstan",
+    "name": "Iraq",
+    "slug": "iraq",
+    "issued": 4,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 6,
+    "approvalRate": 66.67,
+    "year": 2026
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "slug": "saint-kitts-and-nevis",
     "issued": 4,
     "refused": 0,
     "withdrawn": 0,
@@ -550,18 +720,8 @@
     "year": 2026
   },
   {
-    "name": "Syrian Arab Republic",
-    "slug": "syrian-arab-republic",
-    "issued": 4,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 5,
-    "approvalRate": 80,
-    "year": 2026
-  },
-  {
-    "name": "Tunisia",
-    "slug": "tunisia",
+    "name": "Uruguay",
+    "slug": "uruguay",
     "issued": 4,
     "refused": 0,
     "withdrawn": 0,
@@ -580,18 +740,8 @@
     "year": 2026
   },
   {
-    "name": "Albania",
-    "slug": "albania",
-    "issued": 3,
-    "refused": 2,
-    "withdrawn": 0,
-    "total": 5,
-    "approvalRate": 60,
-    "year": 2026
-  },
-  {
-    "name": "Ecuador",
-    "slug": "ecuador",
+    "name": "Armenia",
+    "slug": "armenia",
     "issued": 3,
     "refused": 0,
     "withdrawn": 0,
@@ -600,8 +750,58 @@
     "year": 2026
   },
   {
-    "name": "Moldova, Republic of",
-    "slug": "moldova-republic-of",
+    "name": "Bosnia and Herzegovina",
+    "slug": "bosnia-and-herzegovina",
+    "issued": 3,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 3,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Cambodia",
+    "slug": "cambodia",
+    "issued": 3,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 3,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Ethiopia",
+    "slug": "ethiopia",
+    "issued": 3,
+    "refused": 3,
+    "withdrawn": 0,
+    "total": 6,
+    "approvalRate": 50,
+    "year": 2026
+  },
+  {
+    "name": "Kosova",
+    "slug": "kosova",
+    "issued": 3,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 5,
+    "approvalRate": 60,
+    "year": 2026
+  },
+  {
+    "name": "Macedonia, The Former Yugoslav Republic of",
+    "slug": "macedonia-the-former-yugoslav-republic-of",
+    "issued": 3,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 3,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Nicaragua",
+    "slug": "nicaragua",
     "issued": 3,
     "refused": 0,
     "withdrawn": 0,
@@ -613,6 +813,16 @@
     "name": "Rwanda",
     "slug": "rwanda",
     "issued": 3,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 5,
+    "approvalRate": 60,
+    "year": 2026
+  },
+  {
+    "name": "Saint Lucia",
+    "slug": "saint-lucia",
+    "issued": 3,
     "refused": 1,
     "withdrawn": 0,
     "total": 4,
@@ -620,8 +830,18 @@
     "year": 2026
   },
   {
-    "name": "Singapore",
-    "slug": "singapore",
+    "name": "Saudi Arabia",
+    "slug": "saudi-arabia",
+    "issued": 3,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 3,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "slug": "trinidad-and-tobago",
     "issued": 3,
     "refused": 0,
     "withdrawn": 0,
@@ -640,8 +860,8 @@
     "year": 2026
   },
   {
-    "name": "Algeria",
-    "slug": "algeria",
+    "name": "Congo, The Democratic Republic of the",
+    "slug": "congo-the-democratic-republic-of-the",
     "issued": 2,
     "refused": 0,
     "withdrawn": 0,
@@ -650,8 +870,8 @@
     "year": 2026
   },
   {
-    "name": "Armenia",
-    "slug": "armenia",
+    "name": "Guyana",
+    "slug": "guyana",
     "issued": 2,
     "refused": 0,
     "withdrawn": 0,
@@ -660,8 +880,8 @@
     "year": 2026
   },
   {
-    "name": "Bosnia and Herzegovina",
-    "slug": "bosnia-and-herzegovina",
+    "name": "Hong Kong",
+    "slug": "hong-kong",
     "issued": 2,
     "refused": 0,
     "withdrawn": 0,
@@ -670,8 +890,8 @@
     "year": 2026
   },
   {
-    "name": "Cambodia",
-    "slug": "cambodia",
+    "name": "Republic of Serbia",
+    "slug": "republic-of-serbia",
     "issued": 2,
     "refused": 0,
     "withdrawn": 0,
@@ -680,8 +900,28 @@
     "year": 2026
   },
   {
-    "name": "Georgia",
-    "slug": "georgia",
+    "name": "Serbia",
+    "slug": "serbia",
+    "issued": 2,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 2,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Sierra Leone",
+    "slug": "sierra-leone",
+    "issued": 2,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 2,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Tajikistan",
+    "slug": "tajikistan",
     "issued": 2,
     "refused": 1,
     "withdrawn": 0,
@@ -690,128 +930,18 @@
     "year": 2026
   },
   {
-    "name": "Iraq",
-    "slug": "iraq",
-    "issued": 2,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 3,
-    "approvalRate": 66.67,
-    "year": 2026
-  },
-  {
-    "name": "Ireland",
-    "slug": "ireland",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Kosova",
-    "slug": "kosova",
-    "issued": 2,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 3,
-    "approvalRate": 66.67,
-    "year": 2026
-  },
-  {
-    "name": "Macedonia, The Former Yugoslav Republic of",
-    "slug": "macedonia-the-former-yugoslav-republic-of",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Malawi",
-    "slug": "malawi",
-    "issued": 2,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 3,
-    "approvalRate": 66.67,
-    "year": 2026
-  },
-  {
-    "name": "Peru",
-    "slug": "peru",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Saint Kitts and Nevis",
-    "slug": "saint-kitts-and-nevis",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Saudi Arabia",
-    "slug": "saudi-arabia",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Swaziland",
-    "slug": "swaziland",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Venezuela",
-    "slug": "venezuela",
-    "issued": 2,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Azerbaijan",
-    "slug": "azerbaijan",
+    "name": "Belize",
+    "slug": "belize",
     "issued": 1,
-    "refused": 0,
+    "refused": 1,
     "withdrawn": 0,
-    "total": 1,
-    "approvalRate": 100,
+    "total": 2,
+    "approvalRate": 50,
     "year": 2026
   },
   {
     "name": "Congo",
     "slug": "congo",
-    "issued": 1,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 1,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Congo, The Democratic Republic of the",
-    "slug": "congo-the-democratic-republic-of-the",
     "issued": 1,
     "refused": 0,
     "withdrawn": 0,
@@ -860,26 +990,6 @@
     "year": 2026
   },
   {
-    "name": "Guyana",
-    "slug": "guyana",
-    "issued": 1,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 1,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Honduras",
-    "slug": "honduras",
-    "issued": 1,
-    "refused": 1,
-    "withdrawn": 0,
-    "total": 2,
-    "approvalRate": 50,
-    "year": 2026
-  },
-  {
     "name": "Jamaica",
     "slug": "jamaica",
     "issued": 1,
@@ -890,8 +1000,18 @@
     "year": 2026
   },
   {
-    "name": "Nicaragua",
-    "slug": "nicaragua",
+    "name": "Liberia",
+    "slug": "liberia",
+    "issued": 1,
+    "refused": 0,
+    "withdrawn": 0,
+    "total": 1,
+    "approvalRate": 100,
+    "year": 2026
+  },
+  {
+    "name": "Namibia",
+    "slug": "namibia",
     "issued": 1,
     "refused": 0,
     "withdrawn": 0,
@@ -902,26 +1022,6 @@
   {
     "name": "Papua New Guinea",
     "slug": "papua-new-guinea",
-    "issued": 1,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 1,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Saint Lucia",
-    "slug": "saint-lucia",
-    "issued": 1,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 1,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Serbia",
-    "slug": "serbia",
     "issued": 1,
     "refused": 0,
     "withdrawn": 0,
@@ -950,6 +1050,16 @@
     "year": 2026
   },
   {
+    "name": "Tanzania, United Republic of",
+    "slug": "tanzania-united-republic-of",
+    "issued": 1,
+    "refused": 2,
+    "withdrawn": 0,
+    "total": 3,
+    "approvalRate": 33.33,
+    "year": 2026
+  },
+  {
     "name": "Togo",
     "slug": "togo",
     "issued": 1,
@@ -970,32 +1080,12 @@
     "year": 2026
   },
   {
-    "name": "Uruguay",
-    "slug": "uruguay",
-    "issued": 1,
-    "refused": 0,
-    "withdrawn": 0,
-    "total": 1,
-    "approvalRate": 100,
-    "year": 2026
-  },
-  {
-    "name": "Belize",
-    "slug": "belize",
+    "name": "Libya",
+    "slug": "libya",
     "issued": 0,
     "refused": 1,
     "withdrawn": 0,
     "total": 1,
-    "approvalRate": 0,
-    "year": 2026
-  },
-  {
-    "name": "Ethiopia",
-    "slug": "ethiopia",
-    "issued": 0,
-    "refused": 2,
-    "withdrawn": 0,
-    "total": 2,
     "approvalRate": 0,
     "year": 2026
   }

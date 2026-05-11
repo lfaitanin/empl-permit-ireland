@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { ChevronDown, ChevronUp, BookOpen, GraduationCap, Award } from 'lucide-react';
-import { sectorsByYear } from '../lib/data-loader';
+import { sectorsByYear, summary } from '../lib/data-loader';
 import { getCoursesForSector } from '../constants/sector-courses';
-import { formatNumber, MONTHS } from '../lib/utils';
+import { formatNumber, MONTHS, monthRangeLabel } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 
-const YEAR_MONTH_COUNT: Record<number, number> = { 2022: 12, 2023: 12, 2024: 12, 2025: 12, 2026: 2 };
+const months2026 = summary.monthlyTrend2026.length;
+const YEAR_MONTH_COUNT: Record<number, number> = { 2022: 12, 2023: 12, 2024: 12, 2025: 12, 2026: months2026 };
 
 export default function Sectors() {
   const { t } = useLang();
@@ -35,7 +36,7 @@ export default function Sectors() {
           <option value={2024}>2024</option>
           <option value={2023}>2023</option>
           <option value={2022}>2022</option>
-          <option value={2026}>2026 (Jan–Feb)</option>
+          <option value={2026}>2026 ({monthRangeLabel(months2026)})</option>
         </select>
       </div>
 

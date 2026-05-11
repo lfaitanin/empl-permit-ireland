@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
-import { Building2, Factory, MapPin, TrendingUp, Users, ShieldCheck } from 'lucide-react';
+import { Building2, Factory, MapPin, TrendingUp, Users, ShieldCheck, Zap, ExternalLink, ArrowRight } from 'lucide-react';
 import { summary } from '../lib/data-loader';
-import { formatNumber, MONTHS, shortenName } from '../lib/utils';
+import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 
@@ -32,6 +32,11 @@ function StatCard({ label, value, icon: Icon, sub, color }: { label: string; val
 
 export default function Dashboard() {
   const { t } = useLang();
+  const n2026 = summary.monthlyTrend2026.length;
+  const rangeLabel = monthRangeLabel(n2026);
+  const ytd2025 = summary.monthlyTrend2025.slice(0, n2026).reduce((a, b) => a + b, 0);
+  const growth = ytd2025 > 0 ? Math.round(((summary.totalPermits2026 - ytd2025) / ytd2025) * 100) : 0;
+  const growthStr = growth >= 0 ? `+${growth}%` : `${growth}%`;
   useSEO({
     title: 'Ireland Work Permits Explorer | Companies, Sectors & Statistics 2022–2026',
     description: 'Explore Irish employment permit statistics from 2022 to 2026. Search 8,000+ sponsoring companies, 26 sectors, check your occupation eligibility and understand Irish visa stamps. Free tool for immigrants.',
@@ -51,13 +56,34 @@ export default function Dashboard() {
         <p className="text-gray-500 mt-1 text-sm sm:text-base">{t.dashboard.subtitle}</p>
       </div>
 
+      {/* EPOS Banner */}
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-5 flex flex-col sm:flex-row sm:items-center gap-3">
+        <div className="flex items-start gap-3 flex-1">
+          <div className="p-2 rounded-lg bg-amber-100 text-amber-700 shrink-0"><Zap className="w-4 h-4" /></div>
+          <div>
+            <p className="font-semibold text-gray-900 text-sm">{t.dashboard.newPortalTitle}</p>
+            <p className="text-xs text-gray-600 mt-0.5">{t.dashboard.newPortalDesc}</p>
+          </div>
+        </div>
+        <div className="flex gap-2 shrink-0 pl-9 sm:pl-0">
+          <Link to="/apply" className="flex items-center gap-1 text-xs font-medium bg-amber-600 text-white px-3 py-1.5 rounded-lg hover:bg-amber-700 no-underline transition-colors">
+            {t.dashboard.newPortalCta} <ArrowRight className="w-3 h-3" />
+          </Link>
+          <a href="https://epos.enterprise.gov.ie" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-1 text-xs font-medium border border-amber-400 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 no-underline transition-colors">
+            {t.dashboard.newPortalOfficial} <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+      </div>
+
       {/* Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-1">
         <StatCard label={t.dashboard.permits2025} value={formatNumber(summary.totalPermits2025)} icon={TrendingUp} sub={t.dashboard.fullYear} color="bg-blue-50 text-blue-600" />
-        <StatCard label={t.dashboard.permits2026} value={formatNumber(summary.totalPermits2026)} icon={TrendingUp} sub={t.dashboard.janFebOnly} color="bg-emerald-50 text-emerald-600" />
+        <StatCard label={t.dashboard.permits2026} value={formatNumber(summary.totalPermits2026)} icon={TrendingUp} sub={`${rangeLabel} | ${growthStr} ${t.dashboard.vsSamePeriod}`} color="bg-emerald-50 text-emerald-600" />
         <StatCard label={t.dashboard.companies2025} value={formatNumber(summary.totalCompanies2025)} icon={Users} color="bg-amber-50 text-amber-500" />
         <StatCard label={t.dashboard.approvalRate} value={`${summary.approvalRate2025}%`} icon={ShieldCheck} sub="2025" color="bg-purple-50 text-purple-600" />
       </div>
+      <p className="text-xs text-gray-400 text-right mb-5">{t.dashboard.dataThrough} {MONTHS_FULL[n2026 - 1]} 2026</p>
 
       {/* Yearly Growth Chart */}
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">

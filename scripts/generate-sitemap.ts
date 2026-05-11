@@ -15,6 +15,7 @@ const STATIC_ROUTES = [
   { path: '/nationalities', priority: '0.8', changefreq: 'monthly' },
   { path: '/eligibility', priority: '0.9', changefreq: 'monthly' },
   { path: '/visa-guide', priority: '0.9', changefreq: 'monthly' },
+  { path: '/apply', priority: '0.9', changefreq: 'monthly' },
   { path: '/about', priority: '0.5', changefreq: 'yearly' },
 ];
 

@@ -17,3 +17,9 @@ export function shortenName(name: string, maxLen = 30): string {
 
 export const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 export const MONTHS_FULL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+export function monthRangeLabel(count: number): string {
+  if (count <= 0) return '';
+  if (count === 1) return MONTHS[0];
+  return `${MONTHS[0]}–${MONTHS[count - 1]}`;
+}
