@@ -208,7 +208,7 @@ export default function VisaGuide() {
       {/* Common Path for Brazilians */}
       <div className="bg-gradient-to-r from-green-50 to-yellow-50 border border-green-200 rounded-xl p-5 mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-2xl">🇧🇷</span>
+          <span className="text-2xl">{t.visaGuide.commonPathFlag}</span>
           <h2 className="text-lg font-bold text-gray-900">{t.visaGuide.commonPath}</h2>
         </div>
         <div className="flex flex-wrap items-center gap-2 text-sm">
