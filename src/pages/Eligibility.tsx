@@ -1,5 +1,20 @@
 import { useState, useMemo } from 'react';
-import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp, Ban } from 'lucide-react';
+
+const FILLED_QUOTAS = [
+  {
+    occupation: 'Car Mechanic / Motor Mechanic / Auto Electrician / Motor Vehicle Technician',
+    filledDate: 'March 19, 2026',
+    permits: 200,
+    note: 'Pending applications rejected. No new submissions accepted.',
+  },
+  {
+    occupation: 'Catering & Bar Manager / Hotel & Accommodation Manager / Restaurant Manager / Publican & Manager of Licensed Premises',
+    filledDate: 'April 28, 2026',
+    permits: 292,
+    note: 'Quota exhausted. No new applications accepted.',
+  },
+];
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 import Fuse from 'fuse.js';
@@ -206,6 +221,28 @@ export default function Eligibility() {
         </div>
       </div>
 
+      {/* Filled Quotas */}
+      <div className="bg-red-50 border border-red-200 rounded-xl p-5 mb-8">
+        <div className="flex items-center gap-2 mb-3">
+          <Ban className="w-5 h-5 text-red-600 shrink-0" />
+          <h2 className="text-lg font-semibold text-red-900">Quota Full — No New Applications (2026)</h2>
+        </div>
+        <div className="space-y-3">
+          {FILLED_QUOTAS.map((q, i) => (
+            <div key={i} className="bg-white border border-red-200 rounded-lg p-4">
+              <div className="flex items-start justify-between gap-2">
+                <p className="font-medium text-gray-900 text-sm">{q.occupation}</p>
+                <span className="shrink-0 text-xs font-bold bg-red-100 text-red-700 px-2 py-0.5 rounded-full">QUOTA FULL</span>
+              </div>
+              <p className="text-xs text-gray-500 mt-1">Filled {q.filledDate} · {q.permits} permits · {q.note}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-red-700 mt-3">
+          Source: <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/latest-updates/" target="_blank" rel="noopener noreferrer" className="underline">DETE Latest Updates</a>
+        </p>
+      </div>
+
       {/* Salary thresholds */}
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 mb-8">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">{t.eligibility.salaryTitle}</h2>
@@ -223,6 +260,7 @@ export default function Eligibility() {
             <div className="text-sm text-gray-600 mt-1">{t.eligibility.anyOccSalary}</div>
           </div>
         </div>
+        <p className="text-xs text-gray-400 mt-3">National Minimum Wage as of Jan 1, 2026: €14.15/hr · €28,696/yr. All permit applications must meet the higher thresholds above.</p>
       </div>
 
       {/* Full Lists */}
