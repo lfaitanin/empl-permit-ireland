@@ -1,5 +1,15 @@
 import { useState, useMemo } from 'react';
-import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp, Ban } from 'lucide-react';
+import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp, Ban, Briefcase } from 'lucide-react';
+
+const OTHER_PERMITS = [
+  { name: 'Dependent/Partner/Spouse Permit', desc: 'Allows spouses, civil partners and dependents of Critical Skills or Researcher permit holders to work freely in Ireland without a separate employment permit.' },
+  { name: 'Intra-Company Transfer Permit', desc: 'For senior management, key personnel or trainees being transferred from an overseas branch of a multinational to an Irish operation.' },
+  { name: 'Contract for Services Permit', desc: 'For non-EEA employees of a foreign company being temporarily assigned to carry out a contract for services in Ireland.' },
+  { name: 'Reactivation Permit', desc: 'For non-EEA nationals who previously held a valid permit but fell out of the system through no fault of their own, or experienced workplace exploitation.' },
+  { name: 'Internship Permit', desc: 'For non-EEA full-time students at international institutions studying Critical Skills-relevant disciplines who need Irish work experience.' },
+  { name: 'Sport & Cultural Permit', desc: 'For non-EEA nationals with relevant qualifications, skills or experience in the sporting or cultural sectors.' },
+  { name: 'Exchange Agreement Permit', desc: 'Facilitates employment under prescribed international bilateral agreements between Ireland and other countries.' },
+];
 
 const FILLED_QUOTAS = [
   {
@@ -116,6 +126,7 @@ export default function Eligibility() {
   const [search, setSearch] = useState('');
   const [showCriticalSkills, setShowCriticalSkills] = useState(false);
   const [showIneligible, setShowIneligible] = useState(false);
+  const [showOtherPermits, setShowOtherPermits] = useState(false);
 
   const allOccupations: SearchResult[] = useMemo(() => [
     ...CRITICAL_SKILLS.map(o => ({ ...o, category: 'critical_skills' as const })),
@@ -219,6 +230,36 @@ export default function Eligibility() {
             <li>{t.eligibility.gpDesc4}</li>
           </ul>
         </div>
+      </div>
+
+      {/* Other permit types */}
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden mb-8">
+        <button onClick={() => setShowOtherPermits(!showOtherPermits)}
+          className="flex items-center justify-between w-full p-5 text-left hover:bg-gray-50">
+          <div className="flex items-center gap-2">
+            <Briefcase className="w-5 h-5 text-gray-500" />
+            <h2 className="text-lg font-semibold text-gray-900">Other Permit Types (7)</h2>
+          </div>
+          {showOtherPermits ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+        </button>
+        {showOtherPermits && (
+          <div className="border-t border-gray-200 p-5 space-y-3">
+            {OTHER_PERMITS.map((p, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-gray-400 shrink-0 mt-2" />
+                <div>
+                  <p className="font-medium text-sm text-gray-900">{p.name}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+            <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/"
+              target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700 pt-1 no-underline">
+              <ExternalLink className="w-3 h-3" /> Full details on all permit types — DETE
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Filled Quotas */}

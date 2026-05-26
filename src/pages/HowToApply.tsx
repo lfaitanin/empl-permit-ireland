@@ -1,4 +1,4 @@
-import { ExternalLink, UserPlus, Users, PenLine, CreditCard, Eye, AlertTriangle, CheckCircle2, Smartphone } from 'lucide-react';
+import { ExternalLink, UserPlus, Users, PenLine, CreditCard, Eye, AlertTriangle, CheckCircle2, Smartphone, Clock } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 
@@ -74,6 +74,19 @@ const content = {
         { label: 'Trusted Partner Initiative removed', desc: 'All employers now use the same portal — no priority queue.' },
         { label: 'Real-time status tracking', desc: 'Know exactly where your application is at every stage.' },
         { label: 'Cloud-based infrastructure', desc: 'Designed for better reliability and faster processing.' },
+      ],
+    },
+    processing: {
+      heading: 'Current Processing Times',
+      asOf: 'As of May 26, 2026',
+      source: 'DETE Processing Dates',
+      note: 'Applications processed in date order of receipt. Dates shown are the latest applications currently being processed.',
+      rows: [
+        { type: 'Critical Skills (new)', date: 'May 11, 2026', lag: '~2 weeks', speed: 'fast' },
+        { type: 'Intra-Company Transfer (new)', date: 'Apr 22, 2026', lag: '~5 weeks', speed: 'medium' },
+        { type: 'General & other new applications', date: 'Mar 8, 2026', lag: '~12 weeks', speed: 'slow' },
+        { type: 'Renewals (all types)', date: 'Feb 28, 2026', lag: '~3 months', speed: 'slow' },
+        { type: 'Reviews / Appeals', date: 'Dec 9, 2025', lag: '~6 months', speed: 'very-slow' },
       ],
     },
     links: {
@@ -153,6 +166,19 @@ const content = {
         { label: 'Infraestrutura cloud', desc: 'Projetado para maior confiabilidade e processamento mais rápido.' },
       ],
     },
+    processing: {
+      heading: 'Tempo Atual de Processamento',
+      asOf: 'Em 26 de maio de 2026',
+      source: 'DETE — Datas de Processamento',
+      note: 'Aplicações processadas por ordem de recebimento. As datas mostradas são das últimas aplicações sendo processadas.',
+      rows: [
+        { type: 'Critical Skills (nova)', date: '11 mai 2026', lag: '~2 semanas', speed: 'fast' },
+        { type: 'Intra-Company Transfer (nova)', date: '22 abr 2026', lag: '~5 semanas', speed: 'medium' },
+        { type: 'General e outras novas aplicações', date: '8 mar 2026', lag: '~12 semanas', speed: 'slow' },
+        { type: 'Renovações (todos os tipos)', date: '28 fev 2026', lag: '~3 meses', speed: 'slow' },
+        { type: 'Revisões / Recursos', date: '9 dez 2025', lag: '~6 meses', speed: 'very-slow' },
+      ],
+    },
     links: {
       heading: 'Recursos oficiais',
       portal: 'Ir para o portal EPOS',
@@ -160,6 +186,13 @@ const content = {
       support: 'Suporte técnico: epos@enterprise.gov.ie',
     },
   },
+};
+
+const speedStyle: Record<string, string> = {
+  fast: 'bg-emerald-100 text-emerald-700',
+  medium: 'bg-blue-100 text-blue-700',
+  slow: 'bg-amber-100 text-amber-700',
+  'very-slow': 'bg-red-100 text-red-700',
 };
 
 const colorMap: Record<string, string> = {
@@ -238,6 +271,34 @@ export default function HowToApply() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Processing times */}
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-8">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5 text-gray-500" />
+            <h2 className="font-semibold text-gray-900">{c.processing.heading}</h2>
+          </div>
+          <span className="text-xs text-gray-400">{c.processing.asOf}</span>
+        </div>
+        <p className="text-xs text-gray-500 mb-3">{c.processing.note}</p>
+        <div className="space-y-2">
+          {c.processing.rows.map((row, i) => (
+            <div key={i} className="flex items-center justify-between gap-2 py-2 border-b border-gray-100 last:border-0">
+              <span className="text-sm text-gray-800">{row.type}</span>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs text-gray-500">{row.date}</span>
+                <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${speedStyle[row.speed]}`}>{row.lag}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/current-application-processing-dates/"
+          target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700 mt-3 no-underline">
+          <ExternalLink className="w-3 h-3" />{c.processing.source}
+        </a>
       </div>
 
       {/* MFA note */}
