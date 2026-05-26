@@ -98,4 +98,4 @@ export interface VisaStamp {
   examples: string[];
 }
 
-export type Lang = 'en' | 'pt';
+export type Lang = 'en' | 'pt' | 'hi' | 'tl' | 'zh' | 'es' | 'ur';

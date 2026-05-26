@@ -5,13 +5,13 @@ import { useSEO } from '../hooks/useSEO';
 
 interface StampInfo {
   stamp: string;
-  name: { en: string; pt: string };
-  description: { en: string; pt: string };
-  workRights: { en: string; pt: string };
+  name: Record<string, string>;
+  description: Record<string, string>;
+  workRights: Record<string, string>;
   duration: string;
   icon: typeof Briefcase;
   color: string;
-  examples: { en: string[]; pt: string[] };
+  examples: Record<string, string[]>;
 }
 
 const STAMPS: StampInfo[] = [
@@ -251,7 +251,7 @@ export default function VisaGuide() {
                       {s.stamp}
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-gray-700">{s.workRights[lang]}</td>
+                  <td className="px-4 py-3 text-gray-700">{s.workRights[lang] ?? s.workRights['en']}</td>
                   <td className="px-4 py-3 text-gray-500">{s.duration}</td>
                 </tr>
               );
@@ -279,9 +279,9 @@ export default function VisaGuide() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
                     <span className={`text-xs font-bold px-2 py-0.5 rounded ${colors.lightBg} ${colors.text}`}>{s.stamp}</span>
-                    <span className="font-semibold text-gray-900">{s.name[lang]}</span>
+                    <span className="font-semibold text-gray-900">{s.name[lang] ?? s.name['en']}</span>
                   </div>
-                  <p className="text-sm text-gray-500 mt-0.5">{s.description[lang]}</p>
+                  <p className="text-sm text-gray-500 mt-0.5">{s.description[lang] ?? s.description['en']}</p>
                 </div>
                 {isOpen ? <ChevronUp className="w-5 h-5 text-gray-400" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}
               </button>
@@ -290,7 +290,7 @@ export default function VisaGuide() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <h4 className="text-xs font-semibold text-gray-500 uppercase mb-1">{t.visaGuide.workRights}</h4>
-                      <p className="text-sm text-gray-800">{s.workRights[lang]}</p>
+                      <p className="text-sm text-gray-800">{s.workRights[lang] ?? s.workRights['en']}</p>
                     </div>
                     <div>
                       <h4 className="text-xs font-semibold text-gray-500 uppercase mb-1">{t.visaGuide.duration}</h4>
@@ -300,7 +300,7 @@ export default function VisaGuide() {
                   <div className="mt-3">
                     <h4 className="text-xs font-semibold text-gray-500 uppercase mb-1">{t.visaGuide.whoGets}</h4>
                     <ul className="text-sm text-gray-800 space-y-1">
-                      {s.examples[lang].map((ex, i) => (
+                      {(s.examples[lang] ?? s.examples['en']).map((ex, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <span className={`w-1.5 h-1.5 rounded-full ${colors.bg} mt-1.5 shrink-0`} />
                           {ex}
