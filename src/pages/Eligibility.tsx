@@ -11,25 +11,43 @@ const OTHER_PERMITS = [
   { name: 'Exchange Agreement Permit', desc: 'Facilitates employment under prescribed international bilateral agreements between Ireland and other countries.' },
 ];
 
-const FILLED_QUOTAS = [
+// Quotas filled then RENEWED May 29, 2026 — accepting applications again
+const RENEWED_QUOTAS = [
   {
     occupation: 'Car Mechanic / Motor Mechanic / Auto Electrician / Motor Vehicle Technician',
     filledDate: 'March 19, 2026',
-    permits: 200,
-    note: 'Pending applications rejected. No new submissions accepted.',
+    renewedDate: 'May 29, 2026',
+    note: 'Previously full. Quota renewed — applications accepted again.',
   },
   {
     occupation: 'Catering & Bar Manager / Hotel & Accommodation Manager / Restaurant Manager / Publican & Manager of Licensed Premises',
     filledDate: 'April 28, 2026',
-    permits: 292,
-    note: 'Quota exhausted. No new applications accepted.',
+    renewedDate: 'May 29, 2026',
+    note: 'Previously full. Quota renewed — applications accepted again.',
   },
+];
+
+// New General Employment Permit roles added May 29, 2026
+const GENERAL_PERMIT_NEW = [
+  // No quota
+  { title: 'Pharmaceutical Technician (Healthcare)', quota: false },
+  { title: 'Dental Hygienist', quota: false },
+  { title: 'Plastic Lining Technician', quota: false },
+  { title: 'Steel Fixer', quota: false },
+  { title: 'Fencing Operator / Erector', quota: false },
+  { title: 'Curtain Waller', quota: false },
+  { title: 'Printer', quota: false },
+  { title: 'Industrial Machine Knitter', quota: false },
+  { title: 'Concrete Pump Operator', quota: false },
+  // With new quota (open from 10 Jun 2026)
+  { title: 'Fish Filleter', quota: true },
+  { title: 'Seafood Operative', quota: true },
 ];
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 import Fuse from 'fuse.js';
 
-// Critical Skills Occupation List (SOC 2010) — updated March 2026
+// Critical Skills Occupation List (SOC 2010) — updated May 2026
 const CRITICAL_SKILLS: { title: string; socCode: string }[] = [
   { title: 'ICT Manager', socCode: '1136' },
   { title: 'Financial Manager', socCode: '1131' },
@@ -84,6 +102,13 @@ const CRITICAL_SKILLS: { title: string; socCode: string }[] = [
   { title: 'Quality Assurance Manager (Pharma / Medical Devices)', socCode: '1137' },
   { title: 'Validation Engineer (Pharma)', socCode: '2127' },
   { title: 'Supply Chain Manager', socCode: '1162' },
+  // Added May 29, 2026
+  { title: 'Agronomist', socCode: '2112' },
+  { title: 'Construction Planner / Scheduler', socCode: '2121' },
+  { title: 'Community Eye Care Professional', socCode: '2217' },
+  { title: 'Intellectual Property Professional / Patent Attorney', socCode: '2419' },
+  { title: 'Geospatial Surveyor / Land Surveyor / Geomatics Surveyor', socCode: '2434' },
+  { title: 'Rigger (Games Industry)', socCode: '2137' },
 ];
 
 // Ineligible Categories of Employment
@@ -127,10 +152,13 @@ export default function Eligibility() {
   const [showCriticalSkills, setShowCriticalSkills] = useState(false);
   const [showIneligible, setShowIneligible] = useState(false);
   const [showOtherPermits, setShowOtherPermits] = useState(false);
+  const [showNewGeneral, setShowNewGeneral] = useState(false);
+  const [showRenewed, setShowRenewed] = useState(false);
 
   const allOccupations: SearchResult[] = useMemo(() => [
     ...CRITICAL_SKILLS.map(o => ({ ...o, category: 'critical_skills' as const })),
     ...INELIGIBLE.map(o => ({ ...o, category: 'ineligible' as const })),
+    ...GENERAL_PERMIT_NEW.map(o => ({ title: o.title, socCode: '', category: 'general' as const })),
   ], []);
 
   const fuse = useMemo(() => new Fuse(allOccupations, {
@@ -262,26 +290,68 @@ export default function Eligibility() {
         )}
       </div>
 
-      {/* Filled Quotas */}
-      <div className="bg-red-50 border border-red-200 rounded-xl p-5 mb-8">
-        <div className="flex items-center gap-2 mb-3">
-          <Ban className="w-5 h-5 text-red-600 shrink-0" />
-          <h2 className="text-lg font-semibold text-red-900">Quota Full — No New Applications (2026)</h2>
-        </div>
-        <div className="space-y-3">
-          {FILLED_QUOTAS.map((q, i) => (
-            <div key={i} className="bg-white border border-red-200 rounded-lg p-4">
-              <div className="flex items-start justify-between gap-2">
-                <p className="font-medium text-gray-900 text-sm">{q.occupation}</p>
-                <span className="shrink-0 text-xs font-bold bg-red-100 text-red-700 px-2 py-0.5 rounded-full">QUOTA FULL</span>
-              </div>
-              <p className="text-xs text-gray-500 mt-1">Filled {q.filledDate} · {q.permits} permits · {q.note}</p>
+      {/* New General Permit Roles — May 2026 */}
+      <div className="bg-white rounded-xl border border-emerald-200 shadow-sm mb-6">
+        <button
+          onClick={() => setShowNewGeneral(!showNewGeneral)}
+          className="w-full flex items-center justify-between p-4 sm:p-5 text-left"
+        >
+          <div className="flex items-center gap-2">
+            <Briefcase className="w-5 h-5 text-emerald-600 shrink-0" />
+            <div>
+              <span className="font-semibold text-gray-900">New General Permit Roles — May 2026 </span>
+              <span className="text-xs font-normal text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full ml-1">{GENERAL_PERMIT_NEW.length} roles added</span>
             </div>
-          ))}
-        </div>
-        <p className="text-xs text-red-700 mt-3">
-          Source: <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/latest-updates/" target="_blank" rel="noopener noreferrer" className="underline">DETE Latest Updates</a>
-        </p>
+          </div>
+          {showNewGeneral ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+        </button>
+        {showNewGeneral && (
+          <div className="border-t border-emerald-100 px-4 sm:px-5 pb-4 pt-3 space-y-2">
+            <p className="text-xs text-gray-500 mb-3">These roles were added to General Employment Permit eligibility on <strong>May 29, 2026</strong>. Minimum salary: €34,000/year. Subject to Labour Market Needs Test.</p>
+            {GENERAL_PERMIT_NEW.map((r, i) => (
+              <div key={i} className="flex items-center justify-between py-1.5 border-b border-gray-100 last:border-0">
+                <span className="text-sm text-gray-800">{r.title}</span>
+                {r.quota
+                  ? <span className="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full shrink-0 ml-2">Quota · from 10 Jun 2026</span>
+                  : <span className="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full shrink-0 ml-2">No quota</span>
+                }
+              </div>
+            ))}
+            <p className="text-xs text-gray-400 mt-2">Source: <a href="https://enterprise.gov.ie/en/news-and-events/department-news/2026/may/20260528.html" target="_blank" rel="noopener noreferrer" className="underline">DETE — May 28, 2026</a></p>
+          </div>
+        )}
+      </div>
+
+      {/* Renewed Quotas */}
+      <div className="bg-white rounded-xl border border-amber-200 shadow-sm mb-8">
+        <button
+          onClick={() => setShowRenewed(!showRenewed)}
+          className="w-full flex items-center justify-between p-4 sm:p-5 text-left"
+        >
+          <div className="flex items-center gap-2">
+            <Ban className="w-5 h-5 text-amber-600 shrink-0" />
+            <div>
+              <span className="font-semibold text-gray-900">Previously Full — Quotas Renewed May 2026 </span>
+              <span className="text-xs font-normal text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full ml-1">accepting applications</span>
+            </div>
+          </div>
+          {showRenewed ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+        </button>
+        {showRenewed && (
+          <div className="border-t border-amber-100 px-4 sm:px-5 pb-4 pt-3 space-y-3">
+            <p className="text-xs text-gray-500 mb-3">These quotas were exhausted earlier in 2026 but were <strong>renewed on May 29, 2026</strong>. New applications are now accepted subject to Labour Market Needs Test.</p>
+            {RENEWED_QUOTAS.map((q, i) => (
+              <div key={i} className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="font-medium text-gray-900 text-sm">{q.occupation}</p>
+                  <span className="shrink-0 text-xs font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">RENEWED</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">Was full: {q.filledDate} · Renewed: {q.renewedDate} · {q.note}</p>
+              </div>
+            ))}
+            <p className="text-xs text-gray-400 mt-2">Source: <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/latest-updates/" target="_blank" rel="noopener noreferrer" className="underline">DETE Latest Updates</a></p>
+          </div>
+        )}
       </div>
 
       {/* Salary thresholds */}
