@@ -299,21 +299,21 @@ export default function Eligibility() {
           <div className="flex items-center gap-2">
             <Briefcase className="w-5 h-5 text-emerald-600 shrink-0" />
             <div>
-              <span className="font-semibold text-gray-900">New General Permit Roles — May 2026 </span>
-              <span className="text-xs font-normal text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full ml-1">{GENERAL_PERMIT_NEW.length} roles added</span>
+              <span className="font-semibold text-gray-900">{t.eligibility.newGeneralTitle} </span>
+              <span className="text-xs font-normal text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full ml-1">{GENERAL_PERMIT_NEW.length} {t.eligibility.newGeneralBadge}</span>
             </div>
           </div>
           {showNewGeneral ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
         </button>
         {showNewGeneral && (
           <div className="border-t border-emerald-100 px-4 sm:px-5 pb-4 pt-3 space-y-2">
-            <p className="text-xs text-gray-500 mb-3">These roles were added to General Employment Permit eligibility on <strong>May 29, 2026</strong>. Minimum salary: €34,000/year. Subject to Labour Market Needs Test.</p>
+            <p className="text-xs text-gray-500 mb-3">{t.eligibility.newGeneralDesc}</p>
             {GENERAL_PERMIT_NEW.map((r, i) => (
               <div key={i} className="flex items-center justify-between py-1.5 border-b border-gray-100 last:border-0">
                 <span className="text-sm text-gray-800">{r.title}</span>
                 {r.quota
-                  ? <span className="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full shrink-0 ml-2">Quota · from 10 Jun 2026</span>
-                  : <span className="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full shrink-0 ml-2">No quota</span>
+                  ? <span className="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full shrink-0 ml-2">{t.eligibility.quotaFrom}</span>
+                  : <span className="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full shrink-0 ml-2">{t.eligibility.noQuota}</span>
                 }
               </div>
             ))}
@@ -331,22 +331,22 @@ export default function Eligibility() {
           <div className="flex items-center gap-2">
             <Ban className="w-5 h-5 text-amber-600 shrink-0" />
             <div>
-              <span className="font-semibold text-gray-900">Previously Full — Quotas Renewed May 2026 </span>
-              <span className="text-xs font-normal text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full ml-1">accepting applications</span>
+              <span className="font-semibold text-gray-900">{t.eligibility.renewedTitle} </span>
+              <span className="text-xs font-normal text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full ml-1">{t.eligibility.renewedBadge}</span>
             </div>
           </div>
           {showRenewed ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
         </button>
         {showRenewed && (
           <div className="border-t border-amber-100 px-4 sm:px-5 pb-4 pt-3 space-y-3">
-            <p className="text-xs text-gray-500 mb-3">These quotas were exhausted earlier in 2026 but were <strong>renewed on May 29, 2026</strong>. New applications are now accepted subject to Labour Market Needs Test.</p>
+            <p className="text-xs text-gray-500 mb-3">{t.eligibility.renewedDesc}</p>
             {RENEWED_QUOTAS.map((q, i) => (
               <div key={i} className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                 <div className="flex items-start justify-between gap-2">
                   <p className="font-medium text-gray-900 text-sm">{q.occupation}</p>
-                  <span className="shrink-0 text-xs font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">RENEWED</span>
+                  <span className="shrink-0 text-xs font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">{t.eligibility.renewedLabel}</span>
                 </div>
-                <p className="text-xs text-gray-500 mt-1">Was full: {q.filledDate} · Renewed: {q.renewedDate} · {q.note}</p>
+                <p className="text-xs text-gray-500 mt-1">{t.eligibility.wasFull}: {q.filledDate} · {t.eligibility.renewedOn}: {q.renewedDate} · {q.note}</p>
               </div>
             ))}
             <p className="text-xs text-gray-400 mt-2">Source: <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/latest-updates/" target="_blank" rel="noopener noreferrer" className="underline">DETE Latest Updates</a></p>
