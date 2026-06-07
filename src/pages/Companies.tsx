@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, ExternalLink, ArrowUpDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, ExternalLink, ArrowUpDown, ChevronLeft, ChevronRight, SlidersHorizontal } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { getAllCompanies } from '../lib/data-loader';
 import { formatNumber } from '../lib/utils';
@@ -15,6 +15,59 @@ const PAGE_SIZE = 50;
 
 type SortKey = 'name' | 'total2022' | 'total2023' | 'total2024' | 'total2025' | 'total2026' | 'grandTotal' | 'yearsActive';
 type SortDir = 'asc' | 'desc';
+type SectorId = 'all' | 'it' | 'healthcare' | 'consulting' | 'pharma' | 'hospitality' | 'education';
+
+const SECTOR_FILTERS: { id: SectorId; label: string; emoji: string; nameKw: string[]; slugParts: string[] }[] = [
+  {
+    id: 'it', label: 'IT & Tech', emoji: '💻',
+    nameKw: ['software', 'technology', 'technologies', 'digital', 'cloud', 'cyber', 'analytics', 'computing', 'saas', 'fintech', 'networks', 'systems ltd', 'systems limited', 'solutions ltd', 'solutions limited', 'data services', 'it services'],
+    slugParts: ['google', 'amazon-development', 'amazon-web', 'microsoft', 'apple-distribution', 'meta-platforms', 'linkedin', 'facebook', 'twitter', 'accenture', 'tata-consultancy', 'ibm-', 'oracle-', 'salesforce', 'workday', 'hubspot', 'stripe', 'zendesk', 'intel-', 'ericsson', 'huawei', 'intercom', 'airbnb', 'shopify', 'databricks', 'snowflake', 'servicenow', 'sap-', 'infosys', 'wipro', 'hcl-', 'cognizant', 'capgemini', 'dxc', 'fujitsu', 'vmware', 'cisco', 'indeed-', 'gitlab', 'atlassian', 'ringcentral', 'qualtrics', 'klaviyo', 'twilio', 'datadog', 'box-ireland', 'dropbox', 'docusign', 'zendesk', 'sprinklr', 'medallia', 'wix-', 'palo-alto', 'fortinet'],
+  },
+  {
+    id: 'healthcare', label: 'Healthcare', emoji: '🏥',
+    nameKw: ['hospital', 'hospice', 'healthcare', 'health care', 'nursing home', 'homecare', 'home care', 'care facility', 'care services', 'disability', 'physiotherapy', 'clinic', 'rehabilitation', 'dental'],
+    slugParts: ['hse-', 'health-service-executive', 'redwood-extended', 'mowlam', 'caredoc', 'beacon-hospital', 'bon-secours', 'mercy-university', 'st-james', 'beaumont-hospital', 'university-hospital', 'childrens-health', 'national-childrens', 'cork-university-hospital', 'st-vincents', 'mater-', 'tallaght-university'],
+  },
+  {
+    id: 'consulting', label: 'Finance & Consulting', emoji: '💰',
+    nameKw: ['bank', 'banking', 'financial services', 'capital markets', 'investment', 'insurance', ' consulting', 'consultants', 'advisory', 'advisors', 'audit', 'accountants', 'accountancy', 'asset management', 'wealth management'],
+    slugParts: ['ernst-young', 'deloitte', 'kpmg', 'pwc', 'pricewaterhousecoopers', 'mazars', 'grant-thornton', 'bdo-', 'marsh-', 'aon-', 'willis-', 'citibank', 'bank-of-ireland', 'allied-irish', 'permanent-tsb', 'ulster-bank', 'ing-bank', 'bnp-paribas', 'societe-generale', 'deutsche-bank', 'jp-morgan', 'goldman-sachs', 'morgan-stanley', 'merrill-lynch', 'barclays', 'hsbc-', 'northern-trust', 'state-street', 'blackrock', 'fidelity'],
+  },
+  {
+    id: 'pharma', label: 'Pharma & Biotech', emoji: '💊',
+    nameKw: ['pharma', 'pharmaceutical', 'biotech', 'biologics', 'therapeutics', 'life sciences', 'medtech', 'biopharma', 'biosciences', 'biopharmaceutical'],
+    slugParts: ['pfizer', 'johnson-johnson', 'roche-', 'novartis', 'lilly-', 'abbvie', 'bristol-myers', 'astrazeneca', 'merck-', 'biogen', 'amgen', 'regeneron', 'gilead', 'mylan', 'allergan', 'alkermes', 'prothena', 'icon-plc', 'parexel', 'iqvia', 'wuxi-biologics', 'lonza', 'quintiles'],
+  },
+  {
+    id: 'hospitality', label: 'Hospitality & Food', emoji: '🍽️',
+    nameKw: ['hotel', 'restaurant', 'hospitality', 'catering', 'meat processing', 'meats', 'food company', 'food group', 'beverage', 'pub group', 'cuisine', 'bakery'],
+    slugParts: ['dawn-meats', 'kepak', 'liffey-meats', 'moyvalley-meats', 'keelings', 'dairygold', 'kerry-group', 'glanbia', 'arrabawn', 'lakeland-dairies', 'dunnes-stores', 'supervalu', 'centra-', 'spar-ireland'],
+  },
+  {
+    id: 'education', label: 'Education', emoji: '🎓',
+    nameKw: ['university', 'university college', 'college of', 'institute of technology', 'technological university', 'school of', 'education board', 'training centre', 'etb '],
+    slugParts: ['university-of-', 'national-university', 'dublin-city-university', 'trinity-college', 'ucd-', 'tcd-', 'dcu-', 'rcsi-', 'royal-college-of-surgeons', 'university-limerick', 'university-galway', 'maynooth-university', 'athlone-institute'],
+  },
+];
+
+function inferSector(name: string, slug: string): SectorId | null {
+  const nl = name.toLowerCase();
+  const sl = slug.toLowerCase();
+  for (const s of SECTOR_FILTERS) {
+    if (s.id === 'all') continue;
+    if (s.slugParts.some(p => sl.includes(p))) return s.id;
+    if (s.nameKw.some(kw => nl.includes(kw))) return s.id;
+  }
+  return null;
+}
+
+const MIN_PERMIT_OPTIONS = [
+  { label: 'Any', value: 0 },
+  { label: '5+', value: 5 },
+  { label: '20+', value: 20 },
+  { label: '50+', value: 50 },
+  { label: '100+', value: 100 },
+];
 
 export default function Companies() {
   const { t } = useLang();
@@ -28,12 +81,26 @@ export default function Companies() {
   const [sortKey, setSortKey] = useState<SortKey>('grandTotal');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
   const [yearFilter, setYearFilter] = useState<'all' | '2022' | '2023' | '2024' | '2025' | '2026'>('all');
+  const [sectorFilter, setSectorFilter] = useState<SectorId>('all');
+  const [active2026, setActive2026] = useState(false);
+  const [minPermits, setMinPermits] = useState(0);
+
+  const reset = () => { setSectorFilter('all'); setActive2026(false); setMinPermits(0); setYearFilter('all'); setPage(0); };
 
   const filtered = useMemo(() => {
     let list = search ? fuse.search(search).map(r => r.item) : allCompanies;
     if (yearFilter !== 'all') {
       const key = `total${yearFilter}` as keyof typeof list[0];
       list = list.filter(c => (c[key] as number) > 0);
+    }
+    if (sectorFilter !== 'all') {
+      list = list.filter(c => inferSector(c.name, c.slug) === sectorFilter);
+    }
+    if (active2026) {
+      list = list.filter(c => c.total2026 > 0);
+    }
+    if (minPermits > 0) {
+      list = list.filter(c => c.grandTotal >= minPermits);
     }
     list = [...list].sort((a, b) => {
       const av = a[sortKey as keyof typeof a] as number | string;
@@ -42,7 +109,7 @@ export default function Companies() {
       return sortDir === 'asc' ? (av as number) - (bv as number) : (bv as number) - (av as number);
     });
     return list;
-  }, [search, sortKey, sortDir, yearFilter]);
+  }, [search, sortKey, sortDir, yearFilter, sectorFilter, active2026, minPermits]);
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const pageData = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
@@ -64,7 +131,8 @@ export default function Companies() {
       <h1 className="text-3xl font-bold text-gray-900 mb-2">{t.companies.title}</h1>
       <p className="text-gray-500 mb-6">{formatNumber(allCompanies.length)} {t.companies.subtitle}</p>
 
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
+      {/* Search + year */}
+      <div className="flex flex-col sm:flex-row gap-3 mb-3">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
@@ -82,6 +150,60 @@ export default function Companies() {
           <option value="2025">2025</option>
           <option value="2026">2026</option>
         </select>
+      </div>
+
+      {/* Sector chips */}
+      <div className="flex flex-wrap gap-2 mb-3">
+        <button
+          onClick={() => { setSectorFilter('all'); setPage(0); }}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${sectorFilter === 'all' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'}`}
+        >
+          <SlidersHorizontal className="w-3 h-3" /> All sectors
+        </button>
+        {SECTOR_FILTERS.map(s => (
+          <button
+            key={s.id}
+            onClick={() => { setSectorFilter(s.id); setPage(0); }}
+            className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${sectorFilter === s.id ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400 hover:text-blue-600'}`}
+          >
+            {s.emoji} {s.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Extra filters row */}
+      <div className="flex flex-wrap items-center gap-3 mb-5">
+        {/* Active in 2026 */}
+        <label className="flex items-center gap-2 text-xs font-medium text-gray-700 cursor-pointer select-none">
+          <div
+            onClick={() => { setActive2026(!active2026); setPage(0); }}
+            className={`w-8 h-4 rounded-full transition-colors relative cursor-pointer ${active2026 ? 'bg-emerald-500' : 'bg-gray-300'}`}
+          >
+            <div className={`absolute top-0.5 w-3 h-3 bg-white rounded-full shadow transition-transform ${active2026 ? 'translate-x-4' : 'translate-x-0.5'}`} />
+          </div>
+          Active in 2026
+        </label>
+
+        {/* Min permits */}
+        <div className="flex items-center gap-1.5 text-xs text-gray-600">
+          <span className="font-medium">Min permits:</span>
+          {MIN_PERMIT_OPTIONS.map(opt => (
+            <button
+              key={opt.value}
+              onClick={() => { setMinPermits(opt.value); setPage(0); }}
+              className={`px-2 py-1 rounded border text-xs transition-colors ${minPermits === opt.value ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-300 hover:border-blue-400'}`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Reset */}
+        {(sectorFilter !== 'all' || active2026 || minPermits > 0 || yearFilter !== 'all') && (
+          <button onClick={reset} className="text-xs text-red-500 hover:text-red-700 underline ml-auto">
+            Clear filters
+          </button>
+        )}
       </div>
 
       <div className="text-sm text-gray-500 mb-3">{formatNumber(filtered.length)} {t.companies.found}</div>
