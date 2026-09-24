@@ -81,10 +81,11 @@ export default function Header() {
               href="https://buymeacoffee.com/lfaitanin"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold no-underline transition-opacity hover:opacity-90"
+              title="Buy me a coffee"
+              className="hidden sm:inline-flex items-center justify-center w-8 h-8 rounded-lg text-sm no-underline transition-opacity hover:opacity-90 shrink-0"
               style={{ backgroundColor: '#FFDD00', color: '#000' }}
             >
-              ☕ <span className="hidden lg:inline">Buy me a coffee</span>
+              ☕
             </a>
 
             {/* Language dropdown */}
