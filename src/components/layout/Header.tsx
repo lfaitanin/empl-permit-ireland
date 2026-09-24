@@ -75,6 +75,17 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
+            {/* Buy me a coffee */}
+            <a
+              href="https://buymeacoffee.com/lfaitanin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold no-underline transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#FFDD00', color: '#000' }}
+            >
+              ☕ <span className="hidden lg:inline">Buy me a coffee</span>
+            </a>
+
             {/* Language dropdown */}
             <div className="relative" ref={langRef}>
               <button
@@ -129,6 +140,15 @@ export default function Header() {
                 );
               })}
             </div>
+            <a
+              href="https://buymeacoffee.com/lfaitanin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 mt-1.5 px-3 py-2.5 rounded-lg text-sm font-semibold no-underline transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#FFDD00', color: '#000' }}
+            >
+              ☕ Buy me a coffee
+            </a>
           </nav>
         )}
       </div>
