@@ -12,6 +12,7 @@ const LANG_OPTIONS: { code: Lang; native: string; label: string }[] = [
   { code: 'zh', native: '中文', label: '中' },
   { code: 'es', native: 'Español', label: 'ES' },
   { code: 'ur', native: 'اردو', label: 'UR' },
+  { code: 'mn', native: 'Монгол', label: 'MN' },
 ];
 
 export default function Header() {

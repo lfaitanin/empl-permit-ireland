@@ -27,6 +27,17 @@ const RENEWED_QUOTAS = [
   },
 ];
 
+// Quotas nearing exhaustion — check before applying
+const QUOTA_WATCH = [
+  {
+    occupation: 'Meat Processing Operative',
+    quota: 1000,
+    openedDate: 'June 10, 2026',
+    statusDate: 'August 26, 2026',
+    note: 'Quota almost filled. Do not submit new applications at this time.',
+  },
+];
+
 // New General Employment Permit roles added May 29, 2026
 const GENERAL_PERMIT_NEW = [
   // No quota
@@ -154,6 +165,7 @@ export default function Eligibility() {
   const [showOtherPermits, setShowOtherPermits] = useState(false);
   const [showNewGeneral, setShowNewGeneral] = useState(false);
   const [showRenewed, setShowRenewed] = useState(false);
+  const [showQuotaWatch, setShowQuotaWatch] = useState(false);
 
   const allOccupations: SearchResult[] = useMemo(() => [
     ...CRITICAL_SKILLS.map(o => ({ ...o, category: 'critical_skills' as const })),
@@ -318,6 +330,38 @@ export default function Eligibility() {
               </div>
             ))}
             <p className="text-xs text-gray-400 mt-2">Source: <a href="https://enterprise.gov.ie/en/news-and-events/department-news/2026/may/20260528.html" target="_blank" rel="noopener noreferrer" className="underline">DETE — May 28, 2026</a></p>
+          </div>
+        )}
+      </div>
+
+      {/* Quota Watch — nearing exhaustion */}
+      <div className="bg-white rounded-xl border border-red-200 shadow-sm mb-6">
+        <button
+          onClick={() => setShowQuotaWatch(!showQuotaWatch)}
+          className="w-full flex items-center justify-between p-4 sm:p-5 text-left"
+        >
+          <div className="flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
+            <div>
+              <span className="font-semibold text-gray-900">{t.eligibility.quotaWatchTitle} </span>
+              <span className="text-xs font-normal text-red-700 bg-red-100 px-2 py-0.5 rounded-full ml-1">{t.eligibility.quotaWatchBadge}</span>
+            </div>
+          </div>
+          {showQuotaWatch ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+        </button>
+        {showQuotaWatch && (
+          <div className="border-t border-red-100 px-4 sm:px-5 pb-4 pt-3 space-y-3">
+            <p className="text-xs text-gray-500 mb-3">{t.eligibility.quotaWatchDesc}</p>
+            {QUOTA_WATCH.map((q, i) => (
+              <div key={i} className="bg-red-50 border border-red-200 rounded-lg p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="font-medium text-gray-900 text-sm">{q.occupation}</p>
+                  <span className="shrink-0 text-xs font-bold bg-red-100 text-red-700 px-2 py-0.5 rounded-full">{t.eligibility.quotaWatchBadge}</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">{t.eligibility.quotaOpened}: {q.openedDate} · {t.eligibility.quotaAsOf}: {q.statusDate} ({q.quota.toLocaleString()} {t.eligibility.permitsWord}) · {q.note}</p>
+              </div>
+            ))}
+            <p className="text-xs text-gray-400 mt-2">Source: <a href="https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/latest-updates/" target="_blank" rel="noopener noreferrer" className="underline">DETE Latest Updates</a></p>
           </div>
         )}
       </div>

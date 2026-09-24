@@ -18,7 +18,7 @@ const LangContext = createContext<LangContextValue>({
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(() => {
     const stored = localStorage.getItem('lang');
-    const valid: Lang[] = ['en', 'pt', 'hi', 'tl', 'zh', 'es', 'ur'];
+    const valid: Lang[] = ['en', 'pt', 'hi', 'tl', 'zh', 'es', 'ur', 'mn'];
     return valid.includes(stored as Lang) ? (stored as Lang) : 'en';
   });
 
