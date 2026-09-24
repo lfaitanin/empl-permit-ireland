@@ -7,6 +7,7 @@ import { formatNumber } from '../lib/utils';
 import { googleJobsUrl, linkedInUrl } from '../lib/url-builders';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
+import AdSlot from '../components/ads/AdSlot';
 
 const allCompanies = getAllCompanies();
 const fuse = new Fuse(allCompanies, { keys: ['name'], threshold: 0.3 });
@@ -207,6 +208,8 @@ export default function Companies() {
       </div>
 
       <div className="text-sm text-gray-500 mb-3">{formatNumber(filtered.length)} {t.companies.found}</div>
+
+      <AdSlot slot="0000000001" className="mb-4" />
 
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-x-auto">
         <table className="w-full text-sm">

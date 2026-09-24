@@ -17,6 +17,7 @@ const STATIC_ROUTES = [
   { path: '/visa-guide', priority: '0.9', changefreq: 'monthly' },
   { path: '/apply', priority: '0.9', changefreq: 'monthly' },
   { path: '/about', priority: '0.5', changefreq: 'yearly' },
+  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
 ];
 
 // Load top companies from 2025 data (highest traffic)

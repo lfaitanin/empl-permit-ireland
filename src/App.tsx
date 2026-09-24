@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import PageLayout from './components/layout/PageLayout';
 import { LangProvider } from './i18n/LangContext';
+import AdSenseScript from './components/ads/AdSenseScript';
 
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Companies = lazy(() => import('./pages/Companies'));
@@ -13,6 +14,7 @@ const Eligibility = lazy(() => import('./pages/Eligibility'));
 const VisaGuide = lazy(() => import('./pages/VisaGuide'));
 const HowToApply = lazy(() => import('./pages/HowToApply'));
 const About = lazy(() => import('./pages/About'));
+const Privacy = lazy(() => import('./pages/Privacy'));
 
 function Loading() {
   return (
@@ -25,6 +27,7 @@ function Loading() {
 export default function App() {
   return (
     <LangProvider>
+      <AdSenseScript />
       <BrowserRouter>
         <Suspense fallback={<Loading />}>
           <Routes>
@@ -39,6 +42,7 @@ export default function App() {
               <Route path="/visa-guide" element={<VisaGuide />} />
               <Route path="/apply" element={<HowToApply />} />
               <Route path="/about" element={<About />} />
+              <Route path="/privacy" element={<Privacy />} />
             </Route>
           </Routes>
         </Suspense>

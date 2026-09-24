@@ -27,6 +27,11 @@ export default function Footer() {
         <p className="text-gray-500">
           This is an independent project. Not affiliated with the Irish Government.
         </p>
+        <p>
+          <a href="/privacy" className="text-gray-400 hover:text-gray-300 underline text-xs">
+            Privacy Policy
+          </a>
+        </p>
       </div>
     </footer>
   );

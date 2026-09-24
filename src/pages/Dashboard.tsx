@@ -5,6 +5,7 @@ import { summary } from '../lib/data-loader';
 import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
+import AdSlot from '../components/ads/AdSlot';
 
 const YEAR_COLORS: Record<number, string> = { 2022: '#94a3b8', 2023: '#f59e0b', 2024: '#8b5cf6', 2025: '#2563eb', 2026: '#10b981' };
 
@@ -118,6 +119,8 @@ export default function Dashboard() {
           </LineChart>
         </ResponsiveContainer>
       </div>
+
+      <AdSlot slot="0000000000" className="mb-6" />
 
       <div className="grid lg:grid-cols-2 gap-6 mb-6">
         {/* Top Companies */}
