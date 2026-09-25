@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ExternalLink, ChevronDown, ChevronUp, Briefcase, GraduationCap, Users, Clock, FileCheck } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
+import AffiliateResources from '../components/AffiliateResources';
 
 interface StampInfo {
   stamp: string;
@@ -314,6 +315,8 @@ export default function VisaGuide() {
           );
         })}
       </div>
+
+      <AffiliateResources className="mb-8" />
 
       {/* External links */}
       <div className="bg-gray-50 rounded-xl border border-gray-200 p-5">

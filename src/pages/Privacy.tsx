@@ -90,6 +90,16 @@ export default function Privacy() {
         </section>
 
         <section>
+          <h2 className="text-lg font-semibold text-gray-900 mb-2">Affiliate links</h2>
+          <p>
+            Some links to third-party services (for example banking or online courses) are affiliate
+            or referral links. If you sign up through them, we may earn a small commission at no extra
+            cost to you. These links are marked as sponsored, and we do not share any of your data
+            with those providers — they only see that you arrived from this site.
+          </p>
+        </section>
+
+        <section>
           <h2 className="text-lg font-semibold text-gray-900 mb-2">Contact</h2>
           <p>
             Questions about this policy can be sent via the contact details on the{' '}

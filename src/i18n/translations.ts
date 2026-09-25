@@ -202,6 +202,13 @@ export const translations = {
       linkCitizensInfo: 'Citizens Information — Employment Permits Overview',
     },
     // Common
+    affiliates: {
+      title: 'Moving to Ireland? Useful services',
+      subtitle: 'Services that help with the practical side of relocating.',
+      banking: 'Banking & money transfer',
+      courses: 'Online courses & certifications',
+      disclosure: 'Some of these are affiliate links: we may earn a small commission at no extra cost to you. It helps keep this site free.',
+    },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (Jan–Apr)'],
       yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (Jan–Apr)' },
@@ -398,6 +405,13 @@ export const translations = {
       linkStamps: 'Irish Immigration — Stamps de Permissao de Imigracao',
       linkIRP: 'Irish Immigration — Registrar Sua Permissao (IRP)',
       linkCitizensInfo: 'Citizens Information — Visao Geral de Employment Permits',
+    },
+    affiliates: {
+      title: 'Vai se mudar para a Irlanda? Serviços úteis',
+      subtitle: 'Serviços que ajudam na parte prática da mudança.',
+      banking: 'Banco e transferências',
+      courses: 'Cursos online e certificações',
+      disclosure: 'Alguns destes são links de afiliado: podemos receber uma pequena comissão, sem custo extra para você. Isso ajuda a manter o site gratuito.',
     },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (Jan–Apr)'],
@@ -596,6 +610,13 @@ export const translations = {
       linkIRP: 'Irish Immigration — अपनी परमिशन रजिस्टर करें (IRP)',
       linkCitizensInfo: 'Citizens Information — रोज़गार परमिट अवलोकन',
     },
+    affiliates: {
+      title: 'आयरलैंड जा रहे हैं? उपयोगी सेवाएं',
+      subtitle: 'ऐसी सेवाएं जो स्थानांतरण के व्यावहारिक पहलू में मदद करती हैं।',
+      banking: 'बैंकिंग और मनी ट्रांसफर',
+      courses: 'ऑनलाइन कोर्स और प्रमाणन',
+      disclosure: 'इनमें से कुछ एफिलिएट लिंक हैं: हमें आपके लिए बिना किसी अतिरिक्त लागत के छोटा कमीशन मिल सकता है। इससे यह साइट मुफ्त रहती है।',
+    },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (जन–अप्र)'],
       yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (जन–अप्र)' },
@@ -792,6 +813,13 @@ export const translations = {
       linkStamps: 'Irish Immigration — Mga Stamp ng Pahintulot sa Immigration',
       linkIRP: 'Irish Immigration — Irehistro ang Iyong Pahintulot (IRP)',
       linkCitizensInfo: 'Citizens Information — Pangkalahatang-ideya ng Employment Permit',
+    },
+    affiliates: {
+      title: 'Lilipat sa Ireland? Mga kapaki-pakinabang na serbisyo',
+      subtitle: 'Mga serbisyong tumutulong sa praktikal na bahagi ng paglipat.',
+      banking: 'Banking at pagpapadala ng pera',
+      courses: 'Mga online na kurso at sertipikasyon',
+      disclosure: 'Ang ilan dito ay affiliate links: maaari kaming makatanggap ng maliit na komisyon nang walang dagdag na gastos sa iyo. Nakakatulong ito para manatiling libre ang site.',
     },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (Ene–Abr)'],
@@ -990,6 +1018,13 @@ export const translations = {
       linkIRP: '爱尔兰移民局 — 注册您的许可（IRP）',
       linkCitizensInfo: '公民信息 — 就业许可证概述',
     },
+    affiliates: {
+      title: '准备搬到爱尔兰？实用服务',
+      subtitle: '帮助您处理搬迁实际事务的服务。',
+      banking: '银行与汇款',
+      courses: '在线课程与认证',
+      disclosure: '其中部分为推广链接：我们可能获得少量佣金，您无需支付任何额外费用。这有助于本网站保持免费。',
+    },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026（1–4月）'],
       yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026（1–4月）' },
@@ -1186,6 +1221,13 @@ export const translations = {
       linkStamps: 'Irish Immigration — Stamps de Permiso de Inmigración',
       linkIRP: 'Irish Immigration — Registra Tu Permiso (IRP)',
       linkCitizensInfo: 'Citizens Information — Descripción General de Permisos de Empleo',
+    },
+    affiliates: {
+      title: '¿Te mudas a Irlanda? Servicios útiles',
+      subtitle: 'Servicios que ayudan con la parte práctica de la mudanza.',
+      banking: 'Banca y transferencias',
+      courses: 'Cursos online y certificaciones',
+      disclosure: 'Algunos son enlaces de afiliado: podemos recibir una pequeña comisión sin costo extra para ti. Esto ayuda a mantener el sitio gratuito.',
     },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (Ene–Abr)'],
@@ -1384,6 +1426,13 @@ export const translations = {
       linkIRP: 'Irish Immigration — اپنی اجازت رجسٹر کریں (IRP)',
       linkCitizensInfo: 'Citizens Information — ملازمت اجازت ناموں کا جائزہ',
     },
+    affiliates: {
+      title: 'آئرلینڈ منتقل ہو رہے ہیں؟ مفید خدمات',
+      subtitle: 'ایسی خدمات جو منتقلی کے عملی پہلو میں مدد کرتی ہیں۔',
+      banking: 'بینکنگ اور رقم کی منتقلی',
+      courses: 'آن لائن کورسز اور سرٹیفیکیشن',
+      disclosure: 'ان میں سے کچھ ایفیلیئٹ لنکس ہیں: ہمیں آپ پر کسی اضافی لاگت کے بغیر معمولی کمیشن مل سکتا ہے۔ اس سے یہ سائٹ مفت رہتی ہے۔',
+    },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (جن–اپر)'],
       yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (جن–اپر)' },
@@ -1581,6 +1630,13 @@ export const translations = {
       linkIRP: 'Irish Immigration — Зөвшөөрлөө бүртгүүлэх (IRP)',
       linkCitizensInfo: 'Citizens Information — Хөдөлмөрийн зөвшөөрлийн тойм',
     },
+    affiliates: {
+      title: 'Ирланд руу нүүх гэж байна уу? Хэрэгтэй үйлчилгээнүүд',
+      subtitle: 'Нүүлгэн шилжилтийн практик асуудалд туслах үйлчилгээнүүд.',
+      banking: 'Банк ба мөнгөн гуйвуулга',
+      courses: 'Онлайн сургалт ба гэрчилгээ',
+      disclosure: 'Эдгээрийн зарим нь түншлэлийн холбоос: танд нэмэлт зардалгүйгээр бид бага хэмжээний шимтгэл авч магадгүй. Энэ нь сайтыг үнэгүй байлгахад тусалдаг.',
+    },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (1–4 сар)'],
       yearLabels: { 2022: '2022', 2023: '2023', 2024: '2024', 2025: '2025', 2026: '2026 (1–4 сар)' },
@@ -1777,6 +1833,13 @@ export const translations = {
       linkStamps: 'Irish Immigration — ইমিগ্রেশন পারমিশন স্ট্যাম্প',
       linkIRP: 'Irish Immigration — আপনার পারমিশন নিবন্ধন করুন (IRP)',
       linkCitizensInfo: 'Citizens Information — কর্মসংস্থান পারমিট ওভারভিউ',
+    },
+    affiliates: {
+      title: 'আয়ারল্যান্ডে যাচ্ছেন? দরকারি সেবা',
+      subtitle: 'স্থানান্তরের ব্যবহারিক দিকগুলোতে সাহায্যকারী সেবা।',
+      banking: 'ব্যাংকিং ও টাকা পাঠানো',
+      courses: 'অনলাইন কোর্স ও সার্টিফিকেশন',
+      disclosure: 'এর কিছু অ্যাফিলিয়েট লিংক: আপনার কোনো অতিরিক্ত খরচ ছাড়াই আমরা সামান্য কমিশন পেতে পারি। এতে সাইটটি বিনামূল্যে রাখা সম্ভব হয়।',
     },
     common: {
       years: ['2022', '2023', '2024', '2025', '2026 (জান–এপ্রিল)'],

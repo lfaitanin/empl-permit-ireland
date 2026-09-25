@@ -1,6 +1,7 @@
 import { ExternalLink, UserPlus, Users, PenLine, CreditCard, Eye, AlertTriangle, CheckCircle2, Smartphone, Clock } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
+import AffiliateResources from '../components/AffiliateResources';
 
 const EPOS_URL = 'https://epos.enterprise.gov.ie';
 const EPOS_INFO_URL = 'https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/latest-updates/new-eps/new-employment-permits-system.html';
@@ -940,6 +941,8 @@ export default function HowToApply() {
             : 'Você precisará do seu celular para completar o cadastro — MFA é obrigatório para todas as contas do portal.'}
         </p>
       </div>
+
+      <AffiliateResources className="mb-8" />
 
       {/* Official links */}
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5">
