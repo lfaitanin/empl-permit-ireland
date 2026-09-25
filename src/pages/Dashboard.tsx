@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
+import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, Cell } from 'recharts';
 import { Building2, Factory, MapPin, TrendingUp, Users, ShieldCheck, ListPlus, ExternalLink, ArrowRight } from 'lucide-react';
 import { summary } from '../lib/data-loader';
 import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel } from '../lib/utils';
@@ -99,7 +99,7 @@ export default function Dashboard() {
             <Tooltip formatter={(v: unknown) => formatNumber(Number(v))} />
             <Bar dataKey="permits" name="Permits" radius={[4,4,0,0]}>
               {yearlyData.map((entry) => (
-                <rect key={entry.year} fill={YEAR_COLORS[Number(entry.year)] || '#2563eb'} />
+                <Cell key={entry.year} fill={YEAR_COLORS[Number(entry.year)] || '#2563eb'} />
               ))}
             </Bar>
           </BarChart>

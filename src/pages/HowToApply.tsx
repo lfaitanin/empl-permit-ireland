@@ -90,6 +90,7 @@ const content = {
         { type: 'Reviews / Appeals', date: 'Dec 9, 2025', lag: '~6 months', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'You will need your mobile phone to complete registration — MFA is mandatory for all portal accounts.',
     links: {
       heading: 'Official resources',
       portal: 'Go to EPOS portal',
@@ -180,6 +181,7 @@ const content = {
         { type: 'Revisões / Recursos', date: '9 dez 2025', lag: '~6 meses', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'Você precisará do seu celular para completar o cadastro — MFA é obrigatório para todas as contas do portal.',
     links: {
       heading: 'Recursos oficiais',
       portal: 'Ir para o portal EPOS',
@@ -270,6 +272,7 @@ const content = {
         { type: 'समीक्षा / अपील', date: '9 दिसंबर 2025', lag: '~6 महीने', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'पंजीकरण पूरा करने के लिए आपको अपने मोबाइल फोन की आवश्यकता होगी — सभी पोर्टल अकाउंट के लिए MFA अनिवार्य है।',
     links: {
       heading: 'आधिकारिक संसाधन',
       portal: 'EPOS पोर्टल पर जाएं',
@@ -360,6 +363,7 @@ const content = {
         { type: 'Mga Review / Appeal', date: 'Dis 9, 2025', lag: '~6 buwan', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'Kakailanganin mo ang iyong mobile phone para makumpleto ang pagpaparehistro — sapilitan ang MFA para sa lahat ng portal account.',
     links: {
       heading: 'Mga opisyal na mapagkukunan',
       portal: 'Pumunta sa EPOS portal',
@@ -450,6 +454,7 @@ const content = {
         { type: '审查/上诉', date: '2025年12月9日', lag: '约6个月', speed: 'very-slow' },
       ],
     },
+    mfaNote: '完成注册需要使用您的手机——所有门户账户都必须启用多因素认证（MFA）。',
     links: {
       heading: '官方资源',
       portal: '前往EPOS门户',
@@ -540,6 +545,7 @@ const content = {
         { type: 'Revisiones / Apelaciones', date: '9 dic 2025', lag: '~6 meses', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'Necesitarás tu teléfono móvil para completar el registro — el MFA es obligatorio para todas las cuentas del portal.',
     links: {
       heading: 'Recursos oficiales',
       portal: 'Ir al portal EPOS',
@@ -630,6 +636,7 @@ const content = {
         { type: 'نظرثانی / اپیلیں', date: '9 دسمبر 2025', lag: '~6 ماہ', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'رجسٹریشن مکمل کرنے کے لیے آپ کو اپنے موبائل فون کی ضرورت ہوگی — تمام پورٹل اکاؤنٹس کے لیے MFA لازمی ہے۔',
     links: {
       heading: 'سرکاری وسائل',
       portal: 'EPOS پورٹل پر جائیں',
@@ -720,6 +727,7 @@ const content = {
         { type: 'Хяналт / Давж заалдах', date: '2025.12.09', lag: '~6 сар', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'Бүртгэлээ дуусгахын тулд гар утас хэрэгтэй — бүх порталын бүртгэлд MFA заавал шаардлагатай.',
     links: {
       heading: 'Албан ёсны эх сурвалж',
       portal: 'EPOS порталд очих',
@@ -810,6 +818,7 @@ const content = {
         { type: 'পর্যালোচনা / আপিল', date: '৯ ডিসেম্বর ২০২৫', lag: '~৬ মাস', speed: 'very-slow' },
       ],
     },
+    mfaNote: 'নিবন্ধন সম্পন্ন করতে আপনার মোবাইল ফোন লাগবে — সব পোর্টাল অ্যাকাউন্টের জন্য MFA বাধ্যতামূলক।',
     links: {
       heading: 'অফিসিয়াল সম্পদ',
       portal: 'EPOS পোর্টালে যান',
@@ -936,9 +945,7 @@ export default function HowToApply() {
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3 mb-8">
         <Smartphone className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
         <p className="text-sm text-blue-800">
-          {lang === 'en'
-            ? 'You will need your mobile phone to complete registration — MFA is mandatory for all portal accounts.'
-            : 'Você precisará do seu celular para completar o cadastro — MFA é obrigatório para todas as contas do portal.'}
+          {c.mfaNote}
         </p>
       </div>
 

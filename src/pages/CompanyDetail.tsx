@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, LineChart, Line, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, LineChart, Line, Legend, Cell } from 'recharts';
 import { ArrowLeft, ExternalLink, Search as SearchIcon, Briefcase, Star } from 'lucide-react';
 import { getCompanyBySlug, ALL_YEARS } from '../lib/data-loader';
 import { googleJobsUrl, linkedInUrl, indeedUrl, careersPageUrl, irishJobsUrl } from '../lib/url-builders';
@@ -91,7 +91,7 @@ export default function CompanyDetail() {
               <Tooltip />
               <Bar dataKey="permits" radius={[4,4,0,0]}>
                 {yearTrendData.map((entry) => (
-                  <rect key={entry.year} fill={YEAR_COLORS[Number(entry.year)] || '#2563eb'} />
+                  <Cell key={entry.year} fill={YEAR_COLORS[Number(entry.year)] || '#2563eb'} />
                 ))}
               </Bar>
             </BarChart>
