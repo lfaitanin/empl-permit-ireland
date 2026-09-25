@@ -11,8 +11,8 @@ export interface AffiliateLink {
 }
 
 export const AFFILIATE_LINKS: AffiliateLink[] = [
-  { name: 'Wise', category: 'banking', url: '' },
-  { name: 'Revolut', category: 'banking', url: '' },
+  { name: 'Wise', category: 'banking', url: 'https://wise.com/invite/ilpc/luizo478' },
+  { name: 'Revolut', category: 'banking', url: 'https://revolut.com/referral/?referral-code=faitanin!SEP2-26-AR-L3&geo-redirect' },
   { name: 'Coursera', category: 'courses', url: '' },
   { name: 'Udemy', category: 'courses', url: '' },
 ];
