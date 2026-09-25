@@ -180,6 +180,7 @@ export const translations = {
       quotaOpened: 'Opened',
       quotaAsOf: 'As of',
       permitsWord: 'permits',
+      takeHomeCta: 'How much is that after tax? Calculate your take-home pay',
     },
     // Visa Guide
     visaGuide: {
@@ -386,6 +387,7 @@ export const translations = {
       quotaOpened: 'Aberta em',
       quotaAsOf: 'Status em',
       permitsWord: 'permits',
+      takeHomeCta: 'Quanto sobra depois dos impostos? Calcule seu salário líquido',
     },
     visaGuide: {
       title: 'Guia de Vistos e Stamps',
@@ -590,6 +592,7 @@ export const translations = {
       quotaOpened: 'खुला',
       quotaAsOf: 'स्थिति',
       permitsWord: 'परमिट',
+      takeHomeCta: 'टैक्स के बाद कितना बचेगा? अपनी टेक-होम सैलरी कैलकुलेट करें',
     },
     visaGuide: {
       title: 'वीज़ा और स्टैम्प गाइड',
@@ -794,6 +797,7 @@ export const translations = {
       quotaOpened: 'Binuksan',
       quotaAsOf: 'Status noong',
       permitsWord: 'permit',
+      takeHomeCta: 'Magkano matitira pagkatapos ng buwis? Kalkulahin ang iyong take-home pay',
     },
     visaGuide: {
       title: 'Gabay sa Visa at Stamp',
@@ -998,6 +1002,7 @@ export const translations = {
       quotaOpened: '开放时间',
       quotaAsOf: '状态更新于',
       permitsWord: '个名额',
+      takeHomeCta: '税后能拿多少？计算您的实际到手工资',
     },
     visaGuide: {
       title: '签证与印章指南',
@@ -1202,6 +1207,7 @@ export const translations = {
       quotaOpened: 'Abierta',
       quotaAsOf: 'Estado al',
       permitsWord: 'permisos',
+      takeHomeCta: '¿Cuánto queda después de impuestos? Calcula tu salario neto',
     },
     visaGuide: {
       title: 'Guía de Visa y Stamps',
@@ -1406,6 +1412,7 @@ export const translations = {
       quotaOpened: 'کھلا',
       quotaAsOf: 'حیثیت',
       permitsWord: 'اجازت نامے',
+      takeHomeCta: 'ٹیکس کے بعد کتنا بچے گا؟ اپنی خالص تنخواہ کا حساب لگائیں',
     },
     visaGuide: {
       title: 'ویزا اور سٹیمپ گائیڈ',
@@ -1610,6 +1617,7 @@ export const translations = {
       quotaOpened: 'Нээгдсэн',
       quotaAsOf: 'Байдал',
       permitsWord: 'зөвшөөрөл',
+      takeHomeCta: 'Татварын дараа хэд үлдэх вэ? Гарт авах цалингаа тооцоолоорой',
     },
     visaGuide: {
       title: 'Виз ба тамганы гарын авлага',
@@ -1814,6 +1822,7 @@ export const translations = {
       quotaOpened: 'খোলা হয়েছে',
       quotaAsOf: 'হিসাবে',
       permitsWord: 'পারমিট',
+      takeHomeCta: 'ট্যাক্সের পরে কত থাকবে? আপনার হাতে পাওয়া বেতন হিসাব করুন',
     },
     visaGuide: {
       title: 'ভিসা ও স্ট্যাম্প গাইড',

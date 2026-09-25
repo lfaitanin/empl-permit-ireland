@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp, Ban, Briefcase } from 'lucide-react';
+import { Search, CheckCircle, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp, Ban, Briefcase, Calculator } from 'lucide-react';
 
 const OTHER_PERMITS = [
   { name: 'Dependent/Partner/Spouse Permit', desc: 'Allows spouses, civil partners and dependents of Critical Skills or Researcher permit holders to work freely in Ireland without a separate employment permit.' },
@@ -416,6 +416,16 @@ export default function Eligibility() {
           </div>
         </div>
         <p className="text-xs text-gray-400 mt-3">National Minimum Wage as of Jan 1, 2026: €14.15/hr · €28,696/yr. All permit applications must meet the higher thresholds above.</p>
+        <a
+          href="https://tax.irishventures.ie"
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-2 mt-4 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-200 text-sm font-medium text-emerald-800 hover:bg-emerald-100 no-underline transition-colors"
+        >
+          <Calculator className="w-4 h-4" />
+          {t.eligibility.takeHomeCta}
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
       </div>
 
       {/* Full Lists */}
