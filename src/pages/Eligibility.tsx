@@ -417,7 +417,7 @@ export default function Eligibility() {
         </div>
         <p className="text-xs text-gray-400 mt-3">National Minimum Wage as of Jan 1, 2026: €14.15/hr · €28,696/yr. All permit applications must meet the higher thresholds above.</p>
         <a
-          href="https://tax.irishventures.ie"
+          href="https://tax.irishventures.ie/?salary=34000"
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-2 mt-4 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-200 text-sm font-medium text-emerald-800 hover:bg-emerald-100 no-underline transition-colors"
