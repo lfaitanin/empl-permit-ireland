@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useState, type ReactNode } from 'react';
 import type { Lang } from '../types';
 import { translations, type Translations } from './translations';
 
@@ -16,16 +16,14 @@ const LangContext = createContext<LangContextValue>({
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>(() => {
-    const stored = localStorage.getItem('lang');
-    const valid: Lang[] = ['en', 'pt', 'hi', 'tl', 'zh', 'es', 'ur', 'mn', 'bn'];
-    return valid.includes(stored as Lang) ? (stored as Lang) : 'en';
-  });
+  // Pages are prerendered in English, so start in English to match that HTML
+  // during hydration; PageLayout switches to the saved language after.
+  const [lang, setLang] = useState<Lang>('en');
 
-  const handleSetLang = (l: Lang) => {
+  const handleSetLang = useCallback((l: Lang) => {
     setLang(l);
-    localStorage.setItem('lang', l);
-  };
+    try { localStorage.setItem('lang', l); } catch { /* ignore */ }
+  }, []);
 
   return (
     <LangContext.Provider value={{ lang, setLang: handleSetLang, t: translations[lang] }}>

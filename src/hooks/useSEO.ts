@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { recordSeoTags } from '../lib/ssr-seo';
 
 const SITE_NAME = 'IE Work Permits Explorer';
 const BASE_URL = 'https://ie-work-permits.com';
@@ -12,8 +13,13 @@ export function useSEO({
   description: string;
   path?: string;
 }) {
+  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+
+  if (typeof document === 'undefined') {
+    recordSeoTags({ title: fullTitle, description, url: `${BASE_URL}${path}` });
+  }
+
   useEffect(() => {
-    const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
     document.title = fullTitle;
 
     const set = (selector: string, attr: string, value: string) => {
@@ -35,5 +41,5 @@ export function useSEO({
       document.head.appendChild(canonical);
     }
     canonical.href = `${BASE_URL}${path}`;
-  }, [title, description, path]);
+  }, [fullTitle, description, path]);
 }

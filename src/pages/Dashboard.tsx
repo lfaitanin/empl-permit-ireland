@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, Cell } from 'recharts';
 import { Building2, Factory, MapPin, TrendingUp, Users, ShieldCheck, ListPlus, ExternalLink, ArrowRight } from 'lucide-react';
-import { summary } from '../lib/data-loader';
-import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel } from '../lib/utils';
+import { summary, nationalities2025 } from '../lib/data-loader';
+import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel, fillTemplate, signedPct } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 import AffiliateResources from '../components/AffiliateResources';
@@ -16,6 +16,8 @@ const monthlyData = MONTHS.map((m, i) => ({
 }));
 
 const topCompanies = summary.topCompanies2025.slice(0, 10);
+const topNationalities = [...nationalities2025].sort((a, b) => b.issued - a.issued).slice(0, 3).map(n => n.name);
+const sectorLabel = (name: string) => name.replace(/^[A-Z] - /, '');
 const topSectors = summary.topSectors2025.slice(0, 8);
 
 function StatCard({ label, value, icon: Icon, sub, color }: { label: string; value: string; icon: React.ElementType; sub?: string; color: string }) {
@@ -158,6 +160,30 @@ export default function Dashboard() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+      </div>
+
+      {/* Written summary — the charts carry no text, so state the key facts in words */}
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{t.dashboard.summaryTitle}</h2>
+        <p className="text-sm text-gray-700 leading-relaxed">
+          {[
+            fillTemplate(t.dashboard.summaryIssued, {
+              permits: formatNumber(summary.totalPermits2025),
+              companies: formatNumber(summary.totalCompanies2025),
+              rate: summary.approvalRate2025,
+            }),
+            fillTemplate(t.dashboard.summaryLeaders, {
+              companies: summary.topCompanies2025.slice(0, 3).map(c => c.name).join(', '),
+              sector: sectorLabel(summary.topSectors2025[0].name),
+            }),
+            fillTemplate(t.dashboard.summaryNationalities, { nationalities: topNationalities.join(', ') }),
+            fillTemplate(t.dashboard.summary2026, {
+              range: rangeLabel,
+              ytd: formatNumber(summary.totalPermits2026),
+              growth: signedPct(growth),
+            }),
+          ].join(' ')}
+        </p>
       </div>
 
       {/* Quick links */}

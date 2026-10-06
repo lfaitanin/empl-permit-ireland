@@ -1,9 +1,38 @@
 import { useParams, Link } from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, LineChart, Line, Legend, Cell } from 'recharts';
 import { ArrowLeft, ExternalLink, Search as SearchIcon, Briefcase, Star } from 'lucide-react';
-import { getCompanyBySlug, ALL_YEARS } from '../lib/data-loader';
+import { getCompanyBySlug, ALL_YEARS, companies2025 } from '../lib/data-loader';
 import { googleJobsUrl, linkedInUrl, indeedUrl, careersPageUrl, irishJobsUrl } from '../lib/url-builders';
-import { MONTHS, formatNumber } from '../lib/utils';
+import { MONTHS, formatNumber, fillTemplate, localMonthName, monthRangeLabel, signedPct } from '../lib/utils';
+import type { Company } from '../types';
+
+const ranked2025 = [...companies2025].sort((a, b) => b.total - a.total);
+
+/** Plain-language facts about a company, so the page has readable text and not only charts. */
+function summarySentences(t: Record<string, string>, lang: string, name: string, byYear: Record<number, Company | undefined>, activeYears: number[], totalAll: number): string[] {
+  const out = [fillTemplate(t.summaryTotal, {
+    name, total: formatNumber(totalAll), first: activeYears[0], last: activeYears[activeYears.length - 1],
+  })];
+
+  const c2024 = byYear[2024];
+  const c2025 = byYear[2025];
+  const c2026 = byYear[2026];
+
+  if (c2025) {
+    const rank = ranked2025.findIndex(c => c.slug === c2025.slug) + 1;
+    if (rank > 0) out.push(fillTemplate(t.summaryRank, { rank: formatNumber(rank), count: formatNumber(ranked2025.length) }));
+    if (c2024 && c2024.total > 0) {
+      out.push(fillTemplate(t.summaryChange, { change: signedPct(Math.round(((c2025.total - c2024.total) / c2024.total) * 100)) }));
+    }
+    const peak = Math.max(...c2025.monthly);
+    if (peak > 0) out.push(fillTemplate(t.summaryPeak, { month: localMonthName(c2025.monthly.indexOf(peak), lang), peak: formatNumber(peak) }));
+  }
+
+  if (c2026) {
+    out.push(fillTemplate(t.summaryYtd, { range: monthRangeLabel(c2026.monthly.length), ytd: formatNumber(c2026.total) }));
+  }
+  return out;
+}
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 
@@ -11,7 +40,7 @@ const YEAR_COLORS: Record<number, string> = { 2022: '#94a3b8', 2023: '#f59e0b', 
 
 export default function CompanyDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const byYear = getCompanyBySlug(slug || '');
 
   const activeYears = ALL_YEARS.filter(y => byYear[y]);
@@ -77,6 +106,13 @@ export default function CompanyDetail() {
             </span>
           )}
         </div>
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{t.companyDetail.summaryTitle}</h2>
+        <p className="text-sm text-gray-700 leading-relaxed">
+          {summarySentences(t.companyDetail, lang, name, byYear, activeYears, totalAll).join(' ')}
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 mb-6">

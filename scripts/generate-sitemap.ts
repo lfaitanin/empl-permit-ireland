@@ -1,28 +1,14 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { STATIC_ROUTES, topCompanySlugs } from './routes';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 const BASE_URL = 'https://ie-work-permits.com';
 const TODAY = new Date().toISOString().split('T')[0];
 
-const STATIC_ROUTES = [
-  { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/companies', priority: '0.9', changefreq: 'monthly' },
-  { path: '/sectors', priority: '0.9', changefreq: 'monthly' },
-  { path: '/counties', priority: '0.8', changefreq: 'monthly' },
-  { path: '/nationalities', priority: '0.8', changefreq: 'monthly' },
-  { path: '/eligibility', priority: '0.9', changefreq: 'monthly' },
-  { path: '/visa-guide', priority: '0.9', changefreq: 'monthly' },
-  { path: '/apply', priority: '0.9', changefreq: 'monthly' },
-  { path: '/about', priority: '0.5', changefreq: 'yearly' },
-  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
-];
-
-// Load top companies from 2025 data (highest traffic)
-const companies2025 = JSON.parse(readFileSync(join(root, 'src/data/companies-2025.json'), 'utf-8')) as { slug: string; total: number }[];
-const top100 = companies2025.sort((a, b) => b.total - a.total).slice(0, 100);
+const top100 = topCompanySlugs();
 
 const urls = [
   ...STATIC_ROUTES.map(r => `
@@ -32,9 +18,9 @@ const urls = [
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>
   </url>`),
-  ...top100.map(c => `
+  ...top100.map(slug => `
   <url>
-    <loc>${BASE_URL}/companies/${c.slug}</loc>
+    <loc>${BASE_URL}/companies/${slug}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
