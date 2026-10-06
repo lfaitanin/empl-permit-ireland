@@ -156,7 +156,7 @@ export default function Eligibility() {
   const { t } = useLang();
   useSEO({
     title: 'Ireland Work Permit Eligibility Checker | Critical Skills & General Permits',
-    description: 'Check if your occupation qualifies for an Irish employment permit. Search the Critical Skills Occupation List, ineligible categories, salary thresholds (€40,904 / €34,000) and permit types explained simply.',
+    description: 'Check if your occupation qualifies for an Irish employment permit. Search the Critical Skills Occupation List, ineligible categories, salary thresholds (€40,904 / €36,605) and permit types explained simply.',
     path: '/eligibility',
   });
   const [search, setSearch] = useState('');
@@ -407,7 +407,7 @@ export default function Eligibility() {
             <div className="text-sm text-gray-600 mt-1">{t.eligibility.csSalary}</div>
           </div>
           <div className="text-center p-4 bg-blue-50 rounded-lg">
-            <div className="text-2xl font-bold text-blue-700">&euro;34,000</div>
+            <div className="text-2xl font-bold text-blue-700">&euro;36,605</div>
             <div className="text-sm text-gray-600 mt-1">{t.eligibility.gpSalary}</div>
           </div>
           <div className="text-center p-4 bg-purple-50 rounded-lg">
@@ -415,9 +415,14 @@ export default function Eligibility() {
             <div className="text-sm text-gray-600 mt-1">{t.eligibility.anyOccSalary}</div>
           </div>
         </div>
-        <p className="text-xs text-gray-400 mt-3">National Minimum Wage as of Jan 1, 2026: €14.15/hr · €28,696/yr. All permit applications must meet the higher thresholds above.</p>
+        <ul className="text-xs text-gray-500 mt-3 space-y-1 list-disc pl-4">
+          <li>Recent graduates (degree in the last 12 months): €34,009 for a General Permit (Irish Level 8+ degree) · €36,848 for Critical Skills.</li>
+          <li>Healthcare assistants, home support workers, meat processing operatives and horticulture workers: €32,691.</li>
+          <li>Thresholds in force since 1 March 2026 and rising gradually each year until 2030.</li>
+        </ul>
+        <p className="text-xs text-gray-400 mt-2">National Minimum Wage as of Jan 1, 2026: €14.15/hr · €28,696/yr. All permit applications must meet the higher thresholds above.</p>
         <a
-          href="https://tax.irishventures.ie/?salary=34000"
+          href="https://tax.irishventures.ie/?salary=36605"
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-2 mt-4 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-200 text-sm font-medium text-emerald-800 hover:bg-emerald-100 no-underline transition-colors"
