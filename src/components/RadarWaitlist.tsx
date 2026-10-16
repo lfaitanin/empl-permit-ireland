@@ -30,6 +30,7 @@ export default function RadarWaitlist({ source, className = '' }: { source: stri
           willingToPay: form.get('willingToPay'),
           language: lang,
           source,
+          _subject: `Radar waitlist: ${form.get('occupation')}`,
         }),
       });
       setStatus(res.ok ? 'done' : 'error');
