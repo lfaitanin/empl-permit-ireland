@@ -91,8 +91,6 @@ export default function Dashboard() {
 
       <AffiliateResources compact className="mb-6" />
 
-      <RadarWaitlist source="dashboard" className="mb-6" />
-
       {/* Yearly Growth Chart */}
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">
         <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">{t.dashboard.yearlyGrowth}</h2>
@@ -188,6 +186,8 @@ export default function Dashboard() {
           ].join(' ')}
         </p>
       </div>
+
+      <RadarWaitlist source="dashboard" className="mb-6" />
 
       {/* Quick links */}
       <div className="grid grid-cols-3 gap-3">

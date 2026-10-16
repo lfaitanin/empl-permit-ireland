@@ -222,6 +222,7 @@ export const translations = {
       disclosure: 'Some of these are affiliate links: we may earn a small commission at no extra cost to you. It helps keep this site free.',
     },
     waitlist: {
+      short: 'Job alerts from companies that sponsor employment permits.',
       title: 'Sponsorship Job Radar — coming soon',
       desc: 'Get alerts when jobs in your field open at companies with a history of sponsoring employment permits. Join the waitlist to get early access.',
       email: 'Email',
@@ -456,6 +457,7 @@ export const translations = {
       disclosure: 'Alguns destes são links de afiliado: podemos receber uma pequena comissão, sem custo extra para você. Isso ajuda a manter o site gratuito.',
     },
     waitlist: {
+      short: 'Alertas de vagas em empresas que patrocinam employment permits.',
       title: 'Radar de Vagas com Sponsorship — em breve',
       desc: 'Receba alertas quando abrirem vagas da sua área em empresas com histórico de patrocinar employment permits. Entre na lista de espera para ter acesso antecipado.',
       email: 'Email',
@@ -690,6 +692,7 @@ export const translations = {
       disclosure: 'इनमें से कुछ एफिलिएट लिंक हैं: हमें आपके लिए बिना किसी अतिरिक्त लागत के छोटा कमीशन मिल सकता है। इससे यह साइट मुफ्त रहती है।',
     },
     waitlist: {
+      short: 'रोज़गार परमिट प्रायोजित करने वाली कंपनियों से नौकरी के अलर्ट।',
       title: 'स्पॉन्सरशिप जॉब रडार — जल्द आ रहा है',
       desc: 'जब आपके क्षेत्र की नौकरियां उन कंपनियों में खुलें जिनका रोज़गार परमिट प्रायोजित करने का इतिहास है, तो अलर्ट पाएं। जल्दी पहुंच के लिए वेटलिस्ट में शामिल हों।',
       email: 'ईमेल',
@@ -924,6 +927,7 @@ export const translations = {
       disclosure: 'Ang ilan dito ay affiliate links: maaari kaming makatanggap ng maliit na komisyon nang walang dagdag na gastos sa iyo. Nakakatulong ito para manatiling libre ang site.',
     },
     waitlist: {
+      short: 'Mga alerto sa trabaho mula sa mga kumpanyang nag-sponsor ng employment permit.',
       title: 'Sponsorship Job Radar — malapit na',
       desc: 'Makatanggap ng alerto kapag may bukas na trabaho sa iyong larangan sa mga kumpanyang may kasaysayan ng pag-sponsor ng employment permit. Sumali sa waitlist para sa maagang access.',
       email: 'Email',
@@ -1158,6 +1162,7 @@ export const translations = {
       disclosure: '其中部分为推广链接：我们可能获得少量佣金，您无需支付任何额外费用。这有助于本网站保持免费。',
     },
     waitlist: {
+      short: '来自赞助就业许可证公司的职位提醒。',
       title: '赞助职位雷达 — 即将推出',
       desc: '当有赞助就业许可证历史的公司开放您所在领域的职位时，向您发送提醒。加入候补名单以抢先体验。',
       email: '电子邮件',
@@ -1392,6 +1397,7 @@ export const translations = {
       disclosure: 'Algunos son enlaces de afiliado: podemos recibir una pequeña comisión sin costo extra para ti. Esto ayuda a mantener el sitio gratuito.',
     },
     waitlist: {
+      short: 'Alertas de empleo en empresas que patrocinan permisos de trabajo.',
       title: 'Radar de Empleos con Patrocinio — próximamente',
       desc: 'Recibe alertas cuando se abran empleos de tu área en empresas con historial de patrocinar permisos de trabajo. Únete a la lista de espera para tener acceso anticipado.',
       email: 'Email',
@@ -1626,6 +1632,7 @@ export const translations = {
       disclosure: 'ان میں سے کچھ ایفیلیئٹ لنکس ہیں: ہمیں آپ پر کسی اضافی لاگت کے بغیر معمولی کمیشن مل سکتا ہے۔ اس سے یہ سائٹ مفت رہتی ہے۔',
     },
     waitlist: {
+      short: 'ملازمت کے اجازت نامے اسپانسر کرنے والی کمپنیوں سے نوکری کے الرٹس۔',
       title: 'اسپانسرشپ جاب ریڈار — جلد آ رہا ہے',
       desc: 'جب آپ کے شعبے کی نوکریاں ان کمپنیوں میں کھلیں جو ملازمت کے اجازت نامے اسپانسر کرتی رہی ہیں تو الرٹ حاصل کریں۔ جلد رسائی کے لیے ویٹ لسٹ میں شامل ہوں۔',
       email: 'ای میل',
@@ -1860,6 +1867,7 @@ export const translations = {
       disclosure: 'Эдгээрийн зарим нь түншлэлийн холбоос: танд нэмэлт зардалгүйгээр бид бага хэмжээний шимтгэл авч магадгүй. Энэ нь сайтыг үнэгүй байлгахад тусалдаг.',
     },
     waitlist: {
+      short: 'Хөдөлмөрийн зөвшөөрөл ивээн тэтгэдэг компаниудын ажлын мэдэгдэл.',
       title: 'Ивээн тэтгэлгийн ажлын радар — удахгүй',
       desc: 'Хөдөлмөрийн зөвшөөрөл ивээн тэтгэж байсан компаниудад таны мэргэжлээр ажлын байр нээгдэхэд мэдэгдэл аваарай. Эрт хандахын тулд хүлээлгийн жагсаалтад нэгдээрэй.',
       email: 'Имэйл',
@@ -2094,6 +2102,7 @@ export const translations = {
       disclosure: 'এর কিছু অ্যাফিলিয়েট লিংক: আপনার কোনো অতিরিক্ত খরচ ছাড়াই আমরা সামান্য কমিশন পেতে পারি। এতে সাইটটি বিনামূল্যে রাখা সম্ভব হয়।',
     },
     waitlist: {
+      short: 'যেসব কোম্পানি কর্মসংস্থান পারমিট স্পনসর করে, তাদের চাকরির সতর্কবার্তা।',
       title: 'স্পনসরশিপ জব রাডার — শীঘ্রই আসছে',
       desc: 'যেসব কোম্পানি কর্মসংস্থান পারমিট স্পনসর করেছে, সেখানে আপনার ক্ষেত্রের চাকরি খুললে সতর্কবার্তা পান। আগাম অ্যাক্সেসের জন্য অপেক্ষা তালিকায় যোগ দিন।',
       email: 'ইমেইল',

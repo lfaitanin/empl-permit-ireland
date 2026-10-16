@@ -207,8 +207,6 @@ export default function Companies() {
         )}
       </div>
 
-      <RadarWaitlist source="companies" className="mb-5" />
-
       <div className="text-sm text-gray-500 mb-3">{formatNumber(filtered.length)} {t.companies.found}</div>
 
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-x-auto">
@@ -280,6 +278,8 @@ export default function Companies() {
           </div>
         </div>
       )}
+
+      <RadarWaitlist source="companies" className="mt-6" />
     </div>
   );
 }
