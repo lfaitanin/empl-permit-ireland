@@ -19,7 +19,8 @@ export default function Privacy() {
             IE Work Permits Explorer ("this site") is an independent, non-commercial project that
             visualises publicly available Irish employment permit statistics published by the
             Department of Enterprise, Trade and Employment (DETE). We do not require account
-            registration and do not collect personal data through forms.
+            registration. The only personal data we collect is what you choose to submit in the
+            Sponsorship Job Radar waitlist form (see below).
           </p>
         </section>
 
@@ -86,6 +87,16 @@ export default function Privacy() {
             This site links to external job boards (Google Jobs, LinkedIn), official Irish government
             resources (DETE, Irish Immigration), and a payment page (Buy Me a Coffee). We are not
             responsible for the privacy practices of those external sites.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-gray-900 mb-2">Sponsorship Job Radar waitlist</h2>
+          <p>
+            If you join the waitlist, we store the email address, occupation and answers you submit,
+            only to contact you about the Sponsorship Job Radar. We don't sell or share this data.
+            The form is processed by a third-party form provider. To be removed from the list, use the
+            unsubscribe link in any email or contact us via the About page.
           </p>
         </section>
 

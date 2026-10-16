@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, Cell } from 'recharts';
 import { Building2, Factory, MapPin, TrendingUp, Users, ShieldCheck, ListPlus, ExternalLink, ArrowRight } from 'lucide-react';
 import { summary, nationalities2025 } from '../lib/data-loader';
-import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel, fillTemplate, signedPct } from '../lib/utils';
+import { formatNumber, MONTHS, MONTHS_FULL, shortenName, monthRangeLabel, fillTemplate, signedPct, localMonthName } from '../lib/utils';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
 import AffiliateResources from '../components/AffiliateResources';
+import RadarWaitlist from '../components/RadarWaitlist';
 
 const YEAR_COLORS: Record<number, string> = { 2022: '#94a3b8', 2023: '#f59e0b', 2024: '#8b5cf6', 2025: '#2563eb', 2026: '#10b981' };
 
@@ -34,7 +35,7 @@ function StatCard({ label, value, icon: Icon, sub, color }: { label: string; val
 }
 
 export default function Dashboard() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const n2026 = summary.monthlyTrend2026.length;
   const rangeLabel = monthRangeLabel(n2026);
   const ytd2025 = summary.monthlyTrend2025.slice(0, n2026).reduce((a, b) => a + b, 0);
@@ -64,15 +65,15 @@ export default function Dashboard() {
         <div className="flex items-start gap-3 flex-1">
           <div className="p-2 rounded-lg bg-emerald-100 text-emerald-700 shrink-0"><ListPlus className="w-4 h-4" /></div>
           <div>
-            <p className="font-semibold text-gray-900 text-sm">{t.dashboard.occupationUpdateTitle}</p>
-            <p className="text-xs text-gray-600 mt-0.5">{t.dashboard.occupationUpdateDesc}</p>
+            <p className="font-semibold text-gray-900 text-sm">{fillTemplate(t.dashboard.occupationUpdateTitle, { month: localMonthName(n2026 - 1, lang) })}</p>
+            <p className="text-xs text-gray-600 mt-0.5">{fillTemplate(t.dashboard.occupationUpdateDesc, { ytd: formatNumber(summary.totalPermits2026), growth: signedPct(growth) })}</p>
           </div>
         </div>
         <div className="flex gap-2 shrink-0 pl-9 sm:pl-0">
           <Link to="/eligibility" className="flex items-center gap-1 text-xs font-medium bg-emerald-600 text-white px-3 py-1.5 rounded-lg hover:bg-emerald-700 no-underline transition-colors">
             {t.dashboard.occupationUpdateCta} <ArrowRight className="w-3 h-3" />
           </Link>
-          <a href="https://enterprise.gov.ie/en/news-and-events/department-news/2026/may/20260528.html" target="_blank" rel="noopener noreferrer"
+          <a href="https://enterprise.gov.ie/en/publications/employment-permit-statistics-2026.html" target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs font-medium border border-emerald-400 text-emerald-800 px-3 py-1.5 rounded-lg hover:bg-emerald-100 no-underline transition-colors">
             {t.dashboard.occupationUpdateOfficial} <ExternalLink className="w-3 h-3" />
           </a>
@@ -89,6 +90,8 @@ export default function Dashboard() {
       <p className="text-xs text-gray-400 text-right mb-5">{t.dashboard.dataThrough} {MONTHS_FULL[n2026 - 1]} 2026</p>
 
       <AffiliateResources compact className="mb-6" />
+
+      <RadarWaitlist source="dashboard" className="mb-6" />
 
       {/* Yearly Growth Chart */}
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-6">

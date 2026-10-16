@@ -2,209 +2,217 @@
   {
     "name": "Dublin",
     "slug": "dublin",
-    "issued": 5515,
-    "refused": 661,
-    "approvalRate": 89.3,
+    "issued": 13243,
+    "refused": 1366,
+    "approvalRate": 90.65,
     "year": 2026
   },
   {
     "name": "Cork",
     "slug": "cork",
-    "issued": 1241,
-    "refused": 171,
-    "approvalRate": 87.89,
-    "year": 2026
-  },
-  {
-    "name": "Meath",
-    "slug": "meath",
-    "issued": 648,
-    "refused": 44,
-    "approvalRate": 93.64,
+    "issued": 3047,
+    "refused": 379,
+    "approvalRate": 88.94,
     "year": 2026
   },
   {
     "name": "Kildare",
     "slug": "kildare",
-    "issued": 532,
-    "refused": 93,
-    "approvalRate": 85.12,
+    "issued": 1414,
+    "refused": 169,
+    "approvalRate": 89.32,
     "year": 2026
   },
   {
     "name": "Limerick",
     "slug": "limerick",
-    "issued": 527,
-    "refused": 93,
-    "approvalRate": 85,
+    "issued": 1334,
+    "refused": 171,
+    "approvalRate": 88.64,
+    "year": 2026
+  },
+  {
+    "name": "Meath",
+    "slug": "meath",
+    "issued": 1300,
+    "refused": 115,
+    "approvalRate": 91.87,
     "year": 2026
   },
   {
     "name": "Galway",
     "slug": "galway",
-    "issued": 421,
-    "refused": 76,
-    "approvalRate": 84.71,
+    "issued": 1214,
+    "refused": 183,
+    "approvalRate": 86.9,
     "year": 2026
   },
   {
     "name": "Waterford",
     "slug": "waterford",
-    "issued": 364,
-    "refused": 14,
-    "approvalRate": 96.3,
-    "year": 2026
-  },
-  {
-    "name": "Kerry",
-    "slug": "kerry",
-    "issued": 354,
-    "refused": 19,
-    "approvalRate": 94.91,
+    "issued": 848,
+    "refused": 60,
+    "approvalRate": 93.39,
     "year": 2026
   },
   {
     "name": "Wexford",
     "slug": "wexford",
-    "issued": 296,
-    "refused": 24,
-    "approvalRate": 92.5,
+    "issued": 759,
+    "refused": 74,
+    "approvalRate": 91.12,
     "year": 2026
   },
   {
-    "name": "Clare",
-    "slug": "clare",
-    "issued": 268,
-    "refused": 28,
-    "approvalRate": 90.54,
+    "name": "Kerry",
+    "slug": "kerry",
+    "issued": 701,
+    "refused": 41,
+    "approvalRate": 94.47,
     "year": 2026
   },
   {
     "name": "Louth",
     "slug": "louth",
-    "issued": 244,
-    "refused": 17,
-    "approvalRate": 93.49,
+    "issued": 629,
+    "refused": 42,
+    "approvalRate": 93.74,
+    "year": 2026
+  },
+  {
+    "name": "Clare",
+    "slug": "clare",
+    "issued": 615,
+    "refused": 67,
+    "approvalRate": 90.18,
     "year": 2026
   },
   {
     "name": "Tipperary",
     "slug": "tipperary",
-    "issued": 238,
-    "refused": 33,
-    "approvalRate": 87.82,
-    "year": 2026
-  },
-  {
-    "name": "Cavan",
-    "slug": "cavan",
-    "issued": 156,
-    "refused": 23,
-    "approvalRate": 87.15,
-    "year": 2026
-  },
-  {
-    "name": "Kilkenny",
-    "slug": "kilkenny",
-    "issued": 154,
-    "refused": 24,
-    "approvalRate": 86.52,
-    "year": 2026
-  },
-  {
-    "name": "Westmeath",
-    "slug": "westmeath",
-    "issued": 154,
-    "refused": 21,
-    "approvalRate": 88,
+    "issued": 614,
+    "refused": 66,
+    "approvalRate": 90.29,
     "year": 2026
   },
   {
     "name": "Donegal",
     "slug": "donegal",
-    "issued": 145,
-    "refused": 17,
-    "approvalRate": 89.51,
-    "year": 2026
-  },
-  {
-    "name": "Wicklow",
-    "slug": "wicklow",
-    "issued": 143,
-    "refused": 25,
-    "approvalRate": 85.12,
-    "year": 2026
-  },
-  {
-    "name": "Monaghan",
-    "slug": "monaghan",
-    "issued": 142,
-    "refused": 18,
-    "approvalRate": 88.75,
-    "year": 2026
-  },
-  {
-    "name": "Mayo",
-    "slug": "mayo",
-    "issued": 136,
-    "refused": 25,
-    "approvalRate": 84.47,
-    "year": 2026
-  },
-  {
-    "name": "Roscommon",
-    "slug": "roscommon",
-    "issued": 110,
-    "refused": 12,
-    "approvalRate": 90.16,
-    "year": 2026
-  },
-  {
-    "name": "Laois",
-    "slug": "laois",
-    "issued": 89,
-    "refused": 14,
-    "approvalRate": 86.41,
+    "issued": 452,
+    "refused": 45,
+    "approvalRate": 90.95,
     "year": 2026
   },
   {
     "name": "Offaly",
     "slug": "offaly",
-    "issued": 83,
-    "refused": 13,
-    "approvalRate": 86.46,
+    "issued": 431,
+    "refused": 53,
+    "approvalRate": 89.05,
     "year": 2026
   },
   {
-    "name": "Carlow",
-    "slug": "carlow",
-    "issued": 78,
-    "refused": 18,
-    "approvalRate": 81.25,
+    "name": "Kilkenny",
+    "slug": "kilkenny",
+    "issued": 426,
+    "refused": 63,
+    "approvalRate": 87.12,
+    "year": 2026
+  },
+  {
+    "name": "Cavan",
+    "slug": "cavan",
+    "issued": 420,
+    "refused": 73,
+    "approvalRate": 85.19,
+    "year": 2026
+  },
+  {
+    "name": "Wicklow",
+    "slug": "wicklow",
+    "issued": 405,
+    "refused": 69,
+    "approvalRate": 85.44,
+    "year": 2026
+  },
+  {
+    "name": "Westmeath",
+    "slug": "westmeath",
+    "issued": 397,
+    "refused": 59,
+    "approvalRate": 87.06,
+    "year": 2026
+  },
+  {
+    "name": "Mayo",
+    "slug": "mayo",
+    "issued": 357,
+    "refused": 55,
+    "approvalRate": 86.65,
+    "year": 2026
+  },
+  {
+    "name": "Monaghan",
+    "slug": "monaghan",
+    "issued": 296,
+    "refused": 45,
+    "approvalRate": 86.8,
     "year": 2026
   },
   {
     "name": "Sligo",
     "slug": "sligo",
-    "issued": 77,
-    "refused": 9,
-    "approvalRate": 89.53,
+    "issued": 241,
+    "refused": 30,
+    "approvalRate": 88.93,
+    "year": 2026
+  },
+  {
+    "name": "Roscommon",
+    "slug": "roscommon",
+    "issued": 223,
+    "refused": 33,
+    "approvalRate": 87.11,
+    "year": 2026
+  },
+  {
+    "name": "Laois",
+    "slug": "laois",
+    "issued": 212,
+    "refused": 26,
+    "approvalRate": 89.08,
+    "year": 2026
+  },
+  {
+    "name": "Carlow",
+    "slug": "carlow",
+    "issued": 182,
+    "refused": 34,
+    "approvalRate": 84.26,
     "year": 2026
   },
   {
     "name": "Longford",
     "slug": "longford",
-    "issued": 54,
-    "refused": 4,
-    "approvalRate": 93.1,
+    "issued": 130,
+    "refused": 22,
+    "approvalRate": 85.53,
     "year": 2026
   },
   {
     "name": "Leitrim",
     "slug": "leitrim",
-    "issued": 50,
-    "refused": 3,
-    "approvalRate": 94.34,
+    "issued": 99,
+    "refused": 7,
+    "approvalRate": 93.4,
+    "year": 2026
+  },
+  {
+    "name": "Down",
+    "slug": "down",
+    "issued": 0,
+    "refused": 1,
+    "approvalRate": 0,
     "year": 2026
   }
 ]

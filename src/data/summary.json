@@ -1,12 +1,12 @@
 {
   "totalPermits2025": 31044,
-  "totalPermits2026": 12219,
+  "totalPermits2026": 29989,
   "totalRefused2025": 3432,
-  "totalRefused2026": 1499,
+  "totalRefused2026": 3348,
   "totalCompanies2025": 8330,
-  "totalCompanies2026": 4224,
+  "totalCompanies2026": 7741,
   "approvalRate2025": 90.05,
-  "approvalRate2026": 89.07,
+  "approvalRate2026": 89.96,
   "topCompanies2025": [
     {
       "name": "Google Ireland Limited",
@@ -71,64 +71,64 @@
   ],
   "topCompanies2026": [
     {
-      "name": "Redwood Extended Care Facility Unlimited Company",
-      "total": 137
-    },
-    {
       "name": "Dawn Meats Ireland UC",
-      "total": 134
-    },
-    {
-      "name": "Costern Unlimited Company",
-      "total": 108
-    },
-    {
-      "name": "Bus Átha Cliath - Dublin Bus",
-      "total": 103
-    },
-    {
-      "name": "Applus Inspection Services Ireland Limited",
-      "total": 102
-    },
-    {
-      "name": "Resilience Healthcare Limited",
-      "total": 91
+      "total": 293
     },
     {
       "name": "Google Ireland Limited",
-      "total": 90
+      "total": 254
     },
     {
-      "name": "InisCare Limited",
-      "total": 86
+      "name": "Rosderra Irish Meats Group Unlimited Company",
+      "total": 238
     },
     {
-      "name": "Circet Networks (Ireland) Limited",
-      "total": 74
+      "name": "Redwood Extended Care Facility Unlimited Company",
+      "total": 226
     },
     {
-      "name": "Mowlam Healthcare Services Unlimited Company",
-      "total": 74
+      "name": "Costern Unlimited Company",
+      "total": 224
+    },
+    {
+      "name": "Resilience Healthcare Limited",
+      "total": 192
+    },
+    {
+      "name": "University Limerick Hospitals Group",
+      "total": 171
+    },
+    {
+      "name": "Applus Inspection Services Ireland Limited",
+      "total": 165
     },
     {
       "name": "Cork University Hospital",
-      "total": 68
-    },
-    {
-      "name": "Kel-Tech Engineering (Waterford) Limited",
-      "total": 66
-    },
-    {
-      "name": "Kellor Services (IRE) Limited",
-      "total": 65
+      "total": 165
     },
     {
       "name": "Tata Consultancy Services Limited",
-      "total": 64
+      "total": 154
     },
     {
-      "name": "Accenture Limited",
-      "total": 63
+      "name": "Allpro Security Services Ireland Limited",
+      "total": 153
+    },
+    {
+      "name": "Bus Átha Cliath - Dublin Bus",
+      "total": 146
+    },
+    {
+      "name": "Ernst & Young",
+      "total": 145
+    },
+    {
+      "name": "Mowlam Healthcare Services Unlimited Company",
+      "total": 134
+    },
+    {
+      "name": "Nua Healthcare Services Limited",
+      "total": 134
     }
   ],
   "topSectors2025": [
@@ -176,43 +176,43 @@
   "topSectors2026": [
     {
       "name": "Q - Health & Social Work Activities",
-      "total": 3345
+      "total": 8037
     },
     {
       "name": "I - Accommodation & Food Services Activities",
-      "total": 1341
+      "total": 3091
     },
     {
       "name": "J - Information & Communication Activities",
-      "total": 1295
+      "total": 2963
     },
     {
       "name": "S - Other Service Activities",
-      "total": 1019
+      "total": 2192
     },
     {
       "name": "F - Construction",
-      "total": 760
+      "total": 2014
     },
     {
       "name": "A - Agriculture, Forestry & Fishing",
-      "total": 751
-    },
-    {
-      "name": "C - All Other Manufacturing",
-      "total": 618
+      "total": 1959
     },
     {
       "name": "H - Transport & Storage",
-      "total": 616
+      "total": 1480
+    },
+    {
+      "name": "C - All Other Manufacturing",
+      "total": 1383
     },
     {
       "name": "K - Financial & Insurance Activities",
-      "total": 444
+      "total": 1188
     },
     {
-      "name": "M - Professional, Scientific & Technical Activities of Head Offices, Management Consultancy Services",
-      "total": 249
+      "name": "M - All other Professional, Scientific & Technical Activities",
+      "total": 972
     }
   ],
   "topCounties2025": [
@@ -260,43 +260,43 @@
   "topCounties2026": [
     {
       "name": "Dublin",
-      "issued": 5515
+      "issued": 13243
     },
     {
       "name": "Cork",
-      "issued": 1241
-    },
-    {
-      "name": "Meath",
-      "issued": 648
+      "issued": 3047
     },
     {
       "name": "Kildare",
-      "issued": 532
+      "issued": 1414
     },
     {
       "name": "Limerick",
-      "issued": 527
+      "issued": 1334
+    },
+    {
+      "name": "Meath",
+      "issued": 1300
     },
     {
       "name": "Galway",
-      "issued": 421
+      "issued": 1214
     },
     {
       "name": "Waterford",
-      "issued": 364
-    },
-    {
-      "name": "Kerry",
-      "issued": 354
+      "issued": 848
     },
     {
       "name": "Wexford",
-      "issued": 296
+      "issued": 759
     },
     {
-      "name": "Clare",
-      "issued": 268
+      "name": "Kerry",
+      "issued": 701
+    },
+    {
+      "name": "Louth",
+      "issued": 629
     }
   ],
   "monthlyTrend2025": [
@@ -314,10 +314,15 @@
     2440
   ],
   "monthlyTrend2026": [
-    3204,
-    2789,
-    2904,
-    3322
+    3226,
+    2823,
+    2940,
+    3356,
+    3306,
+    3476,
+    3842,
+    3694,
+    3326
   ],
   "yearlyTotals": [
     {
@@ -354,11 +359,11 @@
     },
     {
       "year": 2026,
-      "totalPermits": 12219,
-      "totalIssued": 12219,
-      "totalRefused": 1499,
-      "approvalRate": 89.07,
-      "totalCompanies": 4224
+      "totalPermits": 29989,
+      "totalIssued": 29989,
+      "totalRefused": 3348,
+      "approvalRate": 89.96,
+      "totalCompanies": 7741
     }
   ]
 }

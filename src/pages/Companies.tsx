@@ -7,6 +7,7 @@ import { formatNumber } from '../lib/utils';
 import { googleJobsUrl, linkedInUrl } from '../lib/url-builders';
 import { useLang } from '../i18n/LangContext';
 import { useSEO } from '../hooks/useSEO';
+import RadarWaitlist from '../components/RadarWaitlist';
 
 const allCompanies = getAllCompanies();
 const fuse = new Fuse(allCompanies, { keys: ['name'], threshold: 0.3 });
@@ -205,6 +206,8 @@ export default function Companies() {
           </button>
         )}
       </div>
+
+      <RadarWaitlist source="companies" className="mb-5" />
 
       <div className="text-sm text-gray-500 mb-3">{formatNumber(filtered.length)} {t.companies.found}</div>
 

@@ -92,8 +92,10 @@ function processCompanies2026() {
     .map(row => {
       const keys = Object.keys(row);
       const name = String(row[keys[0]] || '').trim();
-      const monthly = keys.slice(1, -1).map(k => Number(row[k] || 0));
-      let total = Number(row[keys[keys.length - 1]] || 0);
+      // Ignore trailing columns with no header (DETE sometimes leaves an empty one)
+      const dataKeys = keys.slice(1).filter(k => !k.startsWith('__EMPTY'));
+      const monthly = dataKeys.slice(0, -1).map(k => Number(row[k] || 0));
+      let total = Number(row[dataKeys[dataKeys.length - 1]] || 0);
       if (!total) total = monthly.reduce((a, b) => a + b, 0);
       return { slug: slugify(name), name, monthly, total, year: 2026 };
     })

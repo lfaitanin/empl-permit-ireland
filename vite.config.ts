@@ -9,11 +9,14 @@ export default defineConfig(({ mode }) => {
   // unless explicitly marked as safe. To avoid that friction, the AdSense client ID can be set
   // on Vercel as plain `ADSENSE_CLIENT_ID` (no prefix) and gets mapped here at build time.
   const adsenseClientId = env.ADSENSE_CLIENT_ID || process.env.ADSENSE_CLIENT_ID || env.VITE_ADSENSE_CLIENT_ID || '';
+  // Same reason: the radar waitlist form endpoint is set on Vercel as plain WAITLIST_ENDPOINT.
+  const waitlistEndpoint = env.WAITLIST_ENDPOINT || process.env.WAITLIST_ENDPOINT || env.VITE_WAITLIST_ENDPOINT || '';
 
   return {
     plugins: [react(), tailwindcss()],
     define: {
       'import.meta.env.VITE_ADSENSE_CLIENT_ID': JSON.stringify(adsenseClientId),
+      'import.meta.env.VITE_WAITLIST_ENDPOINT': JSON.stringify(waitlistEndpoint),
     },
   };
 })
